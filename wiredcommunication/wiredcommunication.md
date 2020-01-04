@@ -1,31 +1,27 @@
-Communication over Wires
-========================
+Comunicación usando cables
+==========================
 
 ![Chapter 1 image](chapter1.png)
 
-Introduction
+Introducción
 ------------
 
-Everything is connected nowadays! Computers and devices connect to each other to form networks. And these networks connect to
-form the Internet. When we say *computers* or *devices*, these
-can be anything from a traditional laptop to a cellphone, to a washing machine, to a humidity sensor. Of course, it can also be
-your micro:bit. More and more, the Internet is becoming an *Internet of Things*.
+¡Todo está conectado hoy en día! Ordenadores y dispositvos se conectan entre sí para formar redes. Y estas redes se conectan a su vez entre sí para formar la Internet. Cuando decimos *ordenadores* or *dispositivos*, nos referimos a cualquier cosa, desde un portátil o un teléfono, pasanndo por una labadora o un sensor de humedad. Por supuesto, también puede ser tu micro:bit. Y es que, cada vez más, Internet se está convirtiendo en una *Internet de las Cosas* (*Internet of Things* o *IoT*).
 
-In this chapter, you will form your own network using wires to
-connect two micro:bits. Doing this, you will learn:
+En este capítulo vas a crear una red usando cables para conectar micro:bits. Y en el proceso trabajarás los siguientes conceptos:
 
-- the concept of a *communications medium*, and *signals*
+- *medio de transmisión* y *señales*
 
-- the concept of *binary* and *bit*
+- *binario* y *bit*
 
-- the concept of a *network*
+- *red*
 
-### What you’ll need?
+### ¿Qué necesitas?
 
     2 micro:bits
-    4 crocodile clip leads
-    1 battery holder, and 2 AAA batteries
-    1 teammate
+    4 cables con conector tipo cocodrilo
+    1 caja para las pilas y dos pilas AAA
+    1 colega
 
 Background
 ----------
