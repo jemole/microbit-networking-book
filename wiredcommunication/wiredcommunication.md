@@ -23,48 +23,32 @@ En este capítulo vas a crear una red usando cables para conectar micro:bits. Y 
     1 caja para las pilas y dos pilas AAA
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-For two micro:bits to be able to send messages to each other, they
-somehow need to be connected, whether by wires or wirelessly - we call this
-a *communications medium*.
+Para que dos micro:bits puedan enviarse mensajes tienen que estar conectadas de algún modo, bien miediante cables o de forma inalámbrica - a esto se le llama *medio de transmisión*.
 
-A message could be a
-string like “Hello”, a number like “9”, or an icon image. The
-micro:bits convert each message to a signal to send it over the
-*communications medium*.
+Un mensaje puede ser un texto como “Hola”, un número como “9”, o un icono de una imagen. Las micro:bits convierten cada mensaje en una señal y la envían a través del *medio de transmisión*.
 
-!!! hint "Definition 1: _Communications medium_"
-	A communication medium is the physical path over which a signal is transmitted.
+!!! hint "Definición 1: _Medio de transmisión_"
+	Un medio de transmisión es el camino físico sobre el que se transmite una señal. 
 
-!!! hint "Definition 2: _Signal_"
-	Signals are the electromagnetic voltages or waves transmitted
-	on a physical wired or wireless medium.
+!!! hint "Definición 2: _Señal_"
+	Las señales son los voltajes electromagnéticos o las ondas que se transmiten en un medio físico cableado o inalámbrico. 
 
-For example, take the case when we say “Hello” into a landline
-telephone. The telephone handset converts the sounds into an
-electrical voltage signal. Then, this signal is transmitted to the
-receiving telephone by wires; and at the receiver, it is converted back
-into sound.
+Por ejemplo, pensemos en cuendo decimos “Hola” a través de un teléfono fijo. El auricular del teléfono convierte los sonidos en una señal de voltaje eléctrico. Luego, esta señal se transmite al teléfono receptor por medio de cables; y en el receptor, se convierte nuevamente en sonido. 
 
-!!! attention "Exercise 1"
-	What is the wireless physical medium that makes radio communication
-	possible?
+!!! attention "Ejercicio 1"
+	¿Cuál es el medio físico que hace posible la comunicación por radio?
 
-Computers, and also your micro:bit, cannot process signals without
-converting them to binary data: 0s and 1s. Also, the binary data
-processed by computers need to be converted into signals before they can
-travel a communication medium.
+Los ordenadores, y también la micro:bit, no pueden procesar señales sin convertirlas en datos binarios: 0s y 1s. Además, los datos binarios procesados por los ordenadores deben convertirse en señales antes de que puedan viajar por un medio de transmisión. 
 
-!!! hint "Definition 3: _Bit_"
-	A bit is the smallest unit of data in a computer. It is like an
-	atom. A bit can be either a 1 or a 0.
+!!! hint "Definición 3: _Bit_"
+	Un bit es la unidad de datos más pequeña en una computadora. Es como un átomo. Un bit puede ser un 1 o un 0.
 
-A group of 8 bits is a *byte*. Table \[tab:bit\] shows other example
-groupings.
+Un grupo de 8 bits es un *byte*. La Tabla \[tab:bit\] muestra otros ejemplos: 
 
-|**Name** | **Size**|
+|**Nombre** | **Tamaño**|
 |---------|:--------|
 |Byte (B) | 8 bits |
 |Kilobyte (KB) | 1024 bytes |
@@ -72,18 +56,12 @@ groupings.
 | Gigabyte (GB) | 1024 megabytes |
 | Terabyte (TB) | 1024 gigabytes |
 
-By connecting computers or any device through different communications
-mediums, we create networks.
+Al conectar ordenadores o dispositivos a través de diferentes medios de transmisión se crean las redes. 
 
-!!! hint "Definition 4: _Network_"
-	A computer network is a collection of computers or devices,
-	which are connected to communicate with each other. In a computer
-	network, there is at least two computers. Two or more networks can
-	connect to form a larger network: a network of networks. Internet is a
-	massive network of networks!
+!!! hint "Definición 4: _Red_"
+	Una red de ordenadores es una colección de ordenadores o dispositivos que están conectados para poder comunicarse entre sí. En una red de ordenadores hay, por tanto, al menos dos odendaores. Ademas, dos o más redes pueden conectarse para formar una red más grande: una red de redes. ¡Internet es una red de redes gigante! 
 
-In this chapter, you will create a network of two micro:bits, connected
-via wires.
+En este capítulo vas a crear una red formada por dos micro:bits que se conectan a través de cables.
 
 Programming: A Simple Heart Transfer
 ------------------------------------
