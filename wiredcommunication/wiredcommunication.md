@@ -92,6 +92,7 @@ Para probar la conexión usa el programa de la figura; presiona el botón A en c
 
 
 ![Programa telégrafo: envía una señal por el Pin 1 al presionar botón A. Enciende el píxel (4,4) al recibir una señal en Pin 2](telegrafo_base.png)
+
 !!! note ""
 	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit Telegraph program. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
 
@@ -99,89 +100,26 @@ Una vez que tengas la red funcionando correctamente contesta las siguientes preg
 - ¿Cuántos bits se utilizan para enviar la señal para que la otra placa encienda la luz (4,4)?
 - Sin modificar el funcionamiento actual del botón A, ¿podríamos usar el botón B para enviar otra señal, de manera que se encienda el píxel (4,0) de la otra placa? ¿Cómo? ¿Se puede implementar en las dos placas?
 
-### Task 1: Watch the “Simple Heart Transfer”
+### Tarea 2 (extra): "Envío de corazones"
 
-**Description:** We have created a video to show how your connections
-and program should work in this activity.
-See the video at [Simple Heart Transfer](https://microbit.nominetresearch.uk/networking-book/simple_heart_transfer.html).
+**Descripción:** Vas a intentar replicar el funcionamiento del programa que se muestra en el siguiente vídeo: [Envo de corazones](https://microbit.nominetresearch.uk/networking-book/simple_heart_transfer.html).
 
-**Instruction:** Watch the Simple Heart Transfer in the video.
+**Instrucciones:** 
+La micro:bit 1 debe programarse así:
+1. Al iniciar muestra un icono de corazón.
+2. Cuando se inclina sobre micro:bit 2, envía un pulso a micro:bit 2 sobre el pin correcto y borra el corazón.
+3. Cuando micro:bit 1 recibe un pulso en su pin correcto, muestra un icono de corazón.
 
-**Important: Do not skip this
-task. It will help you to test whether the files you downloaded for Task 2
-work. It will also help you to write your program for this chapter.**
+La micro:bit 2 debe programarse así:
+1. Muestra un icono de corazón cuando recibe un pulso en su pin correcto.
+2. Cuando se inclina sobre micro:bit 1, envía un pulso a micro:bit 1 sobre el pin correcto y borra el corazón
 
+Avanzado...
+-----------
 
-### Task 3: Test “Simple Heart Transfer” Hex files
+!!! attention "Ejercicio avanzado"
+	Echa un ojo a este vídeo [Wired\_pixel\_by\_pixel\_heart.m4v](https://microbit.nominetresearch.uk/networking-book/pixel_heart_transfer.html). Debate con tus colegas de equipo cómo se pueden enviar datos más complejos a través de cables. 
 
-**Description:** We provided two files, named [microbit1\_wired\_simpleheart\_secret.hex](microbit1_wired_simpleheart_secret.hex) and
-[microbit2\_wired\_simpleheart\_secret.hex](microbit2_wired_simpleheart_secret.hex) in this folder,
-for you to test how the final program should work. These files will run
-on your micro:bits, but you will not be able to display the code using
-the JavaScript Blocks editor.
-
-**Instruction:** Download the *Simple Heart Transfer* code into your
-micro:bits. There are two different hex files for micro:bit 1 and
-micro:bit 2. Test the program by tilting your micro:bits and checking
-when the heart icon is displayed.
-
-### Task 4: Program a heart transfer
-
-**Description:** In this task, you will program your micro:bits to get a
-similar behaviour to what you observed in the Tasks 2 and 3. To do this
-task, you will need to think about the following questions:
-
-1. Which input will the micro:bits react to in your program?
-
-2. How do the microbits send data to each other?
-
-3. **Hint: Do you think they are sending each other an actual Heart
-    icon?**
-
-**Instruction:** For question 1, look at the options under the JavaScript Blocks editor  *Input*
-menu. For question 2, use the example Telegraph program above. For question 3, here is another big hint.
-**Hint: Assume micro:bit 2 knows that it will be receiving a Heart icon
-from micro:bit 1.**
-
-Program your micro:bit 1 so that:
-
-1. It displays a heart icon until it is tilted over micro:bit 2.
-
-2. When tilted over micro:bit 2, it sends a pulse to micro:bit 2 over
-    the correct pin.
-
-3. When micro:bit 1 receives a pulse on its correct pin, it displays a
-    heart icon .
-
-Program your micro:bit 2 so that:
-
-1. It displays a heart icon when it receives a pulse on its
-    correct pin.
-
-2. When tilted over micro:bit 1, it sends a pulse to micro:bit 2 over
-    the correct pin.
-
-Extended activity
------------------
-
-!!! attention "Exercise 2"
-	Watch the [Wired\_pixel\_by\_pixel\_heart.m4v](https://microbit.nominetresearch.uk/networking-book/pixel_heart_transfer.html). Based on this video, discuss with your teammate how you can send more complex data across wires. Make a proposal and discuss with others.
-
-!!! attention "Exercise 3"
-	Watch the two videos under the Resources section. How are they related to your activity? Discuss.
-
-Problems
---------
-
-1. What is a bit?
-
-2. How many bits are there in a kilobyte?
-
-3. Explain the use of Ground (GND) and 3V pins in your micro:bit.
-
-4. How many bits did you send to the receiver in your “Simple Heart Transfer” program?
-
-5. How are the bits in your program sent over the wire in your program?
 
 Resources
 ---------
