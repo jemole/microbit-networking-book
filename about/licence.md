@@ -1,6 +1,6 @@
-&copy; Nominet 2017-2019
+&copy; Jesús Moreno León 2019-2020
 
-**Authors:** Cigdem Sengul and Anthony Kirby
+**Authors:** Jesús Moreno León. Adaptado de la obra original de Cigdem Sengul y Anthony Kirby
 
 [https://microbit.nominetresearch.uk/networking-book-online/](https://microbit.nominetresearch.uk/networking-book-online/)
 
