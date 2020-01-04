@@ -91,9 +91,13 @@ En la figura se muestra un ejemplo. Mira los colores con cuidado (aunque quizá 
 Para probar la conexión usa el programa de la figura; presiona el botón A en cada micro:bit y verifica que el LED se ilumina en la placa de tu colega. Hay que usar los bloques del menú *Pines*. Este menú está en *Avanzado*. Haz clic en el enlace *Más* para ver todas las opciones.
 
 
-![Programa telégrafo: envía una señal por el Pin 1 al presionar botón A. Enciende el píxel (4,4) al recibir una señal en Pin 2](Telegrafo_base.png)
+![Programa telégrafo: envía una señal por el Pin 1 al presionar botón A. Enciende el píxel (4,4) al recibir una señal en Pin 2](telegrafo_base.png)
 !!! note ""
 	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit Telegraph program. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
+
+Una vez que tengas la red funcionando correctamente contesta las siguientes preguntas:
+- ¿Cuántos bits se utilizan para enviar la señal para que la otra placa encienda la luz (4,4)?
+- Sin modificar el funcionamiento actual del botón A, ¿podríamos usar el botón B para enviar otra señal, de manera que se encienda el píxel (4,0) de la otra placa? ¿Cómo? ¿Se puede implementar en las dos placas?
 
 ### Task 1: Watch the “Simple Heart Transfer”
 
