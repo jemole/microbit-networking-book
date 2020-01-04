@@ -63,21 +63,37 @@ Al conectar ordenadores o dispositivos a través de diferentes medios de transmi
 
 En este capítulo vas a crear una red formada por dos micro:bits que se conectan a través de cables.
 
-Programming: A Simple Heart Transfer
-------------------------------------
+Programando mi red de micro:bits
+--------------------------------
 
-In this section, you will connect two micro:bits via wires.
-You will send a *Heart* icon from one micro:bit to another.
-The figure below shows how a heart icon should look like on the
-micro:bit display [^1].
+### Tarea 0: Los pines de la placa micro:bit
 
-![Micro:bit displaying a heart icon.](microbit-heart-blue.png)
+Antes de comenzar, como vamos a conectar nuestras micro:bits usando cables, es importante comprender bien para qué se usa cada uno de los pines de conexión. Para ello, lee el artículo [Los "pines" del BBC micro:bit](https://microbit.org/es/guide/hardware/pins/) y contesta las siguientes preguntas: 
+
+- ¿Para qué se usan los pines 0, 1 y 2?
+- ¿Para qué se usan los pines GND y 3V?
+
+
+### Tarea 1: Conecta tus micro:bits y prueba a enviar datos
+
+**Descripción:** Vas a conectar dos micro:bits usando cables, y utilizars un programa para comprobar que la conexión funciona correctamente. 
+
+**Instrucciones:**  Utilizando cables con conector cocodrilo, conecta el pin 3V entre las dos micro:bits, y conecta también el pin pins. Después, conecta el pin 1 en una micro:bit al pin 2 de la otra placa, y viceversa.  Ten cuidado al conectar los cables: dos de los cables van directos (3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).
+
+En la figura se muestra un ejemplo. Mira los colores con cuidado (aunque quizá los colores que tú vas a usar sean diferentes, tienen que hacer la misma conexión).
+
+![Conectar dos micro:bits.Dos de los cabes se conectan de manera directa(3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).](Microbit_wired.png)
 
 !!! note ""
-	**Figure 1:** Micro:bit displaying a heart icon
+	**Figura 1:** Conectar dos micro:bits.Dos de los cabes se conectan de manera directa(3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1)
 
-This activity is best done with a teammate. In the following, you will go
-through four tasks to program your micro:bits.
+
+Para probar la conexión usa el programa de la figura; presiona el botón A en cada micro:bit y verifica que el LED se ilumina en la placa de tu colega. Hay que usar los bloques del menú *Pines*. Este menú está en *Avanzado*. Haz clic en el enlace *Más* para ver todas las opciones.
+
+
+![Programa telégrafo: envía una señal por el Pin 1 al presionar botón A. Enciende el píxel (4,4) al recibir una señal en Pin 2](Telegrafo_base.png)
+!!! note ""
+	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit Telegraph program. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
 
 ### Task 1: Watch the “Simple Heart Transfer”
 
@@ -91,57 +107,6 @@ See the video at [Simple Heart Transfer](https://microbit.nominetresearch.uk/net
 task. It will help you to test whether the files you downloaded for Task 2
 work. It will also help you to write your program for this chapter.**
 
-### Task 2: Connect your micro:bits and test telegraph
-
-**Description:** You will connect your micro:bits using wires, and use
-a program to check the connections. You can follow the instructions below, or
-there is a more detailed step-by-step instructions in the *Micro-bit telegraph activity*[^2] on the micro:bit website.
-
-**Instruction:**  Using crocodile clips, connect the 3V pin between the
-two micro:bits, and connect the GND pins. Then connect pin 1 on one
-micro:bit to pin 2, and vice-versa.  Be careful to get the crocodile clip connections right: two of
-the wires connect straight (3V-to-3V and
-GND-to-GND) but the other two cross over (1-to-2
-and 2-to-1).
-
-See the figure showing connections for an example, and look at the colours
-carefully (you don’t need to use the same colours of course, but they
-must make the same connections).
-
-![Wiring micro:bits.Two of the wires connect straight(3V-to-3V and GND-to-GND) but the other two cross over (1-to-2 and 2-to-1).](Microbit_wired.png)
-
-!!! note ""
-	**Figure 2:** Wiring micro:bits. Two of the wires connect straight
-	(3V-to-3V and GND-to-GND) but the other two cross over (1-to-2 and 2-to-1)
-
-
-To test, use the program from the figure showing the Telegraph program; press button A
-on each micro:bit and check that the LED illuminates on the other one. You will use the blocks from the
-*Pins* menu. This menu is under *Advanced*. Click on the *More* link to
-see all the options.
-
-```blocks
-let signal = 0
-input.onButtonPressed(Button.A, function () {
-    pins.digitalWritePin(DigitalPin.P1, 1)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P1, 0)
-})
-basic.forever(function () {
-    signal = pins.digitalReadPin(DigitalPin.P2)
-    if (signal == 1) {
-        led.plot(2, 2)
-    } else {
-        led.unplot(2, 2)
-    }
-})
-```
-
-!!! note ""
-	**Figure 3:** Telegraph program. Pressing button A sends a signal to the 
-	other side using Pin 1. The receiver micro:bit listens on Pin 2 to check 
-	if a signal is received. If there is a signal, it lights up the (2,2) pixel 
-	on the display.
 
 ### Task 3: Test “Simple Heart Transfer” Hex files
 
