@@ -76,16 +76,16 @@ Antes de comenzar, como vamos a conectar nuestras micro:bits usando cables, es i
 
 ### Tarea 1: Conecta tus micro:bits y prueba a enviar datos
 
-**Descripción:** Vas a conectar dos micro:bits usando cables, y utilizars un programa para comprobar que la conexión funciona correctamente. 
+**Descripción:** Vas a conectar dos micro:bits usando cables, y utilizarás un programa para comprobar que la conexión funciona correctamente. 
 
-**Instrucciones:**  Utilizando cables con conector cocodrilo, conecta el pin 3V entre las dos micro:bits, y conecta también el pin pins. Después, conecta el pin 1 en una micro:bit al pin 2 de la otra placa, y viceversa.  Ten cuidado al conectar los cables: dos de los cables van directos (3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).
+**Instrucciones:**  Utilizando cables con conector cocodrilo, conecta el pin 3V entre las dos micro:bits, y conecta también el pin GND. Después, conecta el pin 1 de una micro:bit al pin 2 de la otra placa, y viceversa.  Ten cuidado al conectar los cables: dos de los cables van directos (3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).
 
-En la figura se muestra un ejemplo. Mira los colores con cuidado (aunque quizá los colores que tú vas a usar sean diferentes, tienen que hacer la misma conexión).
+En la figura se muestra un ejemplo. Mira los colores con cuidado (aunque quizá los colores que uses sean diferentes, tienen que hacer la misma conexión).
 
-![Conectar dos micro:bits.Dos de los cabes se conectan de manera directa(3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).](Microbit_wired.png)
+![Conectar dos micro:bits.Dos de los cabes se conectan de manera directa (3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1).](Microbit_wired.png)
 
 !!! note ""
-	**Figura 1:** Conectar dos micro:bits.Dos de los cabes se conectan de manera directa(3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1)
+	**Figura 1:** Conectar dos micro:bits. Dos de los cabes se conectan de manera directa (3V-a-3V y GND-a-GND) pero los otros dos van cruzados (1-a-2 y 2-a-1)
 
 
 Para probar la conexión usa el programa de la figura; presiona el botón A en cada micro:bit y verifica que el LED se ilumina en la placa de tu colega. Hay que usar los bloques del menú *Pines*. Este menú está en *Avanzado*. Haz clic en el enlace *Más* para ver todas las opciones.
