@@ -23,8 +23,8 @@ En este capítulo vas a crear una red usando cables para conectar micro:bits. Y 
     1 caja para las pilas y dos pilas AAA
     1 colega
 
-Antecedentes
-------------
+Un poco de teoría...
+--------------------
 
 Para que dos micro:bits puedan enviarse mensajes tienen que estar conectadas de algún modo, bien mediante cables o de forma inalámbrica - a esto se le llama *medio de transmisión*.
 
@@ -59,7 +59,7 @@ Un grupo de 8 bits es un *byte*. La Tabla \[tab:bit\] muestra otros ejemplos:
 Al conectar ordenadores o dispositivos a través de diferentes medios de transmisión se crean las redes. 
 
 !!! hint "Definición 4: _Red_"
-	Una red de ordenadores es una colección de ordenadores o dispositivos que están conectados para poder comunicarse entre sí. En una red de ordenadores hay, por tanto, al menos dos odendaores. Ademas, dos o más redes pueden conectarse para formar una red más grande: una red de redes. ¡Internet es una red de redes gigante! 
+	Una red de ordenadores es una colección de ordenadores o dispositivos que están conectados para poder comunicarse entre sí. En una red de ordenadores hay, por tanto, al menos dos dispositivos. Ademas, dos o más redes pueden conectarse para formar una red más grande: una red de redes. ¡Internet es una red de redes gigante! 
 
 En este capítulo vas a crear una red formada por dos micro:bits que se conectan a través de cables.
 
