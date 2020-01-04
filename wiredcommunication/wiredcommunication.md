@@ -26,7 +26,7 @@ En este capítulo vas a crear una red usando cables para conectar micro:bits. Y 
 Antecedentes
 ------------
 
-Para que dos micro:bits puedan enviarse mensajes tienen que estar conectadas de algún modo, bien miediante cables o de forma inalámbrica - a esto se le llama *medio de transmisión*.
+Para que dos micro:bits puedan enviarse mensajes tienen que estar conectadas de algún modo, bien mediante cables o de forma inalámbrica - a esto se le llama *medio de transmisión*.
 
 Un mensaje puede ser un texto como “Hola”, un número como “9”, o un icono de una imagen. Las micro:bits convierten cada mensaje en una señal y la envían a través del *medio de transmisión*.
 
@@ -36,7 +36,7 @@ Un mensaje puede ser un texto como “Hola”, un número como “9”, o un ico
 !!! hint "Definición 2: _Señal_"
 	Las señales son los voltajes electromagnéticos o las ondas que se transmiten en un medio físico cableado o inalámbrico. 
 
-Por ejemplo, pensemos en cuendo decimos “Hola” a través de un teléfono fijo. El auricular del teléfono convierte los sonidos en una señal de voltaje eléctrico. Luego, esta señal se transmite al teléfono receptor por medio de cables; y en el receptor, se convierte nuevamente en sonido. 
+Por ejemplo, pensemos qué ocurre cuando decimos “Hola” a través de un teléfono fijo. El auricular del teléfono convierte los sonidos en una señal de voltaje eléctrico. Luego, esta señal se transmite al teléfono receptor por medio de cables; y en el receptor, se convierte nuevamente en sonido. 
 
 !!! attention "Ejercicio 1"
 	¿Cuál es el medio físico que hace posible la comunicación por radio?
