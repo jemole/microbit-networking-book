@@ -97,8 +97,10 @@ Para probar la conexión usa el programa de la figura; presiona el botón A en c
 	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit Telegraph program. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
 
 Una vez que tengas la red funcionando correctamente contesta las siguientes preguntas:
-- ¿Cuántos bits se utilizan para enviar la señal para que la otra placa encienda la luz (4,4)?
+- ¿Cuántos bits se utilizan para enviar la señal para que la otra placa encienda el píxel (4,4)?
 - Sin modificar el funcionamiento actual del botón A, ¿podríamos usar el botón B para enviar otra señal, de manera que se encienda el píxel (4,0) de la otra placa? ¿Cómo? ¿Se puede implementar en las dos placas?
+- ¿Cómo habría que modificar el código para que en la micro:bit 2 estuviera encendido el píxel (4,4) mientras se mantuviera el botón A pulsado en micro:bit 1, y que se apagara en micro:bit 2 al soltar el botón 1 en micro:bit 1? Programa esta nueva versión.
+
 
 ### Tarea 2 (extra): "Envío de corazones"
 
