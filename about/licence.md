@@ -4,7 +4,7 @@
 
 [https://microbit.nominetresearch.uk/networking-book-online/](https://microbit.nominetresearch.uk/networking-book-online/)
 
-![Creative Commons 4.0 BY SA](by-sa.svg) Nominet 2017-2019
+![Creative Commons 4.0 BY SA](by-sa.svg) 
 
 This work is made available under the Creative Commons Attribution-ShareAlike 4.0 International
 License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
