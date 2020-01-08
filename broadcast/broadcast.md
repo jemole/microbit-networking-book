@@ -29,7 +29,7 @@ Resumiendo, este capítulo nos servirá para aprender:
 Antecedentes
 ------------
 
-La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que irradian desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
+La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que se emiten desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
 
 !!! hint "Definición 1: _Broadcast_"
 	En redes, la comunicación broadcast (o de difusión) significa que el mensaje enviado por un remitente se transmite a todos los receptores en una red.
@@ -41,59 +41,8 @@ Finalmente, los receptores pueden negarse a recibir mensajes de difusión si no 
 !!! hint "Definición 2: _Dirección broadcast_"
 	Una dirección broadcast (o de difusión) es una dirección especial que indica que todos los dispositivos de la red deberían recibir este mensaje.
 
-En estos ejercicios con las placas micro:bit la dirección broadcast se va a configurar estableciendo el ID de grupo de la radio de micro: bit. Por tanto, todas las micro:bits deben tener la misma ID de grupo para que la comunicación broadcast funcione. 
+En estos ejercicios con las placas micro:bit la dirección broadcast se va a configurar estableciendo el ID de grupo de la radio de micro:bit. Por tanto, todas las placas micro:bits deben tener el mismo ID de grupo para que la comunicación broadcast funcione. 
 
-### Further reading
-
-Let’s look at wireless communication in a bit more detail. You already
-learned that radio waves are essentially electromagnetic waves.
-Scientists have found that electromagnetic waves can be arranged
-together on a scale called electromagnetic spectrum. The figure below
-shows the electromagnetic spectrum, and the different electromagnetic
-waves.
-
-![Electromagnetic spectrum](EM.png)
-
-!!! note ""
-	**Figure 1:** Electromagnetic spectrum
-
-One thing to notice in the figure that radio waves are within the
-frequencies 30 KHz and 300 GHz in the electromagnetic spectrum. Radio
-waves include microwaves, which have frequencies between 300 MHz and
-300 GHz. Radio waves travel fast - they move at the speed of light, which
-is around 300,000 km per second!
-
-Let’s define frequency more formally. The frequency of a wave is the
-number of waves passing a point in one second. The unit of frequency is
-hertz (Hz) . Like the examples above, you will typically see that
-frequencies are given as megahertz (MHz) or gigahertz (GHz). 1 MHz is
-equal to 1 million (10^6) Hz. 1 GHz is equal to 1 billion (10^9) Hz.
-Your micro:bit’s radio operates in the frequency range of 2402 MHz to
-2480 MHz. What other wireless technologies operate in the same range as
-the micro:bit’s radio? **Hint: The resources section at the end of this
-chapter may be useful to answer this question.**
-
-In addition to frequency, another important parameter of electromagnetic
-waves is wavelength. The wavelength of a wave is the distance between a
-point on the wave and the same point on the next wave. The unit of
-wavelength is meters. The figure below shows an example of a
-wavelength[^1].
-
-![Wavelength](wavelength.png)
-
-!!! note ""
-	**Figure 2:** Wavelength
-
-
-Frequency and wavelength are related. The relationship between frequency
-and wavelength is given by a formula: 
-
-wavelength (meter) = Speed of light (meter/second)/Frequency (hertz)  
-
-From this equation, we
-see that the higher the frequency, the shorter the wavelength. You can
-see this also in the spectrum figure. How long do you think your
-micro:bit’s radio waves are?
 
 Programming: Receiving and sending broadcast messages
 -----------------------------------------------------
