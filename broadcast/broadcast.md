@@ -26,126 +26,42 @@ Resumiendo, este capítulo nos servirá para aprender:
     2 soportes para pilas y 4 pilas AAA
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-Wireless communication uses electromagnetic radiation - radio waves and
-microwaves - to send information. Radio waves are essentially
-electromagnetic waves radiating from an antenna (like the antennas of a
-WiFi router). So, wireless communication is always broadcast. In other
-words, the signals from the WiFi routers can be heard by other WiFi
-devices tuned into the same radio frequency. Read more about frequency
-in the Further Reading section at the end.
+La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que se emiten desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
 
-!!! hint "Definition 1: _Broadcast_"
-	In networking, broadcast communication means the message
-	of a single sender is transmitted to all receivers in a network.
+!!! hint "Definición 1: _Broadcast_"
+	En redes, la comunicación broadcast (o de difusión) significa que el mensaje enviado por un remitente se transmite a todos los receptores en una red.
 
-But, does this mean that broadcast is only possible with wireless
-communications? No, but it is more cumbersome. For instance, in wired
-communication, broadcast is possible by repeating the same message over
-all the wires.
+Pero, ¿significa esto que la comunicación broadcast solo es posible con las comunicaciones inalámbricas? No, pero es más engorroso. Por ejemplo, en la comunicación por cable la comunicación broadcast es posible repitiendo el mismo mensaje en todos los cables.
 
-Finally, receivers may refuse to receive broadcast messages if they are
-not labeled with a *broadcast address*.
+Finalmente, los receptores pueden negarse a recibir mensajes de difusión si no están etiquetados con una *dirección de broadcast*.
 
-!!! hint "Definition 2: _Broadcast address_"
-	A broadcast address is a special address which
-	says all devices in the network should receive this message.
+!!! hint "Definición 2: _Dirección broadcast_"
+	Una dirección broadcast (o de difusión) es una dirección especial que indica que todos los dispositivos de la red deberían recibir este mensaje.
 
-In a micro:bit, the broadcast address can be configured by setting the
-group ID of micro:bit’s radio. All the micro:bits need to have the same
-group ID for the broadcast to work. You will experiment with
-broadcasting with micro:bits in the next section.
+En estos ejercicios con las placas micro:bit la dirección broadcast se va a configurar estableciendo el ID de grupo de la radio de micro:bit. Por tanto, todas las placas micro:bits deben tener el mismo ID de grupo para que la comunicación broadcast funcione. 
 
-### Further reading
 
-Let’s look at wireless communication in a bit more detail. You already
-learned that radio waves are essentially electromagnetic waves.
-Scientists have found that electromagnetic waves can be arranged
-together on a scale called electromagnetic spectrum. The figure below
-shows the electromagnetic spectrum, and the different electromagnetic
-waves.
+¡A programar!: Recibir y enviar mensajes broadcast
+--------------------------------------------------
 
-![Electromagnetic spectrum](EM.png)
+En esta actividad vas a a prender a recibir mensajes, y también a enviar mensajes broadcast que lleguen a todas las micro:bits.
+
+La placa del profe es la que va a enviar los mensajes que tienes que tratar de recibir. 
+
+### Tarea 1: Configura la radio de tu placa
+
+**Descripción:** Para la comunicación broadcast necesitamos que todas las micro:bits tengan el mismo ID de grupo de radio. Este identificador será la dirección de broadcast. Es algo parecido a lo que hacemos cuando sintonizamos el canal correcto para recibir una transmisión de televisión o una emisora de radio.
+
+**Instrucciones:** Programa tu micro:bit estableciendo el ID de grupo de radio a 0. Para ello tendrás que usar un bloque del menú Radio, como se muestra en la figura a continuación. Puedes aprender más sobre bloques de radio en <https://makecode.microbit.org/reference/radio>.
+
+
+![Establecer el ID de grupo de radio en MakeCode.](RadioSetGroup.png)
 
 !!! note ""
-	**Figure 1:** Electromagnetic spectrum
-
-One thing to notice in the figure that radio waves are within the
-frequencies 30 KHz and 300 GHz in the electromagnetic spectrum. Radio
-waves include microwaves, which have frequencies between 300 MHz and
-300 GHz. Radio waves travel fast - they move at the speed of light, which
-is around 300,000 km per second!
-
-Let’s define frequency more formally. The frequency of a wave is the
-number of waves passing a point in one second. The unit of frequency is
-hertz (Hz) . Like the examples above, you will typically see that
-frequencies are given as megahertz (MHz) or gigahertz (GHz). 1 MHz is
-equal to 1 million (10^6) Hz. 1 GHz is equal to 1 billion (10^9) Hz.
-Your micro:bit’s radio operates in the frequency range of 2402 MHz to
-2480 MHz. What other wireless technologies operate in the same range as
-the micro:bit’s radio? **Hint: The resources section at the end of this
-chapter may be useful to answer this question.**
-
-In addition to frequency, another important parameter of electromagnetic
-waves is wavelength. The wavelength of a wave is the distance between a
-point on the wave and the same point on the next wave. The unit of
-wavelength is meters. The figure below shows an example of a
-wavelength[^1].
-
-![Wavelength](wavelength.png)
-
-!!! note ""
-	**Figure 2:** Wavelength
-
-
-Frequency and wavelength are related. The relationship between frequency
-and wavelength is given by a formula: 
-
-wavelength (meter) = Speed of light (meter/second)/Frequency (hertz)  
-
-From this equation, we
-see that the higher the frequency, the shorter the wavelength. You can
-see this also in the spectrum figure. How long do you think your
-micro:bit’s radio waves are?
-
-Programming: Receiving and sending broadcast messages
------------------------------------------------------
-
-In this activity, you will learn how you can receive a message from a
-broadcasting micro:bit. Also, you will send broadcast messages yourself.
-
-If you are running this activity with your teacher in a classroom, your
-teacher’s micro:bit will be the broadcast sender and you will try to
-receive from this micro:bit.
-
-If you are running this activity alone or with a friend, you can find
-the example codes for the broadcasting micro:bit in this folder. You can use these examples to test your receiver
-code by downloading it to a second micro:bit. These files will run on
-your micro:bits, but you will not be able to display the code using
-the JavaScript Blocks editor.
-
-You will complete three tasks to experiment with broadcasting:
-
-### Task 1: Configure your radio
-
-**Description:** For broadcast communication, you need all your
-micro:bits to have the same radio group ID. This group ID will be the
-broadcast address. This is like tuning into the correct channel to
-receive a TV broadcast.
-
-**Instruction:** Program your receiver micro:bit’s group ID to 0. This
-is the group ID used in the example broadcast sender programs [^2]. For
-this, use the code block for setting the radio group in the MakeCode JavaScript Blocks editor. It’s under
-the Radio menu, as shown in the figure below. You can
-learn about the radio blocks in more detail at
-<https://makecode.microbit.org/reference/radio>.
-
-![Setting the Radio group in MakeCode.](RadioSetGroup.png)
-
-!!! note ""
-	**Figure 3:** Setting the Radio group in MakeCode
+	**Figura 1:** Establecer el ID de grupo de radio en MakeCode
 
 
 ### Task 2: Receive a broadcast message
