@@ -1,35 +1,30 @@
-Broadcast communication: One to All
-===================================
+Comunicación broadcast: De uno a todos
+======================================
 
 ![Chapter 2 image](chapter2.png)
 
-Introduction
+Introducción
 ------------
 
-Wireless (radio) communication, for example WiFi and mobile phones, is a
-popular way to connect to the Internet. In [Communication over Wires](../wiredcommunication/wiredcommunication.md), you
-connected two micro:bits via wires. In this chapter, you will connect
-your micro:bits using radios.
+La comunicación inalámbrica (radio), como por ejemplo el WiFI o los teléfonos móviles, es una forma popular de conectarse a Internet. En el capítulo [Comunicación por cables](../wiredcommunication/wiredcommunication.md), ya conectaste dos placas micro:bits usando cables. Hoy las conectaremos usando las radios.
 
-Doing this, you will not only learn how to use your micro:bit’s radio
-but also, broadcast communication. Wireless communication is typically
-broadcast: one micro:bit can send messages to all micro:bits. In
-summary, this chapter covers:
+En el proceso no solo aprenders a utilizar la radio de tu micro:bit; también aprenderás acerca de la comunicación broadcast (o difusión).  Las comunicaciones inalámbricas suelen ser broadcast; es decir, una micro:bit puede enviar mensajes a todas las micro:bits. 
 
-- *wireless* communication and how to configure the micro:bit radio
+Resumiendo, este capítulo nos servirá para aprender:
 
-- the concept of *broadcast* and *broadcast address*
+- comunicación *inalámbrica* y cómo configurar la radio de las placas micro:bit
 
-- receiving and sending different message types (for example, a number
-    or a string) using broadcast
+- el concepto de *broadcast* y *dirección broadcast*
 
-- when broadcast is useful, and when it isn’t
+- envir y recibir distintos tipos de mensajes (por ejemplo, un número o un texto) utilizando broadcast
 
-### What you’ll need
+- en qué ocasiones resulta útil utilizar broadcast y en cuáles no
+
+### Qué necesitas
 
     2 micro:bits
-    2 battery holders, and 4 AAA batteries
-    1 teammate
+    2 soportes para pilas y 4 pilas AAA
+    1 colega
 
 Background
 ----------
