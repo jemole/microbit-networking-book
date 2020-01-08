@@ -26,37 +26,22 @@ Resumiendo, este capítulo nos servirá para aprender:
     2 soportes para pilas y 4 pilas AAA
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-Wireless communication uses electromagnetic radiation - radio waves and
-microwaves - to send information. Radio waves are essentially
-electromagnetic waves radiating from an antenna (like the antennas of a
-WiFi router). So, wireless communication is always broadcast. In other
-words, the signals from the WiFi routers can be heard by other WiFi
-devices tuned into the same radio frequency. Read more about frequency
-in the Further Reading section at the end.
+La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que irradian desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
 
-!!! hint "Definition 1: _Broadcast_"
-	In networking, broadcast communication means the message
-	of a single sender is transmitted to all receivers in a network.
+!!! hint "Definición 1: _Broadcast_"
+	En redes, la comunicación broadcast (o de difusión) significa que el mensaje enviado por un remitente se transmite a todos los receptores en una red.
 
-But, does this mean that broadcast is only possible with wireless
-communications? No, but it is more cumbersome. For instance, in wired
-communication, broadcast is possible by repeating the same message over
-all the wires.
+Pero, ¿significa esto que la comunicación broadcast solo es posible con las comunicaciones inalámbricas? No, pero es más engorroso. Por ejemplo, en la comunicación por cable la comunicación broadcast es posible repitiendo el mismo mensaje en todos los cables.
 
-Finally, receivers may refuse to receive broadcast messages if they are
-not labeled with a *broadcast address*.
+Finalmente, los receptores pueden negarse a recibir mensajes de difusión si no están etiquetados con una *dirección de broadcast*.
 
-!!! hint "Definition 2: _Broadcast address_"
-	A broadcast address is a special address which
-	says all devices in the network should receive this message.
+!!! hint "Definición 2: _Dirección broadcast_"
+	Una dirección broadcast (o de difusión) es una dirección especial que indica que todos los dispositivos de la red deberían recibir este mensaje.
 
-In a micro:bit, the broadcast address can be configured by setting the
-group ID of micro:bit’s radio. All the micro:bits need to have the same
-group ID for the broadcast to work. You will experiment with
-broadcasting with micro:bits in the next section.
+En estos ejercicios con las placas micro:bit la dirección broadcast se va a configurar estableciendo el ID de grupo de la radio de micro: bit. Por tanto, todas las micro:bits deben tener la misma ID de grupo para que la comunicación broadcast funcione. 
 
 ### Further reading
 
