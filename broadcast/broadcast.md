@@ -58,7 +58,7 @@ La placa del profe es la que va a enviar los mensajes que tienes que tratar de r
 **Instrucciones:** Programa tu micro:bit estableciendo el ID de grupo de radio a 0. Para ello tendrás que usar un bloque del menú Radio, como se muestra en la figura a continuación. Puedes aprender más sobre bloques de radio en <https://makecode.microbit.org/reference/radio>.
 
 
-![Establecer el ID de grupo de radio en MakeCode.](RadioSetGroup.png)
+![Establecer el ID de grupo de radio en MakeCode.](RadioSetGroup_Es.png)
 
 !!! note ""
 	**Figura 1:** Establecer el ID de grupo de radio en MakeCode
