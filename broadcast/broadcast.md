@@ -44,42 +44,24 @@ Finalmente, los receptores pueden negarse a recibir mensajes de difusión si no 
 En estos ejercicios con las placas micro:bit la dirección broadcast se va a configurar estableciendo el ID de grupo de la radio de micro:bit. Por tanto, todas las placas micro:bits deben tener el mismo ID de grupo para que la comunicación broadcast funcione. 
 
 
-Programming: Receiving and sending broadcast messages
------------------------------------------------------
+¡A programar!: Recibir y enviar mensajes broadcast
+--------------------------------------------------
 
-In this activity, you will learn how you can receive a message from a
-broadcasting micro:bit. Also, you will send broadcast messages yourself.
+En esta actividad vas a a prender a recibir mensajes, y también a enviar mensajes broadcast que lleguen a todas las micro:bits.
 
-If you are running this activity with your teacher in a classroom, your
-teacher’s micro:bit will be the broadcast sender and you will try to
-receive from this micro:bit.
+La placa del profe es la que va a enviar los mensajes que tienes que tratar de recibir. 
 
-If you are running this activity alone or with a friend, you can find
-the example codes for the broadcasting micro:bit in this folder. You can use these examples to test your receiver
-code by downloading it to a second micro:bit. These files will run on
-your micro:bits, but you will not be able to display the code using
-the JavaScript Blocks editor.
+### Tarea 1: Configura la radio de tu placa
 
-You will complete three tasks to experiment with broadcasting:
+**Descripción:** Para la comunicación broadcast necesitamos que todas las micro:bits tengan el mismo ID de grupo de radio. Este identificador será la dirección de broadcast. Es algo parecido a lo que hacemos cuando sintonizamos el canal correcto para recibir una transmisión de televisión o una emisora de radio.
 
-### Task 1: Configure your radio
+**Instrucciones:** Programa tu micro:bit estableciendo el ID de grupo de radio a 0. Para ello tendrás que usar un bloque del menú Radio, como se muestra en la figura a continuación. Puedes aprender más sobre bloques de radio en <https://makecode.microbit.org/reference/radio>.
 
-**Description:** For broadcast communication, you need all your
-micro:bits to have the same radio group ID. This group ID will be the
-broadcast address. This is like tuning into the correct channel to
-receive a TV broadcast.
 
-**Instruction:** Program your receiver micro:bit’s group ID to 0. This
-is the group ID used in the example broadcast sender programs [^2]. For
-this, use the code block for setting the radio group in the MakeCode JavaScript Blocks editor. It’s under
-the Radio menu, as shown in the figure below. You can
-learn about the radio blocks in more detail at
-<https://makecode.microbit.org/reference/radio>.
-
-![Setting the Radio group in MakeCode.](RadioSetGroup.png)
+![Establecer el ID de grupo de radio en MakeCode.](RadioSetGroup.png)
 
 !!! note ""
-	**Figure 3:** Setting the Radio group in MakeCode
+	**Figura 1:** Establecer el ID de grupo de radio en MakeCode
 
 
 ### Task 2: Receive a broadcast message
