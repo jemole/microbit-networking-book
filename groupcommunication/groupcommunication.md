@@ -1,33 +1,25 @@
-Group communication: One to Many
-================================
+Multicast: De una a muchas
+==========================
 
 ![Chapter 3 image](chapter3.png)
 
-Introduction
+Introducción
 ------------
 
-In the previous chapter, you experimented with broadcast: sending
-messages to everybody. In this chapter, you will learn about sending a
-message so that it just goes to a smaller group of people. This is an
-activity that is best carried out with a large group of friends or class
-mates so that you can experiment with different groups and group sizes.
+En el capítulo anterior experimentamos con la comunicación broadcast,o de difusión, enviando mensajes a todo el mundo. En este capítulo vamos a aprender a enviar mensajes de forma que lleguen a un grupo más pequeño de gente. Para que la actividad fluya mejor vamos a organizarnos en grupos de tres parejas. 
 
-Group communication (also known as multicast) is an interesting concept,
-and enables several of today’s Internet technologies. For
-example, it enables to send videos as fast as possible over the
-Internet. In this chapter, you will learn:
+La comunicación multicast (que también se conoce como multidifusión o comunicación de grupo) es un concepto interesante, y se usa por muchas tecnologías de Internet. Por ejemplo, permite enviar vídeos de forma muy rápida a través de Internet. En este capítulo vamos a aprender sobre:
 
-- The concept of *group communication* and *group* or *multicast
-    address*
+- El concepto de *comunicación multicast* y *grupo* o *dirección multicast*
 
-- When group communication is useful and when it isn’t
+- Situaciones en las que este tipo de comunicación es útil y situaciones en las que no lo es
 
-### What you’ll need
+### ¿Qué vas a necesitar?
 
     2 micro:bits
-    1 whiteboard/board
-    boardmarkers/post-it notes
-    1 teammate
+    1 pizarra
+    tizas o rotuladores o adhesivos para notas
+    varios colegas
 
 Background
 ----------
