@@ -64,44 +64,25 @@ La placa del profe es la que va a enviar los mensajes que tienes que tratar de r
 	**Figura 1:** Establecer el ID de grupo de radio en MakeCode
 
 
-### Task 2: Receive a broadcast message
+### Tarea 2: Recibir mensajes broadcast
 
-**Description:** In this task, you will program your micro:bits to
-receive a message from a broadcasting micro:bit. You will use the example
-broadcast sender programs to test your receiver program.
+**Descripción:** En esta tarea vas a programar tu micro:bit para recibir mensajes broadcast enviados desde otra placa. En este caso, será la placa del profe la que envíe los mensajes broadcast.
 
-When writing your receiver programs, there are two questions you need to
-think about.
+A la hora de escribir tu programa para recibir mensajes hay dos cosas que tienes que tener en cuenta.
 
-1. Which blocks in the JavaScript Blocks editor do you need to use to receive a radio message?
+1. ¿Qué bloques del editor vas a tener que usar para poder recibir un mensaje a través de la radio?
 
-2. Using these blocks, can you receive any type of message, for
-    example, a number or a string?
+2. Haciendo uso de estos bloques, ¿puedes recibir cualquier tipo de mensaje -como por ejemplo un número o un texto?
 
-**Instruction:** First, you will start by programming micro:bits to
-receive a number. Download *SendNumber.hex* in this folder
-into your sender micro:bit. This sender program uses the radio group 0
-to broadcast and sends a number between 0 and 9, whenever button A is
-pressed. Program your micro:bit to receive and display a number. Test
-your program using the sender micro:bit.
+**Instrucciones:** Primero, programa tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 and 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
 
-Second, you will program your micro:bit to receive a string. Download
-*SendString.hex* under this folder into your sender micro:bit.
-This program also uses radio group 0, and sends a string,
-whenever button A is pressed. Program your micro:bit to receive and
-display this string. Test your program using the sender micro:bit.
-What did you receive?
+Cuando hayas conseguido el paso anterior, vas a programar tu micro:bit para recibir un texto. De nuevo, programa tu micro:bit para recibir mensajes de texto y mostrar el texto recibido. Cuando la hayas programado, avisa al profe para que puedas probar tu programa. ¿Qué palabra has recibido?
 
-### Task 3: Send a broadcast message
+### Tarea 3: Enviar mensajes de broadcast
 
-**Description:** Now it is your turn sending broadcast messages. If you
-run this exercise in a large group, with several micro:bits, you should
-notice that you are receiving a lot of messages! Can you guess who is
-sending which message?
+**Descripción:** Ahora es tu turno para enviar mensajes broadcast. Como somos varios grupos en clase, y cada grupo enviará mensajes broadcast, verás que vas a recibir un montón de mensajes. ¿Es posible saber quién ha enviado cada mensaje?
 
-**Instruction:** Program your micro:bit so that it can send a number
-when you press the button A and a string if you press button B. Extend
-your receiver program so that you can receive and display ten numbers.
+**Instrucciones:** Programa tu micro:bit para que envíe un número al presionar el botón A y envíe un texto al presionar el botón B. Además, amplía el código para la recepción de mensajes de manera que pueda recibir, almacenar y mostrar 10 números.
 
 Extended activity
 -----------------
