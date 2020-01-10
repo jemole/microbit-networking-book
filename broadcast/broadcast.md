@@ -91,9 +91,9 @@ Un pasito más allá
 	Amplía el programa realizado en la tarea 2 que permite recibir un texto. Ahora tu placa mostrará una cara “Triste” hasta que reciba un mensaje con el texto “Hola”. En ese momento mostrará una cara “Alegre” durante dos segundos.
 
 	
-Proeguntas finales
+Preguntas finales
 ------------------
 
 1. Reflexiona sobre algunos problemillas que tiene la comunicación broadcast. ¿Siempre es necesario o útil enviar mensajes a todo el mundo? ¿Qué pasa con la privacidad? ¿Puede ser problemático que todo el mundo reciba todos los mensajes?
 
-2. ¿Es ms fácil enviar mensajes broadcast en redes cableadas o inalámbricas? ¿Por qué?
+2. ¿Es más fácil enviar mensajes broadcast en redes cableadas o inalámbricas? ¿Por qué?
