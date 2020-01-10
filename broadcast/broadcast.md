@@ -8,9 +8,9 @@ Introducción
 
 La comunicación inalámbrica (radio), como por ejemplo el WiFI o los teléfonos móviles, es una forma popular de conectarse a Internet. En el capítulo [Comunicación por cables](../wiredcommunication/wiredcommunication.md), ya conectaste dos placas micro:bits usando cables. Hoy las conectaremos usando las radios.
 
-En el proceso no solo aprenders a utilizar la radio de tu micro:bit; también aprenderás acerca de la comunicación broadcast (o difusión).  Las comunicaciones inalámbricas suelen ser broadcast; es decir, una micro:bit puede enviar mensajes a todas las micro:bits. 
+En el proceso no solo aprenderás a utilizar la radio de tu micro:bit; también aprenderás acerca de la comunicación broadcast (o difusión).  Las comunicaciones inalámbricas suelen ser broadcast; es decir, una micro:bit puede enviar mensajes a todas las micro:bits. 
 
-Resumiendo, este capítulo nos servirá para aprender:
+Resumiendo, este capítulo nos servirá para aprender sobre:
 
 - comunicación *inalámbrica* y cómo configurar la radio de las placas micro:bit
 
@@ -36,7 +36,7 @@ La comunicación inalámbrica utiliza radiación electromagnética (ondas de rad
 
 Pero, ¿significa esto que la comunicación broadcast solo es posible con las comunicaciones inalámbricas? No, pero es más engorroso. Por ejemplo, en la comunicación por cable la comunicación broadcast es posible repitiendo el mismo mensaje en todos los cables.
 
-Finalmente, los receptores pueden negarse a recibir mensajes de difusión si no están etiquetados con una *dirección de broadcast*.
+Finalmente, los receptores pueden negarse a recibir mensajes de difusión si los mensajes no están etiquetados con una *dirección de broadcast*.
 
 !!! hint "Definición 2: _Dirección broadcast_"
 	Una dirección broadcast (o de difusión) es una dirección especial que indica que todos los dispositivos de la red deberían recibir este mensaje.
@@ -66,15 +66,15 @@ La placa del profe es la que va a enviar los mensajes que tienes que tratar de r
 
 ### Tarea 2: Recibir mensajes broadcast
 
-**Descripción:** En esta tarea vas a programar tu micro:bit para recibir mensajes broadcast enviados desde otra placa. En este caso, será la placa del profe la que envíe los mensajes broadcast.
+**Descripción:** En esta tarea vas a programar tu micro:bit para recibir mensajes broadcast enviados desde otra placa. En este caso será la placa del profe la que envíe los mensajes broadcast.
 
 A la hora de escribir tu programa para recibir mensajes hay dos cosas que tienes que tener en cuenta.
 
 1. ¿Qué bloques del editor vas a tener que usar para poder recibir un mensaje a través de la radio?
 
-2. Haciendo uso de estos bloques, ¿puedes recibir cualquier tipo de mensaje -como por ejemplo un número o un texto?
+2. Haciendo uso de estos bloques, ¿puedes recibir cualquier tipo de mensaje, como por ejemplo un número o un texto?
 
-**Instrucciones:** Primero, programa tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 and 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
+**Instrucciones:** Primero vas a programar tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 and 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
 
 Cuando hayas conseguido el paso anterior, vas a programar tu micro:bit para que también pueda recibir un texto. De nuevo, programa tu micro:bit para recibir mensajes de texto y mostrar el texto recibido. Cuando la hayas programado, avisa al profe para que puedas probar tu programa. ¿Qué palabra has recibido?
 
