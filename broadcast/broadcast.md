@@ -76,51 +76,24 @@ A la hora de escribir tu programa para recibir mensajes hay dos cosas que tienes
 
 **Instrucciones:** Primero, programa tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 and 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
 
-Cuando hayas conseguido el paso anterior, vas a programar tu micro:bit para recibir un texto. De nuevo, programa tu micro:bit para recibir mensajes de texto y mostrar el texto recibido. Cuando la hayas programado, avisa al profe para que puedas probar tu programa. ¿Qué palabra has recibido?
+Cuando hayas conseguido el paso anterior, vas a programar tu micro:bit para que también pueda recibir un texto. De nuevo, programa tu micro:bit para recibir mensajes de texto y mostrar el texto recibido. Cuando la hayas programado, avisa al profe para que puedas probar tu programa. ¿Qué palabra has recibido?
 
 ### Tarea 3: Enviar mensajes de broadcast
 
 **Descripción:** Ahora es tu turno para enviar mensajes broadcast. Como somos varios grupos en clase, y cada grupo enviará mensajes broadcast, verás que vas a recibir un montón de mensajes. ¿Es posible saber quién ha enviado cada mensaje?
 
-**Instrucciones:** Programa tu micro:bit para que envíe un número al presionar el botón A y envíe un texto al presionar el botón B. Además, amplía el código para la recepción de mensajes de manera que pueda recibir, almacenar y mostrar 10 números.
+**Instrucciones:** Programa tu micro:bit para que envíe un número al presionar el botón A y envíe un texto al presionar el botón B. 
 
-Extended activity
------------------
+Un pasito más allá
+------------------
 
-!!! attention "Exercise 1"
-	Extend your program in Task 2 for receiving a string. Display a “Sad” face on your micro:bit’s display until you receive a “Hello” message. Then display a “Happy” face for 2 seconds.
+!!! attention "Ejercicio 1"
+	Amplía el programa realizado en la tarea 2 que permite recibir un texto. Ahora tu placa mostrará una cara “Triste” hasta que reciba un mensaje con el texto “Hola”. En ese momento mostrará una cara “Alegre” durante dos segundos.
 
-!!! attention "Exercise 2"
-	Discuss some issues with broadcast communication. Is it always useful or necessary to send messages to everybody? What about privacy? Is this a problem that everybody receives all messages?
+	
+Proeguntas finales
+------------------
 
-Problems
---------
+1. Reflexiona sobre algunos problemillas que tiene la comunicación broadcast. ¿Siempre es necesario o útil enviar mensajes a todo el mundo? ¿Qué pasa con la privacidad? ¿Puede ser problemático que todo el mundo reciba todos los mensajes?
 
-1. Which frequency range does your micro:bit’s radio work in?
-
-2. What is the speed of light?
-
-3. Using the wavelength equation, calculate the wavelength of your micro:bit’s radio.
-
-4. Is it easier to broadcast using wired or wireless communication? Why?
-
-Resources
----------
-
-- BBC Bitesize, The electromagnetic spectrum -
-    <https://www.bbc.com/bitesize/guides/z32f4qt/revision/1>
-
-- BBC Bitesize, An introduction to waves -
-    <https://www.bbc.com/bitesize/guides/zgf97p3/revision/1>
-
-- Video: How does Wi-Fi Work? (Brit Lab) -
-    <https://youtu.be/xmabFJUKMdg>
-
--   Wired, Why Everything Wireless is 2.4GHz?-\
-    <https://www.wired.com/2010/09/wireless-explainer/>
-
-[^1]: Image by Dicklyon (Richard F. Lyon) - Own work, CC BY-SA 3.0,
-    <https://commons.wikimedia.org/w/index.php?curid=7184592>
-
-[^2]: If you are using your own programs to send a broadcast, you can
-    select the group ID as you like.
+2. ¿Es ms fácil enviar mensajes broadcast en redes cableadas o inalámbricas? ¿Por qué?
