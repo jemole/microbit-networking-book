@@ -44,7 +44,7 @@ En primer lugar tenemos que decidir quiénes van a formar parte de cada grupo. P
 
 ### Tarea 1: Creación de grupos
 
-**Descripción:** En esta tarea vais a elegir un ID único para vuestro grupo, y luego tendréis que configurar las radios de de vuestras placas con este ID de grupo. Para ello se usa el bloque "radio establecer grupo" en el editor de bloques de JavaScript. Al elegir vuestro ID de grupo tenéis que lograr que sea un número único. **Ojo: ¿Qué pasaría is dos grupos eligen el mismo número? ¿cómo podríamos asegurarnos de que esto no ocurre?**
+**Descripción:** En esta tarea vais a elegir un ID único para vuestro grupo (un número entre 0 y 255), y luego tendréis que configurar las radios de vuestras placas con este ID de grupo. Para ello se usa el bloque "radio establecer grupo" en el editor de bloques de JavaScript. Al elegir vuestro ID de grupo tenéis que lograr que sea un número único. **Ojo: ¿Qué pasaría si dos grupos eligen el mismo número? ¿cómo podríamos asegurarnos de que esto no ocurre?** **Además, ¿Por qué crees que el ID va de 0 a 255? ¿Cuántos bits tiene la dirección de grupo en micro:bit?**
 
 **Instrucciones:** Usad la pizarra para apuntar el ID de grupo que habéis elegido y aseguraos de que es único.
 
@@ -55,27 +55,19 @@ En primer lugar tenemos que decidir quiénes van a formar parte de cada grupo. P
 **Instrucciones:** Cada pareja programa su micro:bit para enviar un número aleatorio del 0 al 9 al presionar el botón A. Las placas, además, cuando reciben un número por radio lo muestran durante 2 segundos. Al presionar el botón B muestran el número de mensajes recibidos. Y al presionar los dos botones A y B a la vez, muestran el número de mensajes enviados desde esa placa. Tras jugar a enviar mensajes desde las tres placas del grupo, comprobad que estáis recibiendo correctamente todos los mensajes del grupo y que no habéis recibido mensajes de otros grupos.
 
 
-Extended activity
------------------
+Actividades de reflexión
+------------------------
 
-!!! attention "Exercise 1"
-	How easy or difficult would it be if micro:bits could create groups automatically themselves? How would they pick a group ID? How would they make sure nobody else had that number? Would broadcast be useful? Discuss with your teammates.
+!!! attention "Ejercicio 1"
+	¿Sería sencillo que las placas micro:bits pudieran crear los grupos automáticamente? ¿Cómo escogerían el ID de grupo? ¿Cómo podrían asegurarse de que nadie más tiene ese númer? ¿Sería útil utilizar broadcast? Debatidlo en grupo.
 
-!!! attention "Exercise 2"
-	Can a micro:bit be part of two groups or more? How would you program your micro:bit to do that?
+!!! attention "Ejercicio 2"
+	¿Podría una micro:bit formar parte de más de un grupo? ¿Cómo habría que programar la placa para lograrlo?
 
-Problems
---------
+Problemas
+---------
 
-1. Fill in the blank in this sentence: “A one-to-may communication between one sender and a group of receivers is *---* communication.”
 
-    1. unicast
-
-    2. multicast
-
-    3. broadcast
-
-    4. none of the above
 
 2. Let’s assume the group ID is 3 bits. For example, 010 is a group ID. What is the maximum number of groups can you have in a network?
 
