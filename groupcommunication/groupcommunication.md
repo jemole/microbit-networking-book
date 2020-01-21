@@ -59,7 +59,7 @@ Actividades de reflexión
 ------------------------
 
 !!! attention "Ejercicio 1"
-	¿Sería sencillo que las placas micro:bits pudieran crear los grupos automáticamente? ¿Cómo escogerían el ID de grupo? ¿Cómo podrían asegurarse de que nadie más tiene ese númer? ¿Sería útil utilizar broadcast? Debatidlo en grupo.
+	¿Sería sencillo que las placas micro:bits pudieran crear los grupos automáticamente? ¿Cómo escogerían el ID de grupo? ¿Cómo podrían asegurarse de que nadie más tiene ese número? ¿Sería útil utilizar broadcast? Debatidlo en grupo.
 
 !!! attention "Ejercicio 2"
 	¿Podría una micro:bit formar parte de más de un grupo? ¿Cómo habría que programar la placa para lograrlo?
@@ -67,7 +67,7 @@ Actividades de reflexión
 Problemas
 ---------
 
-1. Supongamos que el ID de grupo fuera de 3 bits. Por ejemplo, sería un ID de grupo 010. ¿Cuál sería el número máximo de grupos que podríamos tener en este caso?
+1. Supongamos que el ID de grupo fuera de 3 bits. Por ejemplo, 010 podría ser un ID de grupo. ¿Cuál sería el número máximo de grupos que podríamos tener en este caso?
 
 2. Si el ID grupo fuera de 6 bits, ¿cuál sería el ID más grande que podríamos escoger para el grupo de nuestra micro:bit?
 
