@@ -67,16 +67,8 @@ Actividades de reflexión
 Problemas
 ---------
 
+1. Supongamos que el ID de grupo fuera de 3 bits. Por ejemplo, sería un ID de grupo 010. ¿Cuál sería el número máximo de grupos que podríamos tener en este caso?
 
+2. Si el ID grupo fuera de 6 bits, ¿cuál sería el ID más grande que podríamos escoger para el grupo de nuestra micro:bit?
 
-2. Let’s assume the group ID is 3 bits. For example, 010 is a group ID. What is the maximum number of groups can you have in a network?
-
-3. If the group ID were 6 bits,  what is the largest group ID you could choose for your micro:bit?
-
-4. “Compared to broadcast, the receivers in group communication receive more messages.” True or False?
-
-Resources
----------
-
-BBC Bitesize, Binary revision -
-<http://www.bbc.co.uk/education/guides/z26rcdm/revision>
+3. “En comparación con broadcast, en la comunicación por grupos se reciben más mensajes.” ¿Verdadero o falso?
