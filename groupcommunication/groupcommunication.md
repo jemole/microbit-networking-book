@@ -16,7 +16,7 @@ La comunicación multicast (que también se conoce como multidifusión o comunic
 
 ### ¿Qué vas a necesitar?
 
-    2 micro:bits
+    3 micro:bits
     1 pizarra
     tizas o rotuladores o adhesivos para notas
     varios colegas
@@ -24,77 +24,36 @@ La comunicación multicast (que también se conoce como multidifusión o comunic
 Antecedentes
 ------------
 
-En el capítulo anterior, todas las micro:bits recibían los mensajes que enviaban todas las demás micro:bits. Como experimentaste, esta situación puede ser algo confusa (¡aunque también divertida!). Hoy vamos a intentar limitar a quién puede enviar mensajes cada placa y de quién puede recibir mensajes. Esto se llama comunicación por grupos o multicast. La comunicación por grupos se usa en Internet para enviar tráfico a muchas personas al mismo tiempo. Por ejemplo, la televisión por Internet y la videoconferencia utilizan la comunicación por grupos.
+En el capítulo anterior todas las micro:bits recibían los mensajes que enviaban todas las demás micro:bits. Como experimentaste, esta situación puede ser algo confusa (¡aunque también divertida!). Hoy vamos a intentar limitar a quién puede enviar mensajes cada placa y de quién puede recibir mensajes. Esto se llama comunicación por grupos o multicast. La comunicación por grupos se usa en Internet para enviar tráfico a muchas personas al mismo tiempo. Por ejemplo, la televisión por Internet y la videoconferencia utilizan la comunicación por grupos.
 
 !!! hint "Definición 1: _Comunicación por grupos_"
 	En la comunicación por grupos o multicast un mensaje es enviado solo a los ordenadores que forman parte del grupo. 
 
-Para ello es necesario que los mensajes lleven una etiqueta con una *dirección de grupo* o * dirección multicast*.
+Para ello es necesario que los mensajes lleven una etiqueta con una *dirección de grupo* o *dirección multicast*.
 
-!!! hint "Definition 2: _Dirección de grupo_"
+!!! hint "Definición 2: _Dirección de grupo_"
 	Una dirección de grupo o multicast es una dirección especial que especifica que todos los dispositivos que pertenecen al grupo deberían recibir ese mensaje. 
 
 Para establecer una dirección de grupo (o ID del grupo) vamos a utilizar de nuevo el bloque “radio establecer grupo” que está en la categoría Radio, tal como hicimos en la práctica [Broadcast: de una a todos](../broadcast/broadcast.md). El mayor reto de este capítulo es crear los grupos de comunicación correctamente. ¿Cómo aprenden los ordenadores que existe un grupo? ¿Cómo se unen a ellos? ¿Qué ocurre cuando abandonan un grupo? A lo largo de este capítulo tendrás la oportunidad de pensar sobre estas cuestiones mientras experimentas con la creación de grupos.
 
-### **Further reading**
 
-When configuring group IDs for micro:bits, you will notice that the group IDs range from 0 to 255. This is the decimal (base 10) representation of group IDs. But we can also write these group IDs in binary (base 2). For the binary case, we will need 8 bits to get to a maximum group ID of 255.
+A programar: Creación de grupos y envío de mensajes dentro del grupo
+--------------------------------------------------------------------
 
-Let’s think about the binary representation of group IDs.
-The figure below shows an example for the group ID 172 in 8
-bits: 10101100. Notice that, we start reading bits from right to left.
-Each bit is numbered 1 to 8, corresponding to a power of two. The
-leftmost bit, bit 1, means $2^0 = 1$. Bit 2 means $2^1 = 2$ and we
-continue like this until we reach bit 8, which means $2^7 = 128$. Each
-bit location may contain either 0 or 1. To find the decimal value of
-10101100, we need to do some maths. For a bit location $x$, we multiply its
-bit value with $2^{x-1}$. For bit
-location 8, the bit value is 1, and we need to multiply $2^(8-1) =2^7=128$ with 1.
-After doing this for all bit locations, we add all the values we found.
-The result of this addition is 172. Now, check for the case 11111111. Is
-it really equal to 255? For further reading, see the BBC Bitesize,
-Binary revision page in the Resources section.
+En primer lugar tenemos que decidir quiénes van a formar parte de cada grupo. Para ello, vamos a crear grupos de tres parejas, y cada pareja tendrá que programar una micro:bit. 
 
-![Binary representation of group IDs.](BinaryAddress.png)
+### Tarea 1: Creación de grupos
 
-!!! note ""
-	**Figure 1:** Binary representation of group IDs
+**Descripción:** En esta tarea vais a elegir un ID único para vuestro grupo, y luego tendréis que configurar las radios de de vuestras placas con este ID de grupo. Para ello se usa el bloque "radio establecer grupo" en el editor de bloques de JavaScript. Al elegir vuestro ID de grupo tenéis que lograr que sea un número único. **Ojo: ¿Qué pasaría is dos grupos eligen el mismo número? ¿cómo podríamos asegurarnos de que esto no ocurre?**
 
-Programming: Creating groups and messaging within groups
---------------------------------------------------------
+**Instrucciones:** Usad la pizarra para apuntar el ID de grupo que habéis elegido y aseguraos de que es único.
 
-In this chapter, you need to work together in pairs or small groups,
-with at least 2 micro:bits in each group. You will complete two tasks to
-program your micro:bits to send messages to and receive messages within
-your group.
+### Tarea 2: Envío y recepción de mensajes
 
-### Task 1: Create groups
+**Descripción:** Podéis reutilizar los programas del capítulo anterior para enviar y recibir mensajes dentro de vuestro grupo. Tendréis que actualizarlos para contar el número de mensajes enviados y recibidos, de manera que podáis estar seguros de que solo estáis recibiendo los mensajes enviados desde vuestro grupo. 
 
-**Description:** In this task, you will choose a unique group ID for
-your group, and configure your radios with this group ID. You will
-use the radio block *radio set group* in your program in the JavaScript
-Blocks editor. When
-choosing group IDs, you have to think about the best way to choose
-this number. **Hint: What would happen if two groups choose the same
-number, and how would you make sure that doesn’t happen?**
+**Instrucciones:** Cada pareja programa su micro:bit para enviar un número aleatorio del 0 al 9 al presionar el botón A. Las placas, además, cuando reciben un número por radio lo muestran durante 2 segundos. Al presionar el botón B muestran el número de mensajes recibidos. Y al presionar los dos botones A y B a la vez, muestran el número de mensajes enviados desde esa placa. Tras jugar a enviar mensajes desde las tres placas del grupo, comprobad que estáis recibiendo correctamente todos los mensajes del grupo y que no habéis recibido mensajes de otros grupos.
 
-**Instruction:** Use the board and post-it notes to choose a group
-ID. Make sure your group ID is not the same as any other group ID
-
-### Task 2: Send and receive messages
-
-**Description:** You will use the programs from the previous chapter to
-send and receive messages to your group. You will change these programs
-to count the number of messages you receive. This way, you will test
-whether you receive messages that only come from your group.
-
-**Instruction:** Write a sender program that sends a random number
-between 0 and 9, when you press the button A. Write a receiver program
-that increments a counter each time it receives a number. When you press
-the button A at the receiver, it displays the value of the counter. With
-your group, test that you are receiving the correct number of messages.
-Test together with other groups that you are not receiving their
-messages.
 
 Extended activity
 -----------------
