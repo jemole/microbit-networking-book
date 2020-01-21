@@ -21,30 +21,20 @@ La comunicación multicast (que también se conoce como multidifusión o comunic
     tizas o rotuladores o adhesivos para notas
     varios colegas
 
-Background
-----------
+Antecedentes
+------------
 
-In the previous chapter, all micro:bits received messages from all the
-other micro:bits. This might have got confusing (or amusing!). Now,
-let’s try limiting who you can send messages to and receive messages
-from. This is called group communication. Group communication is used in
-the Internet to send to many people at the same time. For example,
-Internet television and videoconferencing use group communication.
+En el capítulo anterior, todas las micro:bits recibían los mensajes que enviaban todas las demás micro:bits. Como experimentaste, esta situación puede ser algo confusa (¡aunque también divertida!). Hoy vamos a intentar limitar a quién puede enviar mensajes cada placa y de quién puede recibir mensajes. Esto se llama comunicación por grupos o multicast. La comunicación por grupos se usa en Internet para enviar tráfico a muchas personas al mismo tiempo. Por ejemplo, la televisión por Internet y la videoconferencia utilizan la comunicación por grupos.
 
-!!! hint "Definition 1: _Communications medium_"
-	In group communication or multicast, a message
-	is sent only to the computers in the group.
+!!! hint "Definición 1: _Comunicación por grupos_"
+	En la comunicación por grupos o multicast un mensaje es enviado solo a los ordenadores que forman parte del grupo. 
 
-For this, the messages need to be labeled with a *group* or *multicast
-address*.
+Para ello es necesario que los mensajes lleven una etiqueta con una *dirección de grupo* o * dirección multicast*.
 
-!!! hint "Definition 2: _Group address_"
-	A group or multicast address is a special address
-	which says all devices in the group should receive this message.
+!!! hint "Definition 2: _Dirección de grupo_"
+	Una dirección de grupo o multicast es una dirección especial que especifica que todos los dispositivos que pertenecen al grupo deberían recibir ese mensaje. 
 
-To set a group address (or group ID), you will again use the “radio set group”
-block under the Radio menu like in [Broadcast communication:One to all](../broadcast/broadcast.md). The main challenge of this chapter is creating the groups for communication. How do computers learn about and join these groups?
-What happens when they leave a group? In this chapter, you will have a chance to think about these questions when you experiment with creating groups.
+Para establecer una dirección de grupo (o ID del grupo) vamos a utilizar de nuevo el bloque “radio establecer grupo” que está en la categoría Radio, tal como hicimos en la práctica [Broadcast: de una a todos](../broadcast/broadcast.md). El mayor reto de este capítulo es crear los grupos de comunicación correctamente. ¿Cómo aprenden los ordenadores que existe un grupo? ¿Cómo se unen a ellos? ¿Qué ocurre cuando abandonan un grupo? A lo largo de este capítulo tendrás la oportunidad de pensar sobre estas cuestiones mientras experimentas con la creación de grupos.
 
 ### **Further reading**
 
