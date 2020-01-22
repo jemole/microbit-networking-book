@@ -1,40 +1,33 @@
-Game 1: Shakey Donkey
-=====================
+Juego 1: Corazones agitados
+===========================
 
 ![Chapter 4 image](chapter4.png)
 
-Introduction
+Introducción
 ------------
 
-Let’s put everything you have learnt so far into practice with a fun
-game. If you have not already seen it, Shakey Donkey is a micro:bit game
-that uses the radio [^1].
+Ha llegado la hora de poner en práctica todo lo que has aprendido hasta ahora programando un videojuego en red. Se trata de un juego inspirado en el Shakey Donkey, un juego de micro: bit que usa la radio [^ 1]. 
 
-Shakey Donkey is played with two players, and it measures how fast you
-react to a Donkey appearing in your micro:bit. The game starts with
-shaking micro:bits. The moment your micro:bit displays a Donkey, you
-should shout “Donkey!” and shake your micro:bit to make it disappear. At
-the end, when you press the button A, if your micro:bit displays a happy
-face, you won!
+En nuestro juego participarán dos jugadores, y se medirá lo rápido que reacciona cada jugador cuando aparece un corazón en su micro:bit. El juego comienza al agitar micro: bits. En el momento en que tu micro:bit muestre un corazón, debes gritar "¡Corazón!" Y agitar tu plaza para que desaparezca. Tras borrar el quinto corazón aparecerá un aspa en tu placa. Pulsando el botón B se mostrará el tiempo total de reacción que has tardado. Y pulsando el botón B se mostrará bien una cara feliz o una cara triste, en función del tiempo que tardó tu rival.
 
-In this chapter, you will practice:
+Por tanto, en este capítulo practicarás:
 
-1. the concept of *group communication*
+1. el concepto de *communicación por grupos*
 
-2. using *group* or *multicast address*
+2. usando direcciones *multicast* o *de grupo*
 
-3. sending and receiving messages
+3. enviando y recibiendo mensajes
 
-4. shake and button inputs
+4. con entradas diversas: botones y agitar
 
-5. program variables and random numbers
+5. con el uso de variables y números aleatorios
 
-### What you’ll need
+### Qué vas a necesitar:
 
     2 micro:bits
-    1 whiteboard/board
-    boardmarkers/post-it notes
-    1 teammate
+    1 pizarra
+    rotuladores o notas adhesivas
+    1 colega
 
 Programming: Playing Shakey Donkey
 ----------------------------------
