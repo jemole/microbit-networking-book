@@ -46,22 +46,22 @@ El juego consiste en agitar las micro:bit cada vez que aparece un corazón en la
 Si te fijas, en esta primera parte se envía el texto "Corazón". Por tanto es necesario que tengamos un programa que se encarga de gestionar la recepción de un texto. Eso es precisamente lo que se muestra en la siguiente figura:
 
 ![Parte 2](Parte2.png)
+
 !!! note ""
 	Parte 2: Recibir un mensaje para mostrar un corazón o un aspa
 
 La tercera parte, mostrada en la siguiente figura, se encarga de gestionar lo que ocurre al pulsar el botón B y el botón A. Como ves, en uno de los casos las placas envían un número por radio, así que es necesario un programa que reciba ese número y lo gestione. 
 
 ![Parte 3](Parte3.png)
+
 !!! note ""
 	Parte 3: Presionar botones B y A para conocer el resultado de la partida
 
-Programa tu placa siguiendo el código mostrado en las imágenes. Una vez listo, jugad varias partidas para comprobar que todo funciona correctamente. Después estudiad el código para intentar entender lo que hace cada programa y contesta las preguntas de los problemas.
+Programa tu placa siguiendo el código mostrado en las imágenes. Una vez listo, jugad varias partidas para comprobar que todo funciona correctamente. Después estudiad el código para intentar entender lo que hace cada programa y contestad las preguntas de los problemas.
 
 
 Problemas
 ---------
-
-Let’s first look at Part 1, in the first figure.
 
 1. ¿Qué se almacena en la variable "mi_equipo"?
 
