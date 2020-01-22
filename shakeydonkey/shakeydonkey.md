@@ -38,17 +38,20 @@ A programar: jugando a "corazones agitados"
 
 El juego consiste en agitar las micro:bit cada vez que aparece un corazón en la pantalla y así borrarlo. Así que lo primero que vamos a hacer es programar lo que la placa tiene que hacer al ser agitada:
 
+![Parte 1](Parte1.png)
 
 !!! note ""
 	Parte 1: Agitar la micro:bit para borrar el corazón
 
-Si te das cuenta, en esta primera parte se envía el texto "Corazón". Por tanto es necesario que tengamos un programa que se encarga de gestionar la recepción de un texto. Eso es precisamente lo que se muestra en la siguiente figura:
+Si te fijas, en esta primera parte se envía el texto "Corazón". Por tanto es necesario que tengamos un programa que se encarga de gestionar la recepción de un texto. Eso es precisamente lo que se muestra en la siguiente figura:
 
+![Parte 2](Parte2.png)
 !!! note ""
 	Parte 2: Recibir un mensaje para mostrar un corazón o un aspa
 
 La tercera parte, mostrada en la siguiente figura, se encarga de gestionar lo que ocurre al pulsar el botón B y el botón A. Como ves, en uno de los casos las placas envían un número por radio, así que es necesario un programa que reciba ese número y lo gestione. 
 
+![Parte 3](Parte3.png)
 !!! note ""
 	Parte 3: Presionar botones B y A para conocer el resultado de la partida
 
