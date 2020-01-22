@@ -29,109 +29,51 @@ Por tanto, en este capítulo practicarás:
     rotuladores o notas adhesivas
     1 colega
 
-Programming: Playing Shakey Donkey
-----------------------------------
+A programar: jugando a "corazones agitados"
+-------------------------------------------
 
-**Description:** To be able to play this game in groups of 2, you will
-set a unique group ID for your pair. Then you will program the Shakey
-Donkey game given to you in three parts in the
-the following figures.
+**Descripción:** Para que se pueda jugar por parejas, lo primero que hay que hacer es establecer un ID de grupo único para vuestra pareja. Luego programarás tu placa siguiendo el código que aparece en las imágenes de las siguientes secciones. 
 
-**Instruction:** To set your groups, repeat the activity from
-[Group communication: One to Many](../groupcommunication/groupcommunication.md). Make sure your group IDs are unique!
+**Instrucciones:** Para establecer los grupos y que sean únicos, una vez elegido el ID escribidlo en la pizarra. 
 
-The game is played by shaking your micro:bit each time the donkey
-appears on your display to get rid of it. So, first thing to do is to
-program what your micro:bit should do “On shake”. This is shown in
-the  figure below.
+El juego consiste en agitar las micro:bit cada vez que aparece un corazón en la pantalla y así borrarlo. Así que lo primero que vamos a hacer es programar lo que la placa tiene que hacer al ser agitada:
 
-```blocks
-let caught = 0
-let me = 0
-input.onGesture(Gesture.Shake, function () {
-    if (caught != 0) {
-        me += input.runningTime() - caught
-    }
-    basic.clearScreen()
-    basic.pause(Math.randomRange(0, 2000))
-    radio.sendNumber(me)
-})
-```
-!!! note ""
-	Shakey Donkey program - Part 1: Shake your micro:bit to send your reaction time.
-
-Notice that, in this first part, your program sends a number. So, you
-need a piece of code for handling a received number. This second part is
-shown in the next figure. Add it to your JavaScript Blocks editor program.
-
-```blocks
-let you = 0
-let caught = 0
-radio.onReceivedNumber(function (receivedNumber) {
-    caught = input.runningTime()
-    you = receivedNumber
-    basic.showLeds(`
-        . . . . #
-        . # # # .
-        # # # # .
-        . # . # .
-        . # . # .
-        `)
-})
-```
-!!! note ""
-	Shakey Donkey program - Part 2: Receive the other player’s reaction time, and display the donkey.
-
-The third part, shown in the next figure, handles the
-case when the button A is pressed. This part of the program decides
-whether you won or not. Add this part into your program too.
-
-```blocks
-let caught = 0
-let you = 0
-let me = 0
-input.onButtonPressed(Button.A, function () {
-    if (me > you) {
-        basic.showIcon(IconNames.Sad)
-    } else {
-        basic.showIcon(IconNames.Happy)
-    }
-    me = 0
-    you = 0
-    caught = 0
-})
-```
 
 !!! note ""
-	Shakey Donkey program - Part 3: Press button A to learn the result.
+	Parte 1: Agitar la micro:bit para borrar el corazón
 
-Download the program into your micro:bits. Play the Shakey Donkey game
-with your teammate. Then, go through the problems to explain how your
-program works.
+Si te das cuenta, en esta primera parte se envía el texto "Corazón". Por tanto es necesario que tengamos un programa que se encarga de gestionar la recepción de un texto. Eso es precisamente lo que se muestra en la siguiente figura:
 
-Problems
---------
+!!! note ""
+	Parte 2: Recibir un mensaje para mostrar un corazón o un aspa
+
+La tercera parte, mostrada en la siguiente figura, se encarga de gestionar lo que ocurre al pulsar el botón B y el botón A. Como ves, en uno de los casos las placas envían un número por radio, así que es necesario un programa que reciba ese número y lo gestione. 
+
+!!! note ""
+	Parte 3: Presionar botones B y A para conocer el resultado de la partida
+
+Programa tu placa siguiendo el código mostrado en las imágenes. Una vez listo, jugad varias partidas para comprobar que todo funciona correctamente. Después estudiad el código para intentar entender lo que hace cada programa y contesta las preguntas de los problemas.
+
+
+Problemas
+---------
 
 Let’s first look at Part 1, in the first figure.
 
-1. At the beginning, what is the value of the "caught" variable for both players? Does anybody need to change the "me" variable?
+1. ¿Qué se almacena en la variable "mi_equipo"?
 
-2. Who gets to send their "me" variable first?
+2. ¿Qué se almacena en la variable "mostrado"?
 
-Next, let’s look at Part 2, in the second figure.
+3. ¿Cómo se actualiza la variable "mi_equipo"?
 
-1. When you receive a number, you set the "caught" variable. What does the "caught" variable mean?
+4. ¿Cómo sabe el programa si tiene que mostrar una cara alegre o una triste? ¿Cómo sabe el tiempo que ha tardado el otro equipo?
 
-2. You also change the "you" variable by the "receivedNumber". What does the "you" variable track?
+5. ¿Por qué siempre jugamos exactamente hasta que aparece el quinto corazón?
 
-Now, let’s look at both Parts 1 and 2.
+6. ¿Que tendría que hacer si quisiera jugar partidas en las que aparecieran 10 corazones?
 
-1. Imagine you already started playing the program. You saw some donkeys appear on your display, and you shook them away. How did your "me" variable change? What is it equal to?
+7. Si quisieras hacer trampa para ganar todas las partidas, ¿cómo "hackearías" el programa para lograrlo?
 
-Finally, let’s look at Part 3, in the last figure.
 
-1. How do you know you won? Does the other player know the result? How? Explain how the "me" and "you" variables are used to decide the winner.
-
-2. How would you make sure you win this game?
 
 [^1]: Se trata de un juego creado por David Whale: [Código original](https://twitter.com/whaleygeek/status/834898461912891392?lang=es )
