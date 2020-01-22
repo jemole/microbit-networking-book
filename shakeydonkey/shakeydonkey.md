@@ -8,15 +8,15 @@ Introducción
 
 Ha llegado la hora de poner en práctica todo lo que has aprendido hasta ahora programando un videojuego en red. Se trata de un juego inspirado en el Shakey Donkey, un juego de micro: bit que usa la radio [^ 1]. 
 
-En nuestro juego participarán dos jugadores, y se medirá lo rápido que reacciona cada jugador cuando aparece un corazón en su micro:bit. El juego comienza al agitar micro: bits. En el momento en que tu micro:bit muestre un corazón, debes gritar "¡Corazón!" Y agitar tu plaza para que desaparezca. Tras borrar el quinto corazón aparecerá un aspa en tu placa. Pulsando el botón B se mostrará el tiempo total de reacción que has tardado. Y pulsando el botón B se mostrará bien una cara feliz o una cara triste, en función del tiempo que tardó tu rival.
+En nuestro juego participarán dos jugadores, y se medirá lo rápido que reacciona cada jugador cuando aparece un corazón en su micro:bit. El juego comienza al agitar las micro:bits. En el momento en que tu micro:bit muestre un corazón, debes gritar "¡Corazón!" Y agitar tu placa para que desaparezca. Tras borrar el quinto corazón aparecerá un aspa en tu placa. Pulsando el botón B se mostrará el tiempo total de reacción que has tardado. Y pulsando el botón A se mostrará o bien una cara feliz o bien una cara triste, en función del tiempo que tardó tu rival.
 
 Por tanto, en este capítulo practicarás:
 
 1. el concepto de *communicación por grupos*
 
-2. usando direcciones *multicast* o *de grupo*
+2. el uso de direcciones *multicast* o *de grupo*
 
-3. enviando y recibiendo mensajes
+3. el envío y recepción de mensajes
 
 4. con entradas diversas: botones y agitar
 
@@ -134,5 +134,4 @@ Finally, let’s look at Part 3, in the last figure.
 
 2. How would you make sure you win this game?
 
-[^1]: This game is by David Whale. We thank him for allowing us to use
-    it in this book.
+[^1]: Se trata de un juego creado por David Whale: [Código original] (https://twitter.com/whaleygeek/status/834898461912891392?lang=es )
