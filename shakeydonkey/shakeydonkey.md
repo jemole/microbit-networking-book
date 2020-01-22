@@ -134,4 +134,4 @@ Finally, let’s look at Part 3, in the last figure.
 
 2. How would you make sure you win this game?
 
-[^1]: Se trata de un juego creado por David Whale: [Código original] (https://twitter.com/whaleygeek/status/834898461912891392?lang=es )
+[^1]: Se trata de un juego creado por David Whale: [Código original](https://twitter.com/whaleygeek/status/834898461912891392?lang=es )
