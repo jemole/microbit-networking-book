@@ -25,63 +25,42 @@ En este capítulo vamos a enviar mensajes unicast a la placa micro:bit de otro c
     rotuladores/notas adhesivas
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-This chapter covers unicast communication. So, what is unicast?
+Este capítulo trata de la comunicación unicast. Así que, ¿qué es unicast?
 
-!!! hint "Definition 1: _Unicast_"
-	Transmission of a message to a single receiver.
+!!! hint "Definición 1: _Unicast_"
+	Transmisión de un mensaje a un único receptor.
 
-When transmitting messages to each other, computers use *protocols*.
+Para transmitir mensajes de unos a otros, los ordenadores usan *protocolos*.
 
-!!! hint "Definition 2: _Protocol_"
-	A set of rules for how messages are sent across networks.
+!!! hint "Definición 2: _Protocolo_"
+	Un conjunto de reglas que establece cómo se envían mensajes a través de una red.
 
-Simply, protocols define how computers should send messages and what
-they should do when they receive a message. On the Internet, every
-computer or device follows the Internet Protocol (IP).
+Es decir, que los protocolos definen la forma en que los ordenadores deberían enviar los mensajes y lo que deberían hacer cuando reciben un mensaje. En Internet, todos los ordenadores o dispositivos siguen el protocolo IP: Internet Protocol.
 
-According to Internet Protocol, each device is given a unique *address*,
-called an *IP address*. Remember you have already used special addresses
-for broadcast and multicast. In this chapter, we consider unicast
-addresses. *IP address* is used for unicast on the Internet.
+De acuerdo al protocolo IP, cada dispositivo recibe una *dirección* que debe ser única y que se llama *dirección IP*. Las *direcciones IP* se usan para implementar la comunicación unicast en Internet.
 
-!!! hint "Definition 3: _IP address_"
-	A unique string that identifies computers that use the
-	Internet Protocol  to communicate over a network. This string is made up
-	of 4 decimal numbers, that range between 0 and 255. Each decimal is
-	separated by dots. For example, 213.248.234.11 is an IP address.
+!!! hint "Definición 3: _dirección IP_"
+	Un texto único que identifica ordenadores que usan el protocolo IP para comunicarse en una red. Este texto se compone de cuatro números entre 0 y 255 y separados por puntos. Por ejemplo, 213.248.234.11 es una dirección IP.
 
-Your micro:bit also has an address (but it is a bit different). You
-already partly changed your micro:bit’s address, by changing the group
-ID.
+Las placas micro:bit también tienen direcciones (pero son un poco diferentes). Y en prácticas anteriores ya hemos modificado parcialmente la dirección de nuestras placas al cambiar el ID de grupo de radio.
 
-When two computers communicate, the sender sends a data packet  to the
-receiver.
+Cuando dos ordenadores se comunican, el emisor envía un paquete de datos al receptor.
 
-!!! hint "Definition 4: _Data packet_" 
-	A data packet is a piece of data sent over a network.
-	This piece of data has an actual message part (for example, an image or
-	a text) and one or more header parts. A header contains helpful
-	information for protocols like the sender and receiver IP addresses.
+!!! hint "Definición 4: _Paquete de datos_" 
+	Un paquete de datos es un conjunto de datos que se envía por una red. Este conjunto de datos se compone de una parte de mensaje real (por ejemplo, una imagen o un texto) y de una o más cabeceras. Una cabecera, o encabezado, contiene información necesaria definida por el protocolo, como por ejemplo, las direcciones IP origen y destino.
+	
 
-![A data packet contains a message and a header. A header contains information to help a protocol such as sender and receiver addresses, and message types. Different protocols may add different headers to a message.](Datapacket.png)
+![Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.](Datapacket.png)
 
 !!! note ""
-	**Figure 1:** A data packet contains a message and a header. A header contains information to help a protocol such as sender and receiver addresses, and message types. Different protocols may add different headers to a message.
+	**Figura 1:** Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.
 
-The figure above shows how the data and one header forms a data
-packet. In this figure, as well as the sender and receiver addresses,
-the example header also includes a message type. Message type tells the
-receiver whether it is receiving, for example, a text or an image.
-Remember, in the previous chapters, your programmed your receivers to
-receive a specific type of message. If your packets contained a header
-with the message type, then it would be easier to write the receiver
-program.
+La figura anterior muestra como los datos y una cabecera forman un paquete de datos. En esta figura además de las direcciones origen y destino, la cabecera de ejemplo también incluye el tipo de mensaje. El tipo de mensaje le dice al receptor si está recibiendo, por ejemplo, un texto o una imagen. Si te acuerdas, en los capítulos anteriores programábamos nuestra placa para recibir un tipo específico de mensaje (texto o número). Si los paquetes contienen una cabecera con información del tipo de mensaje sería ms fácil escribir el programa del receptor.
 
-In this chapter, to unicast to other micro:bits, you will create a data
-packet by adding a header with source and destination addresses.
+En cualquier caso, en esta práctica vas a crear paquetes de datos añadiendo una cabecera que contendrá tan solo las direcciones origen y destino, para lograr comunicación unicast entre micro:bits.
 
 Programming: Sending and receiving unicast messages
 ---------------------------------------------------
