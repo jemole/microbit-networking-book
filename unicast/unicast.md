@@ -88,47 +88,36 @@ Para crear las cabeceras vamos a trabajar con un string (texto) algo especial.
 
 A continuación elige a qué persona de la clase vas a enviar un mensaje, y toma nota de su dirección. Para preparar la cabecera de cada mensaje a enviar hay que unir las direcciones origen y destino en un único texto. Para ello usaremos el bloque unir, de la categoría texto. 
 
-### Task 3: Crea el paquete y envíalo
+### Tarea 3: Crea el paquete y envíalo
 
-**Description:** Now it is time to create your packet. As shown in the
-figure with the example packet, a header and a message form a packet. Your final
-packet will have the following information:
+**Descripción:** Ha llegado el momento de crear el paquete. Como hemos visto antes el paquete se forma con la unión de las cabeceras y el mensaje. Así que tu paquete debe contener la siguiente información:
 
-- sender address
+- dirección origen
 
-- receiver address
+- dirección destino
 
-- your message
+- tu mensaje
 
-**Instruction:** Pick a string as your message. For example: “Hello”.
-Use the Text blocks to join your message string with your header.
+**Instrucciones:** Elige el texto que quieres enviar como tu mensaje. Por ejemplo "Hola, figura". Usa los bloques de texto para unir tu mensaje a la cabecera. 
 
-Now, your sender micro:bit is ready to send unicast packets.
+Con esto tu micro:bit estaría lista para enviar paquetes unicast. 
 
-### Task 4: Receive a packet
+### Tarea 4: Recibir un paquete
 
-**Description:** When the receiver micro:bit receives a packet, it
-decides whether to receive or ignore the packet. Notice that the
-receiver micro:bit receives a single string, but it knows that this
-string is made up of:
+**Descripción:** Cuando la micro:bit recibe un paquete tiene que decidir si lo procesa o si lo ignora. Ten en cuenta que la micro:bit recibe un único texto, pero como conocemos el protocolo que estamos utilizando sabemos que:
 
-- Sender address: first 2 letters
+- dirección origen: las primeras 2 letras
 
-- Receiver address: next 2 letters
+- dirección destino: las siguientes 2 letras
 
-- Sender’s message: the rest of the string
+- mensaje: el resto
 
-The receiver needs to use this information to decide which packets are
-for itself.
+El receptor utilizará esta información para decidir qué paquetes de los recibidos van efectivamente dirigidos a ella. 
 
-**Instruction:** Divide the received string into the *sender address*,
-*receiver address*, and *sender’s message* variables.  Use
-the Text blocks, for example *substring* and *compare*.
 
-Check if the *receiver address* is equal to your micro:bit’s address. If
-it is, then your micro:bit is the rightful receiver. Display the sender
-address and the message on your display. If your micro:bit is not the
-receiver, be a good citizen, and ignore the message.
+**Instrucciones:** Divide el texto recibido en variables: *dirección origen*, *dirección destino* y *mensaje*. Para ello puedes usar los bloques *subcadena* de la categoría texto.
+
+Comprueba si la dirección destino es igual a la dirección que elegiste para tu placa. Si es así, esto significa que tu micro:bit es la destinataria correcta. Si tu micro:bit no es la destinataria, sé un buen ciudadano e ignora el mensaje. ¡Hay que ser buenos!
 
 ### Challenge: Filter senders
 
