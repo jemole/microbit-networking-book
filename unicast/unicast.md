@@ -62,55 +62,33 @@ La figura anterior muestra como los datos y una cabecera forman un paquete de da
 
 En cualquier caso, en esta práctica vas a crear paquetes de datos añadiendo una cabecera que contendrá tan solo las direcciones origen y destino, para lograr comunicación unicast entre micro:bits.
 
-Programming: Sending and receiving unicast messages
----------------------------------------------------
+A programar: enviar y recibir mensajes unicast
+----------------------------------------------
 
-In this section, you will program your micro:bits to send and receive
-unicast messages completing four tasks. To start with, you need two
-micro:bits.
+En esta práctica vamos a aprender a crear paquetes de datos que contengan una dirección origen y otra destino, de manera que podamos enviar mensajes unicast a otras micro:bits. Es decir, nuestras placas recibirán todos los mensajes, pero solamente leerán los que sean para nosotros. Es como cuando llegas al buzón de tu piso y puede que haya cartas de varios vecinos, pero solamente abres las tuyas.
 
-For unicast to work, your radio should receive all messages sent, but
-your program should read only the ones that are addressed to you. This
-is like seeing all the post coming into your house, but only opening the
-envelopes with your name on.
+### Tarea 1: Configura tu radio
 
-### Task 1: Configure your radio
+**Descripción:** Para recibir cualquier paquete, sin importar quién lo envíe, hay que usar broadcast como modo de comunicación. 
 
-**Description:** To receive any packet, sent by anybody, you need to use
-broadcast as the underlying communication.
+**Instrucciones:** Establece el ID de radio de grupo a 0, como hicimos en la práctica 
+[Broadcast](../broadcast/broadcast.md).
 
-**Instruction:** Set your radio group ID like you did in
-[Broadcast Communication: One to All](../broadcast/broadcast.md).
+### Tarea 2: Diseña tu cabecera
 
-### Task 2: Design your header
+**Descripción:** La micro:bit emisora tiene que añadir una cabecera a cada paquete antes de enviarlo. La cabecera incluirá:
 
-**Description:** The sender micro:bit needs to add a header to each
-message before sending. The message header will include:
+- dirección origen
 
-- sender address
+- dirección destino
 
-- receiver address
+Para crear las cabeceras vamos a trabajar con un string (texto) algo especial. 
 
-For the message header, you will create a special string.
+**Instrucciones:** En primer lugar hay que elegir la dirección de cada placa. Podemos usar dos letras, como nuestras iniciales (por ejemplo, JM). Como tienen que ser únicas, las escribimos en la pizarra para que nadie se ponga la misma que tú. Por tanto, en la pizarra escribiríamos algo como "Jesús Moreno -> JM".
 
-**Instruction:** First construct the sender and receiver addresses. With
-your teammate, pick two-letter strings as micro:bit addresses. You need
-one address for your micro:bit, and one address for your teammate’s
-micro:bit. For example, you can use your initials: These are “CS” and
-“AK” for the authors of this book. **Important! Your addresses should be
-unique across all the addresses of micro:bits that are in the same room
-with you.**
+A continuación elige a qué persona de la clase vas a enviar un mensaje, y toma nota de su dirección. Para preparar la cabecera de cada mensaje a enviar hay que unir las direcciones origen y destino en un único texto. Para ello usaremos el bloque unir, de la categoría texto. 
 
-Next, join the strings for sender and receiver addresses to create a
-header. You will use the blocks under the *Text* menu in the MakeCode Blocks editor
-shown in the figure below. Create your header using the blocks in this menu.
-
-![Text menu in PXT](TextMenuinPXT.png)
-
-!!! note ""
-	Text menu in the MakeCode Blocks editor
-
-### Task 3: Create your packet and send
+### Task 3: Crea el paquete y envíalo
 
 **Description:** Now it is time to create your packet. As shown in the
 figure with the example packet, a header and a message form a packet. Your final
