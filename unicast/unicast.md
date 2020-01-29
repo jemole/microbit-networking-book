@@ -53,7 +53,7 @@ Cuando dos ordenadores se comunican, el emisor envía un paquete de datos al rec
 	Un paquete de datos es un conjunto de datos que se envía por una red. Este conjunto de datos se compone de una parte de mensaje real (por ejemplo, una imagen o un texto) y de una o más cabeceras. Una cabecera, o encabezado, contiene información necesaria definida por el protocolo, como por ejemplo, las direcciones IP origen y destino.
 	
 
-![Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.](Datapacket.png)
+![Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.](Datapacket_ES.png)
 
 !!! note ""
 	**Figura 1:** Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.
