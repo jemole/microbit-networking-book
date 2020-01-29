@@ -1,34 +1,29 @@
-Unicast communication: One to One
-=================================
+Comunicación unicast: de una a una
+==================================
 
 ![Chapter 5 image](chapter5.png)
 
-Introduction
+Introducción
 ------------
 
-Unicast, sending messages to a single receiver, is the typical way we
-communicate on the Internet. For example, to view a web page, we send
-unicast messages to a server, which in turn sends us the page to display
-on our browser.
+La comunicación unicast, enviar mensajes a un único receptor, es la forma habitual de comunicación en Intenet. Por ejemplo, para ver una página web enviamos mensajes unicast a un servidor, que a su vez nos envía la página que hay que mostrar en el navegador.
 
-In this chapter, you will send unicast messages, for example to a
-friend’s or teammate’s micro:bit. Doing this, you will learn some basic
-ideas of computer networking, including:
+En este capítulo vamos a enviar mensajes unicast a la placa micro:bit de otro compañero. Y en el proceso vamos a aprender ideas y conceptos fundamentales de las redes de ordenadores, incluyendo:
 
-- the concept of *unicast*
+- el concepto de *unicast*
 
-- the concept of a *protocol*
+- el concepto de *protocolo*
 
-- the concept of an *address* and *IP address*
+- el concepto de *dirección* y *dirección IP*
 
-- the concept of a *data packet* and a *header*
+- el concepto de *paquete de datos* y de *cabecera*
 
-### What you’ll need
+### Qué vas a necesitar:
 
     2 micro:bits
-    1 whiteboard/board
-    boardmarkers/post-it notes
-    1 teammate
+    1 pizarra
+    rotuladores/notas adhesivas
+    1 colega
 
 Background
 ----------
