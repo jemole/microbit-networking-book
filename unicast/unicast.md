@@ -139,38 +139,8 @@ Para reflexionar
 Problemas
 ---------
 
-1. In what ways is unicast like broadcast and group communication? In what ways is it different?
+1. En este capítulo hemos usado textos de dos letras para las direcciones. ¿Cuántas direcciones diferentes podemos tener con esta solución?
 
-2. Which ones are not IP addresses?
+2. Al seleccionar un tamaño de las direcciones para la cabecera de tus mensajes, ¿puedes elegir el tamaño que quieras? En tu programa, ¿qué sucede si aumenta el tamaño de las direcciones a 10 letras? ¿Ves algún beneficio? ¿Hay alguna limitación?
 
-    1. -1.0.0.1
-
-    2. 278.0.10.0
-
-    3. 104.20.14.61
-
-    4. 127.0.0.1
-
-    5. 161.23.84;18
-
-    6. 161.73.246.13
-
-    7. 104.20.14.61.15
-
-3. In this chapter, you used two-letter strings for your addresses. How many different people can you unicast using this address size?
-
-4. When selecting an address size for your message header, can you pick any size you like? In your program, what happens if you increase your address size to 10 letters? Do you see any benefits? Or are there any limitations?
-
-5. How does the size of a data packet header affect the actual packet size? If your data packet size were 100 Bytes, and your header size were 10 Bytes, how big could your messages be? What happens if the header size increases to 50 Bytes?
-
-Resources
----------
-
-- Video: IP addresses and DNS (code.org) -
-    <https://youtu.be/5o8CwafCxnU>
-
-- Video: IP addresses (CommonCraft) -
-    <https://www.commoncraft.com/video/ip-addresses>
-
-- BBC bitesize networks -
-    <http://www.bbc.co.uk/education/topics/zjxtyrd>
+3. ¿Cómo afecta el tamaño de la cabecera de un paquete de datos al tamaño real del paquete? Si el tamaño de tu paquete de datos fuera de 100 Bytes y el tamaño de tu cabecera fuera de 10 Bytes, ¿cuántos Bytes podrían tener como máximo los mensajes? ¿Qué sucedería si el tamaño del encabezado aumenta a 50 bytes (y se mantiene el tamaño de paquete en 100 Bytes)?
