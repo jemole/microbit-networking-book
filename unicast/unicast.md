@@ -121,7 +121,7 @@ Comprueba si la dirección destino es igual a la dirección que elegiste para tu
 
 ### Desafío: filtrar emisores
 
-**Descripción:** Hay veces en las que no quieres recibir mensajes que procedan de cualquier emisor. Para ello podrías escribir un programa de forma que solo recibas mensajes de los emisores que tu escojas. A esta lista se le suele llamar *lista blanca*.
+**Descripción:** Hay veces en las que no quieres recibir mensajes que procedan de cualquier emisor. Para ello podrías escribir un programa de forma que solo recibas mensajes de los emisores que tú escojas. A esta lista se le suele llamar *lista blanca*.
 
 **Instrucciones:** Amplía tu programa que recibe mensajes para comprobar si la *dirección origen* que viene en la cabecera del paquete está en la lista blanca. Si es así, se muestra el mensaje; en caso contrario, no.
 
