@@ -119,33 +119,25 @@ El receptor utilizará esta información para decidir qué paquetes de los recib
 
 Comprueba si la dirección destino es igual a la dirección que elegiste para tu placa. Si es así, esto significa que tu micro:bit es la destinataria correcta. Si tu micro:bit no es la destinataria, sé un buen ciudadano e ignora el mensaje. ¡Hay que ser buenos!
 
-### Challenge: Filter senders
+### Desafío: filtrar emisores
 
-**Description:** Sometimes, you may not want to receive messages just
-from anybody. For this, you will write a program so that you only
-receive messages from two people you know. We will call this your
-*allow-list* (often referred to as a *whitelist*).
+**Descripción:** Hay veces en las que no quieres recibir mensajes que procedan de cualquier emisor. Para ello podrías escribir un programa de forma que solo recibas mensajes de los emisores que tu escojas. A esta lista se le suele llamar *lista blanca*.
 
-**Instruction:** Extend the receiver program to also check the *sender
-address* field in the header. Check whether this address is in your allow-list. If yes, display the sender address and the message. If not,
-ignore the message. Test your program with addresses in and out of your
-whitelist.
+**Instrucciones:** Amplía tu programa que recibe mensajes para comprobar si la *dirección origen* que viene en la cabecera del paquete está en la lista blanca. Si es así, se muestra el mensaje; en caso contrario, no.
 
-Extended activity
------------------
 
-!!! attention "Exercise 1"
-	You may have written two separate programs: one for the receiver and one for the sender. Change your program so that both micro:bits can send and receive.
+Para reflexionar
+----------------
 
-!!! attention "Exercise 2"
-	Did you try listening out for messages sent from other micro:bits in your class? How could your program achieve this? Is this the right thing to do? How might you protect your messages from others snooping?
+!!! attention "Ejercicio 1"
+	¿Podríamos poner nuestras micro:bit en modo espía para escuchar mensajes que vayan a otras personas? ¿Cómo? ¿Es esto algo ético? ¿Cómo podrías proteger tus mensajes para que otras personas no pudieran espiarlos?
+	
+!!! attention "Ejercicio 2"
+	En lugar de usar direcciones origen y destino, podríamos lograr algo equivalente al unicast como hicimos en prácticas anteriores, estableciendo un ID de grupo de radio único con cada micro:bit con la que queramos comunicarnos. ¿Qué limitaciones presenta este enfoque?
 
-!!! attention "Exercise 3"
-	In this chapter, we have covered one way to do a unicast: Putting sender and receiver addresses in a data packet header. But there is another way. Remember [Group communication: one to many](../groupcommunication/groupcommunication.md). If you set your group to be
-	only for your pair of micro:bits, then this is like you are unicasting. To unicast like this, choose a unique group ID, like you did for group communication. Announce it on the board so that no one else uses it. Write programs for your pair of micro:bits that send and receive using this radio group ID. What are the limitations of doing unicast like this? **Hint: Think about how many possible group IDs there are. Would this be enough for everyone in the world who has a micro:bit?**
 
-Problems
---------
+Problemas
+---------
 
 1. In what ways is unicast like broadcast and group communication? In what ways is it different?
 
