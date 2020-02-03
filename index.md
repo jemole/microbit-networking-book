@@ -16,29 +16,30 @@ Al escribir el libro no se ha asumido conocimiento previo alguno sobre comunicac
 
 Sin embargo, sí se asume que has escrito algunos programas sencillos con una micro:bit. Por ejemplo, se espera que entiendas lo que es una variable, una instrucción si-entonces-sino o un bucle. Pero si no tienes mucha experiencia programando, tampoco te preocupes, porque los programas con que trabajaremos son muy sencillos y tendrás oportunidad de practicar en cada capítulo.
 
-
-Editions
---------
-A PDF version is available for [download](https://microbit.nominetresearch.uk/networking-book-pdf/networking_with_the_microbit.pdf).
-
-You can buy a printed copy from [Amazon.co.uk](https://www.amazon.co.uk/Networking-micro-bit-Anthony-Kirby/dp/1973396769) or [Amazon.com](https://www.amazon.com/Networking-micro-bit-Anthony-Kirby/dp/1973396769) (this is the cheapest & most efficient way for us to make printed copies available).
+Hay que tener en cuenta que esta obra que estás leyendo es un traducción al castellano que, aunque respeta en general la obra original, ha sido modificada, resumida o ampliada en diferentes capítulos por el autor de la adaptación.
 
 
+Ediciones
+---------
+
+Es posible descargar una versión PDF del libro original en inglés: [descarga](https://microbit.nominetresearch.uk/networking-book-pdf/networking_with_the_microbit.pdf).
+
+También se pueden comprar copias impresasen [Amazon.co.uk](https://www.amazon.co.uk/Networking-micro-bit-Anthony-Kirby/dp/1973396769) o [Amazon.com](https://www.amazon.com/Networking-micro-bit-Anthony-Kirby/dp/1973396769). 
+
+Cuando finalice la traducción al español se generará una edición en PDF y se incluirá también para descarga.
 
 
-About the authors
+
+Sobre los autores
 -----------------
 
-We are researchers, which means we work on new ideas and products. Our company Nominet runs the part of the Internet that controls how names (like
-[http://www.bbc.co.uk)](http://www.bbc.co.uk)) are used when people, computers, or devices like tablets or smartphones connect to
-other computers over the Internet. We’re very excited to have the opportunity to work with micro:bits
-and the Micro:bit Foundation.
+Los autores de la obra original son investigadores, lo que significa que tratan de encontrar nuevas ideas y productos. Su empresa Nominet se encarga de la parte de internet que controla como se usan los nombres (como
+[http://www.bbc.co.uk)](http://www.bbc.co.uk)) cuando la gente, los ordenadores y otros dispositivos se conectan a otros ordenadores a través de internet. 
 
-Understanding how computers talk to each other is something that we think is important, which is why
-we wrote this book! We’ve enjoyed designing the tasks and challenges in the book, and we hope you
-do too.
+Comprender cómo hablan los ordenadores entre sí es algo importante, y es por eso que escribieron este libro. Anthony & Cigdem disfrutaron realmente al diseñar los retos y los desafíos del libro, y esperan que tú también lo hagas al tratar de resolverlos.
 
-Anthony & Cigdem
+El autor de esta traducción al español y adaptación es Jesús Moreno León, profesor de informática en Sevilla (España). Las modificaciones que se han realizado de la obra original se deben a que Jesús está utilizando estas prácticas en sus clases, por lo que algunos capítulos se han adaptado a las necesidades concretas de su alumnado.
+
 
 Resumen
 -------
