@@ -3,24 +3,19 @@ Prefacio
 
 ![Cover image](introduction/cover.png)
 
-About the book
+Acerca del libro
 ------------------------------------
 
-This book presents a series of activities to teach the basics of computer networks. While you will not
-learn all aspects of computer networking, we hope that it will serve as a good starting point.
+Este libro presenta una serie de actividades para conocer aspectos básicos sobre redes de ordenadores usando placas micro:bit. Aunque no aprenderás todos los aspectos de las redes, esperamos que sirva como un buen punto de partida.
 
-To network micro:bits, we use custom micro:bit radio to radio communication. When one hears the
-word radio, what comes to mind is the radio that blasts out tunes from your favourite radio broadcasting
-channel. But, a radio, or a radio transceiver (transmitter/receiver), is used in communications to
-generate and receive radio waves that contain information such as audio, video or digital data. And
-all micro:bits have built-in radios[^1].
+Para que las micro:bits puedan comunicarse usaremos la comunicación de radio a radio. Al escuchar la palabra radio solemos pensar en nuestras emisoras musicales favoritas, pero una radio, un trasceptor de radio (transmisor/receptor) se usa en las comunicaciones para generar y recibir ondas de radio que pueden contener información como audio, vídeo o datos digitales. Y todas las micro:bit llevan una radio incorada [^1].
 
-Each chapter presents interesting challenges in radio communications and networking with micro:bits.
-After every few chapters, there’s an exciting game to look forward to! In the programming sections, you will use the JavaScript Blocks Editor at the [Microsoft Makecode site](https://makecode.microbit.org/) to develop solutions to overcome those challenges[^2]. 
+Cada capítulo presenta retos interesantes sobre las comunicaciones usando micro:bits. Cada pocos capítulos se intercala un juego que pone en práctica todo lo aprendido. Para programar las placas se usa el editor de bloques de JavaScript, [Microsoft Makecode](https://makecode.microbit.org/)[^2]. 
 
-Writing this book, we have assumed no knowledge of radio communications or networking. 
+Al escribir el libro no se ha asumido conocimiento previo alguno sobre comunicaciones o redes. 
 
-However, we assume that you have written programs with a micro:bit. For example, we expect that you are familiar with variables, if-then-else statements, and loops. The activities in each chapter will provide ample opportunity to put this knowledge into practice.
+Sin embargo, sí se asume que has escrito algunos programas sencillos con una micro:bit. Por ejemplo, se espera que entiendas lo que es una variable, una instrucción si-entonces-sino o un bucle. Pero si no tienes mucha experiencia programando, tampoco te preocupes, porque los programas con que trabajaremos son muy sencillos y tendrás oportunidad de practicar en cada capítulo.
+
 
 Editions
 --------
