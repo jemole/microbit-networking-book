@@ -38,7 +38,7 @@ Los autores de la obra original son investigadores, lo que significa que tratan 
 
 Comprender cómo hablan los ordenadores entre sí es algo importante, y es por eso que escribieron este libro. Anthony & Cigdem disfrutaron realmente al diseñar los retos y los desafíos del libro, y esperan que tú también lo hagas al tratar de resolverlos.
 
-El autor de esta traducción al español y adaptación es Jesús Moreno León, profesor de informática en Sevilla (España). Las modificaciones que se han realizado de la obra original se deben a que Jesús está utilizando estas prácticas en sus clases, por lo que algunos capítulos se han adaptado a las necesidades concretas de su alumnado.
+El autor de esta traducción al español y adaptación es [Jesús Moreno León](http://jemole.me/), profesor de informática en Sevilla (España). Las modificaciones que se han realizado de la obra original se deben a que Jesús está utilizando estas prácticas en sus clases, por lo que algunos capítulos se han adaptado a las necesidades concretas de su alumnado.
 
 
 Resumen
