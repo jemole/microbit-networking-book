@@ -1,5 +1,5 @@
-Preface
-=======
+Prefacio
+========
 
 ![Cover image](introduction/cover.png)
 
@@ -45,31 +45,23 @@ do too.
 
 Anthony & Cigdem
 
-Outline
+Resumen
 -------
 
-- [**Connecting micro:bits with wires**](wiredcommunication/wiredcommunication.md)  
-    This chapter is an introduction and a fun demonstration of networking. Micro:bits can communicate
-    when connected with wires. Via wires, you will send images between micro:bits.
+- [**Conexión de micro:bits por cables**](wiredcommunication/wiredcommunication.md)  
+    Este capítulo es una introducción y una demostración divertida de las redes de ordenadores. Las placas micro:bit se pueden comunicar al conectarse mediante cables. Y a través de estos enviars imágenes entre micro:bits.
 
-- [**Broadcast communication: One to all**](broadcast/broadcast.md)  
-    You will start using radio communication in this chapter and learn about broadcast communication.
-    With broadcast communication, one micro:bit can send messages to many other micro:bits. But, be
-    cautious! If all micro:bits do that, it’s like everyone is speaking at once.
+- [**Comunicación broadcast: de una a todas**](broadcast/broadcast.md)  
+    Comenzars a utilizar la comunicación por radio y aprenderás acerca de la comunicación broadast. Así, una micro:bit enviará información a todas las demás micro:bits de la clase. Pero, ojo, si todas las placas hacen lo mismo es como si todos hablésemos al mismo tiempo.
 
-- [**Group communication: One to many**](groupcommunication/groupcommunication.md)
-    By forming small groups, you will send to and receive from a limited number of micro:bits. This is more
-    manageable than broadcast. But, selecting a unique identifier for your group will be an interesting
-     challenge.
+- [**Comunicación por grupos: de una a muchas**](groupcommunication/groupcommunication.md)
+    Formaremos grupos pequeño para enviar y recibir información de un número limitado de micro:bits. Esto es más manejable que broadcast. El reto está en elegir un identificador que sea único para tu grupo.
 
-- [**Game 1: Shakey Donkey**](shakeydonkey/shakeydonkey.md)
-    This is a game that uses the micro:bit radio. See whether you can figure out how to play the game,
-    and how it works.
+- [**Juego 1: Corazones agitados**](shakeydonkey/shakeydonkey.md)
+    Este juego usa la radio de la micro:bit. Tras programarlo siguiendo las instrucciones, jugarás varias partidas, entenderás el código e, incluso, tratarás de hackearlo para poder ganar siempre.
 
-- [**Unicast Communication: One to One**](unicast/unicast.md)
-    Broadcast and group communication are fun. But sometimes you want to talk to only one person.
-    This is called unicast communication. To do this, you discover that you will need a unique identifier
-    for your micro:bit.
+- [**Comunicación unicast: de una a una**](unicast/unicast.md)
+    Las comunicaciones broadcast y multicast son divertidas. Pero a veces solo quieres hablar con una persona determinada. Esto se llama comunicación unicast. Para ello, descubriremos que es necesario que cada micro:bit tenga un identificador único.
 
 - [**Two-way Unicast**](twowayunicast/twowayunicast.md)
     It’s no use talking with somebody if you don’t get a response back. In this chapter, you will program
