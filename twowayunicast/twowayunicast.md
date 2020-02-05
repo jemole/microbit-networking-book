@@ -73,56 +73,41 @@ Con tu micro:bit, de cara a calcular el round-trip-time tendrás que usar el blo
 En el resto de este capítulo usarás el tiempo de ejecución para calcular el RTT. Será muy útil para guardar el tiempo en el que enviaste un mensaje y también en el que recibiste un mensaje. **Ojo: guardar el tiempo significa establecer el valor de una variable para que sea igual al tiempo de ejecución actual. 
 
 
-Programming: Ping
+A programar: Ping
 -----------------
 
-This activity is best done with a team of two. You will together program
-your micro:bits to run the Ping program. For this, you will need to
-complete four tasks.
+Esta actividad se hace en parejas. Juntos vais a programar vuestras micro:bits para implementar y probar el programa Ping. Tendréis que realizar cuatro tareas:
 
-### Task 1: Prepare for unicast
 
-**Description:** Ping uses unicast between the sender and the receiver
-micro:bits. Look at your notes for [Unicast Communication: One to One](../unicast/unicast.md)  and your
-unicast program to remember how to do unicast.
+### Tarea 1: Prearar unicast
 
-**Instruction:** Start with using the unicast program you have written for
-[Unicast Communication: One to One](../unicast/unicast.md) as a basis. In this program, decide which
-micro:bit is going send the *Pings*, and which micro:bit is going to
-respond with *Pongs*. Set the address variables based on your decision.
-Design your message header, *Ping* packet, and *Pong* packet.
+**Descripción:** Ping usa unicast entre las micro:bits emisora y receptora. Echa un ojo a tus notas del capítulo [Unicast : De una a una](../unicast/unicast.md) para recordar cómo se implementa la comunicación unicast.
 
-### Task 2: Send a Ping
+**Intrucciones:** Puedes partir del programa que desarrollaste en el capítulo anterior. Decidid qué micro:bit va a enviar los *pings* y que micro:bit va a responder con mensajes *pong*. Estableced los valores de las direcciones en base a esta decisión. Diseñad la cabecera de vuestro mensaje, tanto para el paquete *ping* como para el *pong*. 
 
-**Description:** The ping sender records the time before it sends out a
-*Ping* packet. It unicasts the *Ping* packet.
+### Tarea 2: Envía un ping
 
-**Instruction:** Use *running time* to record the *Ping* sending time.
-Send a *Ping* packet to the receiver micro:bit.
+**Descripción:** El emisor del ping tiene que almacenar el tiempo justo antes de enviar un paquete *ping*. Entonces envía el paquete *ping*.
 
-### Task 3: Receive a Ping
+**Instrucciones:** Usa *tiempo de ejecución* para almacenar el momento en que se envía el *ping*. Envía un paquete *ping* a la micro:bit receptora.
 
-**Description:** The receiver micro:bit responds a *Ping* message with a
-*Pong*.
+### Tarea 3: Recibe un ping
 
-**Instruction:** Program the receiver micro:bit to unicast a *Pong*
-packet when a *Ping* packet is received.
+**Descripción:** La micro:bit receptora responde al mensaje *ping* con un mensaje *pong*.
 
-### Task 4: Receive a Pong and calculate round-trip-time
+**Instrucciones**: Programa la micro:bit receptora para que envíe un paquete *pong* unicast cuando recibe un paquete *ping*. La dirección destino del paquete *pong* debe ser la dirección de origen del paquete *ping*.
 
-**Description:** When the sender micro:bit receives the *Pong*, it
-calculates the round-trip-time. 
+### Tarea 4: Recibe un pong y calcula el round-trip-time
 
-**Instruction:** Program the sender to
-receive a *Pong* packet. When the *Pong* is received, record the time
-using the running time variable. Show the difference between receiving
-and sending times on your display. Run your program 5 times, and write
-down the send times that you see in your display. Answer these two
-questions:
+**Descripción:** Cuando la micro:bit emisora recibe el *pong* calcula el round-trip-time. 
 
-1. What is the minimum and maximum round-trip-time (RTT)?
+**Instrucciones:** Programa la micro:bit emisora para recibir un paquete *pong*. Cuando recibe un *pong* almacena el tiempo en el que lo ha recibido usando el tiempo de ejecución. Muestra por pantalla la diferencia entre el tiempo de envío y el de recepción. Ejecuta el programa 5 veces y escribe en un cuaderno los tiempos que se muestran en la pantalla. Contesta a las siguientes preguntas: 
 
-2. What is the average RTT?
+1. ¿Cuál fue el RTT máximo? 
+
+2. ¿Cuál fue el RTT mínimo? 
+
+3. ¿Cuál fue el RTT medio?
 
 Exercises
 ---------
