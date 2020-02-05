@@ -45,57 +45,38 @@ Así que el programa Ping mide el *tiempo de viaje* (o tiempo de ida y vuelta, o
 	
 En otras palabras, el emisor mide la diferencia de tiempo entre el momento en que envió el *ping* y en que recibió el *pong*.
 
-RTT = Tiempo\_recibo\_pong - Tiempo\_envío\_ping  
+RTT = Tiempo\_recepción\_pong - Tiempo\_envío\_ping  
 
 La siguiente figura muestra la relación entre *ping*, *pong*, y round-trip-time.
 
-![Round-trip-time. Micro:bit 1 sends a *Ping* message to Micro:bit 2 at *Time\_send*. The Micro:bit 2 responds with a *Pong* message. Micro:bit 1 receives the *Pong* message at *Time\_receive*. The difference between these two times, *Time\_receive* and *Time\_send* is the round-trip-time.](Ping-rtt.png)
+![Round-trip-time. Micro:bit 1 envía un mensaje *ping* a Micro:bit 2 en el momento *Tiempo\_envío*. Micro:bit 2 responde con un mensaje *pong*. Micro:bit 1 recibe el mensaje *pong* en el momento *Tiempo\_recepción*. La diferencia entre estos dos tiempos, *Tiempo\_envío* y *Tiempo\_recepción*, es el round-trip-time.](Ping-rtt.png)
 
 !!! note ""
-	**Figure 1:** Round-trip-time. Micro:bit 1 sends a *Ping* message to 
-	Micro:bit 2 at *Time\_send*. The Micro:bit 2 responds with a *Pong* message. 
-	Micro:bit 1 receives the *Pong* message at *Time\_receive*. The difference 
-	between these two times, *Time\_receive* and *Time\_send* is the round-trip-time.
+	**Figura 1:** Round-trip-time. Micro:bit 1 envía un mensaje *ping* a Micro:bit 2 en el momento *Tiempo\_envío*. Micro:bit 2 responde con un mensaje *pong*. Micro:bit 1 recibe el mensaje *pong* en el momento *Tiempo\_recepción*. La diferencia entre estos dos tiempos, *Tiempo\_envío* y *Tiempo\_recepción*, es el round-trip-time.
 
-Besides round-trip-time (RTT), the Ping program reports statistical
-information. Figure below shows an example output as a result of
-using the command:
+Además del round-trip-time (RTT), el programa Ping aporta otra información estadística. La figura siguiente muestra un ejemplo de salida como resultado de usar la orden:
 
     ping www.google.com
 
-on the <http://ping.eu/ping> website. In this example, four Ping messages were sent to *www.google.com*.
-The round-trip-time for each message is given with the *time* value in
-each line. For example, for the first ping, the RTT is 10.2 ms
-(milliseconds). The program also reports ping statistics. For example, 4
-packets were sent, 4 packets were received. This means 0% packet loss.
-The average RTT (shown as *avg*) is 10.184 ms.
+en la web <http://ping.eu/ping>. En este ejemplo se enviaron cuatro mensajes a *www.google.com*. El RTT para cada mensaje se muestra con el valor *time* en cada línea. Por ejemplo, para el primer ping el RTT es 10.2 ms (milisegundos). El programa también informa de estadísticas del ping. Por ejemplo, se muestra que se han enviado 4 mensajes y se han recibido 4 mensajes. Este significa que se han perdido el 0% de los mensajes. La media del RTT (que aparece como *avg*) es 10.184 ms.
 
 ![The output of running ping to send four messages to *www.google.com*. The <http://ping.eu/ping> online program reports round-trip time and a statistical summary of the results.](PingGoogle.png)
 
 !!! note ""
-	**Figure 2:** The output of running ping to send four messages to *www.google.com*. 
-	The <http://ping.eu/ping> online program reports round-trip time and a 
-	statistical summary of the results.
+	**Figura 2:** La salida de ejecutar ping para enviar cuantro mensajes a *www.google.com*. El programa online <http://ping.eu/ping> muestra el round-trip time e información estadística.
+	
+Con tu micro:bit, de cara a calcular el round-trip-time tendrás que usar el bloque *tiempo de ejecución (ms)*.
 
-With a micro:bit, to calculate the round-trip-time of your messages, you
-will use the *running time* variable.
-
-!!! hint "Definition 3: _micro:bit running time_"
-	A variable that keeps record of how long has passed since the micro:bit was
-	turned on or reset (measured in milliseconds).
+!!! hint "Definición 3: _tiempo de ejecución micro:bit_"
+	Una variable que mantiene el tiempo que ha pasado desde que la micro:bit se encendió o se reseteó (medido en milisegundos).
 
 ![PXT running time](PXTRunningTime.png)
 
 !!! note ""
-	**Figure 3:** MakeCode running time
+	**Figura 3:** Tiempo de ejecución en MakeCode
 
-In the rest of this chapter, you will use the running time variable to
-calculate the round-trip time. It will be very useful to record the time
-when you first sent a message, and also when you received a response.
-**Hint: Recording running time means setting a variable equal to the
-current running time. You will need to combine the set item block in the
-JavaScript Blocks editor *Variables* menu with the running time block in the *Input*
-menu shown above.**
+En el resto de este capítulo usarás el tiempo de ejecución para calcular el RTT. Será muy útil para guardar el tiempo en el que enviaste un mensaje y también en el que recibiste un mensaje. **Ojo: guardar el tiempo significa establecer el valor de una variable para que sea igual al tiempo de ejecución actual. 
+
 
 Programming: Ping
 -----------------
