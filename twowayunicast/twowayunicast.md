@@ -49,7 +49,7 @@ RTT = Tiempo\_recepción\_pong - Tiempo\_envío\_ping
 
 La siguiente figura muestra la relación entre *ping*, *pong*, y round-trip-time.
 
-![Round-trip-time. Micro:bit 1 envía un mensaje *ping* a Micro:bit 2 en el momento *Tiempo\_envío*. Micro:bit 2 responde con un mensaje *pong*. Micro:bit 1 recibe el mensaje *pong* en el momento *Tiempo\_recepción*. La diferencia entre estos dos tiempos, *Tiempo\_envío* y *Tiempo\_recepción*, es el round-trip-time.](Ping-rtt.png)
+![Round-trip-time. Micro:bit 1 envía un mensaje *ping* a Micro:bit 2 en el momento *Tiempo\_envío*. Micro:bit 2 responde con un mensaje *pong*. Micro:bit 1 recibe el mensaje *pong* en el momento *Tiempo\_recepción*. La diferencia entre estos dos tiempos, *Tiempo\_envío* y *Tiempo\_recepción*, es el round-trip-time.](Ping-rtt_es.png)
 
 !!! note ""
 	**Figura 1:** Round-trip-time. Micro:bit 1 envía un mensaje *ping* a Micro:bit 2 en el momento *Tiempo\_envío*. Micro:bit 2 responde con un mensaje *pong*. Micro:bit 1 recibe el mensaje *pong* en el momento *Tiempo\_recepción*. La diferencia entre estos dos tiempos, *Tiempo\_envío* y *Tiempo\_recepción*, es el round-trip-time.
@@ -69,11 +69,6 @@ Con tu micro:bit, de cara a calcular el round-trip-time tendrás que usar el blo
 
 !!! hint "Definición 3: _tiempo de ejecución micro:bit_"
 	Una variable que mantiene el tiempo que ha pasado desde que la micro:bit se encendió o se reseteó (medido en milisegundos).
-
-![PXT running time](PXTRunningTime.png)
-
-!!! note ""
-	**Figura 3:** Tiempo de ejecución en MakeCode
 
 En el resto de este capítulo usarás el tiempo de ejecución para calcular el RTT. Será muy útil para guardar el tiempo en el que enviaste un mensaje y también en el que recibiste un mensaje. **Ojo: guardar el tiempo significa establecer el valor de una variable para que sea igual al tiempo de ejecución actual. 
 
