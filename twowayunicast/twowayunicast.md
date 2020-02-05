@@ -23,47 +23,31 @@ Este capítulo se basa en los aprendizajes de [Comunicación unicast: de una a u
     rotuladores/notas adhesivas
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-*Bidirectional communication* enables two-way communication between two
-computers.
+La *comunicación bidireccional* permite comunicación de ida y vuelta entre dos ordenadores.
 
-!!! hint "Definition 1: _Bidirectional communication_"
-	This is a communications mode in which
-	data is transmitted in both directions but not at the same time.
+!!! hint "Definición 1: _Comunicación bidireccional_"
+	Es un modo de comunicación en el que la información se transmite en ambas direcciones pero no al mismo tiempo.
 
-In the previous chapter, your micro:bits had clear roles: there was a
-sender and a receiver. In bidirectional communication, either of the
-micro:bits can send and receive messages. This way, it becomes possible
-to create two-way protocols. In these protocols, when a computer sends a
-message, it waits for a certain response to its message.
+Con la comunicación bidireccional, por tanto, las micro:bits podrán tanto enviar como recibir mensajes. Y de este modo es posible crear protocolos en los que, cuando un equipo envía un mensaje, espera a recibir una respuesta determinada a su mensaje.
 
-!!! hint "Definition 2: _Ping_"
-	Ping is an example of a two-way protocol. It is widely used in
-	the Internet to test whether a networked computer is on and connected OK.
+!!! hint "Definición 2: _Ping_"
+	Ping es un ejemplo de un protocolo bidireccional. Se usa habitualmente en Internet para comprobar si un dispositivo de una red está encendido y conectado correctamente. 
 
-Ping program sends a *Ping* message to test whether computers are OK. It
-expects this message to be echoed back, for example with a *Pong*
-message. This is like playing ping pong but with computers and over
-networks. If the sender does not receive a response to its *Ping*, this
-shows there is a problem with the receiver. It is also a problem if it
-takes a long time before the sender receives a *Pong* response.
+El programa Ping envía un mensaje *ping* para comprobar si otro ordenador está bien. Y espera que este mensaje sea respondido con un mensaje *pong*. Es como jugar al ping-pong pero con ordenadores y a través de redes. Si el emisor no recibe una respuesta a su *ping* podemos suponer que hay algún tipo de problema, bien en la red, bien en el receptor. También es problemático si la respuesta *pong* llega al emisor pero tarda mucho en hacerlo.
 
-So, Ping program measures the *round-trip-time* between the two
-computers to point out these problems.
+Así que el programa Ping mide el *tiempo de viaje* (o tiempo de ida y vuelta, o round-trip-time) entre dos ordenadores para detectar este tipo de problemas.
 
-!!! hint "Definition 3: _Round-trip-time (RTT)_"
-	Round-trip-time is the time it takes for a
-	message to go from a sender to a receiver and back again.
+!!! hint "Definición 3: _Round-trip-time (RTT)_"
+	Round-trip-time es el tiempo que tarda un mensaje en ir desde el emisor hasta el receptor y de vuelta al emisor.
+	
+En otras palabras, el emisor mide la diferencia de tiempo entre el momento en que envió el *ping* y en que recibió el *pong*.
 
-In other words, the sender measures the difference in time when it sent
-the *Ping* and when it received the *Pong*.  
+RTT = Tiempo\_recibo\_pong - Tiempo\_envío\_ping  
 
-RTT = Time\_receive\_pong - Time\_send\_ping  
-
-The figure below shows the relationship between,
-*Ping*, *Pong*, and round-trip-time.
+La siguiente figura muestra la relación entre *ping*, *pong*, y round-trip-time.
 
 ![Round-trip-time. Micro:bit 1 sends a *Ping* message to Micro:bit 2 at *Time\_send*. The Micro:bit 2 responds with a *Pong* message. Micro:bit 1 receives the *Pong* message at *Time\_receive*. The difference between these two times, *Time\_receive* and *Time\_send* is the round-trip-time.](Ping-rtt.png)
 
