@@ -1,32 +1,27 @@
-Two-way unicast
-===============
+Unicast de ida y vuelta: ping-pong
+==================================
 
 ![Chapter 6 image](chapter6.png)
 
-Introduction
+Introducción
 ------------
 
-In this chapter, you will learn about *bidirectional communication*:
-sending a message to another micro:bit and getting a response to
-your message. You will also learn about the Ping program, which is a
-commonly used tool to check if computers are still connected to the
-Internet.
+En este capítulo vas a aprender sobre *comunicación bidireccional*: enviar un mensaje a una micro:bit y recibir una respuesta a tu mensaje. También aprenderemos sobre el programa Ping, que es una herramienta muy utilizada para comprobar si dos ordenadores tienen conectividad.
 
-This chapter will build on the learnings from
-[Unicast Communication: One to One](../unicast/unicast.md). The new ideas are:
+Este capítulo se basa en los aprendizajes de [Comunicación unicast: de una a una](../unicast/unicast.md). Las nuevas ideas son:
 
-- The idea of 2-way communication (*bidirectional communication*)
+- La comunicación de ida y vuelta (*comunicación bidireccional*)
 
-- The Ping program
+- El programa Ping
 
-- The concept of round-trip-time
+- El concepto de tiempo de viaje (o tiempo de ida y vuelta)
 
-### What you’ll need
+### Qué necesitas
 
     2 micro:bits
-    1 whiteboard/board
-    boardmarkers/postit notes
-    1 teammate
+    1 pizarra
+    rotuladores/notas adhesivas
+    1 colega
 
 Background
 ----------
