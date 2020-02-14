@@ -59,11 +59,8 @@ Resumen
 - [**Comunicación unicast: de una a una**](unicast/unicast.md)
     Las comunicaciones broadcast y multicast son divertidas. Pero a veces solo quieres hablar con una persona determinada. Esto se llama comunicación unicast. Para ello, descubriremos que es necesario que cada micro:bit tenga un identificador único.
 
-- [**Two-way Unicast**](twowayunicast/twowayunicast.md)
-    It’s no use talking with somebody if you don’t get a response back. In this chapter, you will program
-    your micro:bit to send a message and to get a reply. Also, you will work out how long it takes for a
-    reply to come back. Doing this, you will also program one of the most important tools used in the
-    Internet: Ping.
+- [**Unicast de ida y vuelta: ping-pong**](twowayunicast/twowayunicast.md)
+    No tiene mucho sentido hablar con alguien si no te puede responder. En este capítulo programarás tu micro:bit para enviar un mensaje y recibir una respuesta. Además calcularás cuánto tarda la respuesta en llegar. Y en el proceso habrás programado una de las herramientas más importantes de las utilizadas en Internet: Ping.
 
 - [**Game 2: Rock-Paper-Scissors over Radio**](rockpaperscissors/rockpaperscissors.md)  
     This is not like the traditional Rock-Paper-Scissors game. It
