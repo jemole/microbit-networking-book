@@ -109,21 +109,18 @@ Esta actividad se hace en parejas. Juntos vais a programar vuestras micro:bits p
 
 3. ¿Cuál fue el RTT medio?
 
-Exercises
+Ejercicios
+----------
+
+!!! attention "Ejercicio 1"
+	Amplía tu programa ping para que envíe automáticamente más de un mensaje *Ping*. Prueba, por ejemplo, con 10 *Pings*. Calcula la media del tiempo de viaje de los mensajes.
+
+!!! attention "Ejercicio 2"
+	El programa ping informa sobre el tiempo de viaje (RTT). Pero, ¿y si calculases el tiempo que tarda solo en la ida? ¿Es posible calcular el tiempo solo de la ida o de la vuelta? En otras palabras, ¿es posible calcular el tiempo que tarda el mensaje en llegar de el emisor al receptor?
+	
+
+Problemas
 ---------
-
-!!! attention "Exercise 1"
-	Extend your Ping program to send automatically more than one *Ping* message. 
-	Test it with 10 *Pings*. Calculate the average round-trip time of these Ping messages.
-
-!!! attention "Exercise 2"
-	The Ping program reports the round-trip-time. What if you wanted to calculate 
-	the time the message took one-way? Is it possible to calculate one-way times? 
-	In other words, is it possible to calculate how long it takes to send a message 
-	from the sender to the receiver? How long the messages take from the receiver to the sender?
-
-Problems
---------
 
 1. In the example ping figure from the <http://ping.eu/ping> site, what is 172.217.23.228?
 
