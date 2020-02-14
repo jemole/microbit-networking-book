@@ -122,17 +122,17 @@ Ejercicios
 Problemas
 ---------
 
-1. In the example ping figure from the <http://ping.eu/ping> site, what is 172.217.23.228?
+1. En el ejemplo de la figura del sitio <http://ping.eu/ping>, ¿qué es 172.217.23.228?
 
-2. What is round-trip-time, and how is it calculated?
+2. ¿Qué es el tiempo de viaje (RTT) y cómo se calcula?
 
-3. Think about the following scenario: micro:bit 1 sends a *Ping* to micro:bit 2 at time *5*. If the round-trip-time is *10*, at what time did the micro:bit 1 receive the *Pong* message?
+3. Piensa en el siguiente escenario: micro:bit 1 envía un *Ping* a micro:bit 2 en el tiempo *5*. Si el RTT es *10*, ¿en qué tiempo recibió micro:bit 1 el mensaje *Pong*?
 
-4. In the example ping figure from the <http://ping.eu/ping> site, what are the minimum and maximum round-trip-times (RTTs)?
+4. En el ejemplo de la figura del sitio <http://ping.eu/ping>, ¿cuál fue el RTT mínimo? ¿Cuál fue el máximo? 
 
-5. In the example ping figure from the <http://ping.eu/ping> site, the packet loss 0% loss. What is the loss percentage, if 2 *Ping* messages were lost out of 5?
+5. En el ejemplo de la figura del sitio <http://ping.eu/ping>, la pérdida de paquetes fue del 0%. ¿Cuál sería el porcentaje de pérdida de paquetes si se envían 5 mensajes *Ping* y se pierden 2? 
 
-Resources
----------
+Recursos
+--------
 
-Video: What is a Ping? - <https://youtu.be/N8uT7LNVJv4>
+Vídeo: What is a Ping? - <https://youtu.be/N8uT7LNVJv4>
