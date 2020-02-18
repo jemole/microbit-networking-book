@@ -1,27 +1,23 @@
-Handling Errors: Retransmissions
-================================
+Gestionar errores: retransmisiones
+==================================
 
 ![Chapter 8 image](chapter8.png)
 
-Introduction
+Introducción
 ------------
 
-In the previous chapters, you probably noticed wireless communication isn’t always
-reliable. In other words, not every message you send may be received by
-the other side. In this chapter, you will learn about how to increase
-the chance your messages are received. What would you do if a message gets lost? This chapter will cover one
-simple but effective method: retransmissions.
+En los capítulos anteriores es probable que hayas notado que la comunicación inalámbrica no es siempre fiable. En otras palabras, puede que no todos los mensajes que se envían sean recibidos por el otro extremo. En este capítulo aprenderemos a incrementar la probabilidad de que nuestros mensajes sean recibidos. ¿Qué podríamos hacer si un mensaje se pierde? En esta práctica veremos un método simple pero efectivo: las retransmisiones.
 
-In summary, you will learn about:
+En resumen, aprenders sobre:
 
-- Wireless communication errors
+- Errores en comunicaciones inalámbricas
 
-- *Retransmissions* as a method of reliability.
+- *Retransmisiones* como un método de fiabilidad.
 
-### What you’ll need
+### Qué necesitas
 
     2 micro:bits
-    1 teammate
+    1 colega
 
 Background
 ----------
