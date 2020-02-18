@@ -8,7 +8,7 @@ Introducción
 
 En los capítulos anteriores es probable que hayas notado que la comunicación inalámbrica no es siempre fiable. En otras palabras, puede que no todos los mensajes que se envían sean recibidos por el otro extremo. En este capítulo aprenderemos a incrementar la probabilidad de que nuestros mensajes sean recibidos. ¿Qué podríamos hacer si un mensaje se pierde? En esta práctica veremos un método simple pero efectivo: las retransmisiones.
 
-En resumen, aprenders sobre:
+En resumen, aprenderás sobre:
 
 - Errores en comunicaciones inalámbricas
 
@@ -19,34 +19,20 @@ En resumen, aprenders sobre:
     2 micro:bits
     1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-In wireless communications, an error can occur for several reasons.
-For example, there may be physical obstructions, like walls, doors, and
-even people. The wireless signals lose power as they go through these
-obstructions and sometimes,  bounce off them!
-The more obstructions there
-are between a sender and a receiver, the more chance there is of an
-error. Also, if the sender and receiver are too far away from each
-other, they may not always be able to communicate. Imagine there are
-many obstacles between two people, they may not always hear what the
-other is saying!
+En las comunicaciones inalámbricas un error se puede producir por varios motivos. Por ejemplo, por que haya obstáculos físicos como muros, puertas o incluso personas. Las señales inalámbricas pierden fuerza al atravesar estos obstáculos y a veces incluso rebotan en ellos.
 
-Another reason for a wireless error may be *radio interference*. This is
-because wireless communication is broadcast (remember
-[Wireless and Broadcast Communication](../broadcast/broadcast.md)). This means that there may be many
-broadcasters, and their transmissions may collide at the receivers.
-These broadcasters *interfere* with each other.
+Cuantos más obstáculos haya entre emisor y receptor mayor es la probabilidad de que ocurra un error. Además si emisor y receptor están muy alejados puede que no sean capaces de comunicarse. Imagina que hay un montón de obstáculos entre dos personas que se estén hablando; puede que no siempre puedan escuchar lo que el otro está diciendo.
 
-!!! hint "Definition 1: _Interference_"
-	In wireless communications, interference is any other
-	signal that disrupts a signal as it travels to its destination.
+Otra causa de errores inalámbricos pueden ser las *interferencias de radio*. Esto se debe a que la comunicación inalámbrica es broadcast (acuérdate de lo que vimos en el capítulo de [Comunicación broadcast](../broadcast/broadcast.md). Esto significa que pueda haber mucha gente enviando mensajes, y sus transmisiones puede colisionar en los receptores. Es decir, que los emisores están *interfiriendo* unos con otros.
 
-Imagine, in a classroom, when everybody is talking at the same time. You
-will miss half of the things your friend says. Other people’s signals
-interfere with your friend’s signal on its way to you. In networking,
-this is a packet loss.
+!!! hint "Definición 1: _Interferencia_"
+	En comunicación inalámbrica una interferencia es cualquier otra señal que interrumpe una señal mientras viaja a su destino.
+	
+imagina en una clase que todo el mundo está hablando a la vez. Seguro que no te enterás de la mitad de las cosas que esté diciendo tu compañero. Las señales de otras personas están interfiriendo con la señal de tu compañero en su camino hacia ti. En redes, esto es una pérdida de paquetes.
+
 
 !!! hint "Definition 2: _Packet loss_"
 	Packet loss happens when one or more data packets
