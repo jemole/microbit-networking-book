@@ -22,35 +22,28 @@ En resumen, aprenderás sobre:
 Antecedentes
 ------------
 
-En las comunicaciones inalámbricas un error se puede producir por varios motivos. Por ejemplo, por que haya obstáculos físicos como muros, puertas o incluso personas. Las señales inalámbricas pierden fuerza al atravesar estos obstáculos y a veces incluso rebotan en ellos.
+En las comunicaciones inalámbricas un error se puede producir por varios motivos. Por ejemplo, si hay obstáculos físicos como muros, puertas o incluso personas. Las señales inalámbricas pierden fuerza al atravesar estos obstáculos y a veces incluso rebotan en ellos.
 
 Cuantos más obstáculos haya entre emisor y receptor mayor es la probabilidad de que ocurra un error. Además si emisor y receptor están muy alejados puede que no sean capaces de comunicarse. Imagina que hay un montón de obstáculos entre dos personas que se estén hablando; puede que no siempre puedan escuchar lo que el otro está diciendo.
 
-Otra causa de errores inalámbricos pueden ser las *interferencias de radio*. Esto se debe a que la comunicación inalámbrica es broadcast (acuérdate de lo que vimos en el capítulo de [Comunicación broadcast](../broadcast/broadcast.md). Esto significa que pueda haber mucha gente enviando mensajes, y sus transmisiones puede colisionar en los receptores. Es decir, que los emisores están *interfiriendo* unos con otros.
+Otra causa de errores inalámbricos pueden ser las *interferencias de radio*. Esto se debe a que la comunicación inalámbrica es broadcast (acuérdate de lo que vimos en el capítulo de [Comunicación broadcast](../broadcast/broadcast.md)). Esto significa que pueda haber mucha gente enviando mensajes, y sus transmisiones puede colisionar en los receptores. Es decir, que los emisores están *interfiriendo* unos con otros.
 
 !!! hint "Definición 1: _Interferencia_"
-	En comunicación inalámbrica una interferencia es cualquier otra señal que interrumpe una señal mientras viaja a su destino.
+	En comunicación inalámbrica una interferencia es cualquier otra señal que interrumpe una señal mientras viaja hacia su destino.
 	
-imagina en una clase que todo el mundo está hablando a la vez. Seguro que no te enterás de la mitad de las cosas que esté diciendo tu compañero. Las señales de otras personas están interfiriendo con la señal de tu compañero en su camino hacia ti. En redes, esto es una pérdida de paquetes.
+Imagina en una clase en la que todo el mundo está hablando a la vez. Seguro que no te enterás de la mitad de las cosas que esté diciendo tu compañero. Las señales de otras personas están interfiriendo con la señal de tu compañero en su camino hacia ti. En redes, esto se llama pérdida de paquetes.
 
+!!! hint "Definición 2: _Pérdida de paquetes_"
+	La pérdida de paquetes ocurre cuando uno o más paquetes que viajan en una red de ordenadores no llegan a su destino. La pérdida de paquetes se mide como la proporción de paquetes perdidos y paquetes enviados (echa un ojo a la fórmula de abajo).
 
-!!! hint "Definition 2: _Packet loss_"
-	Packet loss happens when one or more data packets
-	traveling in a computer network do not reach their destination. Packet
-	loss is measured as the ratio of packets lost and the packets sent (see
-	Equation below).
+*Pérdida de paquetes* = (*Paquetes perdidos*)/(*Paquetes enviados*)
 
-*Packet loss* = (*Packets lost*)/(*Packets sent*)
+Por otra parte es posible que si hay mucha interferencia se puedan recibir mensajes con errores. Por ejemplo podría ocurrir que escucharas "guapo" cuando tu compañero en realidad ha dicho "guarro". En redes esto se llama paquetes con errores. Los paquetes con errores se miden como la tasa paquetes con errores.
 
-Also, if there is too much interference, you may receive messages
-incorrectly! For instance, you may hear “Bat!” when your friend is
-shouting “Cat!”. In networking, this is a packet error. Packet errors are measured as packet error rates.
-
-!!! hint "Definition 3: _Packet error rate_"
-	Packet error rate is the ratio of packets that have been received with
-	one or more errors and the packets sent.
-
-*Packet error rate* = (*Packets with errors*)(*Packets sent*)
+!!! hint "Definición 3: _Tasa de paquetes con errores_"
+	La tasa de paquetes con errores es la proporción de paquetes que se han recibido con uno o más errores y los paquetes enviados.
+	
+*Tasa de paquetes con errores* = (*Paquetes con errores*)(*Paquetes enviados*)
 
 In this chapter, we will cover one simple method to handle these errors, *retransmissions*, where the sender automatically retransmits messages multiple times to increase the
 chance of reception.
