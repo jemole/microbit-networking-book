@@ -59,47 +59,28 @@ En la Figura de abajo asumiremos que el emisor sabe que el medio de transmisión
 
 Es habitual utilizar retransmisiones combinadas con otros métodos. Por ejemplos, el emisor podria retransmitir solo cuando está seguro de que ha ocurrido un error. Esta opción se explora en el próximo capítulo, [Gestionar errores: ACKs](../acknowledgements/acknowledgements.md).
 
-Programming: Retransmissions
+A programar: Retransmisiones 
 ----------------------------
 
-This activity is best done with a teammate. You will start with creating
-packet errors in Task 1, and then test different packet error rates in
-Task 2. In Task 3, you will program the retransmissions solution to
-handle these errors. In this task, you will also run a series of
-experiments to measure how well retransmissions works.
+Esta actividad hay que hacerla con un colega. En la tarea 1 epezarás creando paquetes de errores, y luego en la tarea 2 probaremos diferentes tasas de error. En la tarea 3 programaremos la solución de las retransmisiones para tratar con los errores. Y a lo largo de las tareas se proponen diferentes experimentos para medir realmente cómo de bien funcionan las retransmisiones.
 
-### Task1: Create packet errors
+### Tarea 1: Crear errores en paquetes
 
-**Description:** In wireless communication, packets may fail randomly.
-This may make the testing your code for this chapter difficult. To test
-errors, you will use a custom block in the JavaScript Blocks editor to send messages with errors.
+**Descripción:** En comunicación inalámbrica los paquetes pueden fallar de manera aleatoria. Y claro, esto hace que realizar pruebas en tu código para este capítulo sea complicado. Para probar los errores vamos a usar un bloque a medida en el editor de bloques de JavaScript para enviar mensajes con errores.
 
-The ErrorRadio functions are like the Radio functions, but have an
-extra *error* parameter. This parameter is set to 20 by default, which
-means the packet error rate is 0.2 or 20%.
+Los bloques de ErrorRadio son como los que estamos acostumbrados a usar de Radio, pero tienen un parámetro extra, *error*. Este parámetro está definido a 20 por defecto, lo que significa que la tasa de paquetes con errores es 0,2 o 20%.
 
 ![Error radio custom blocks](ErrorRadio.png)
 
 !!! note ""
-	**Figure 2:** Error radio custom blocks
+	**Figura 2:** Bloques a medida Error radio
 
-**Instruction** To use the custom blocks in the JavaScript Blocks editor, import the
-ErrorRadio.hex file in this folder. With your teammate,
-decide who will have the sender micro:bit, and who will have the
-receiver micro:bit. Follow the approach in [Unicast Communication: One to One](../unicast/unicast.md)
-to put sender and receiver address in your packets.
-You may copy and
-change one of the programs you have written for
-[Unicast Communication: One to One](../unicast/unicast.md)
- to use the *ErrorRadio* blocks.
+**Instrucciones** Para usar los bloques a medida en el editor de JavaScript hay que importar el archivo [ErrorRadio.hex](https://microbit.nominetresearch.uk/networking-book/ErrorRadio.hex) en el sitio web de MakeCode. Ahora tenéis que decidir qué placa micro:bit será la emisora y cuál la receptora. Sigue el enfoque del capítulo [Unicast: de una a una](../unicast/unicast.md) para escribir las direcciones origen y destino en los paquetes. Quizás incluso puedes copiar y modificar uno de los programas que ya escribiste en ese capítulo, para incluir ahora los bloques de *ErrorRadio*.
 
-Write a small sender program that sends a number with an error. Download it
-to the sender micro:bit. Write a small receiver program that receives a
-number and displays it on screen. Download this program to the receiver
-micro:bit.
+En el emisor, escribe un programa que envíe un número con un error. Descarga el programa a la micro:bit. En el receptor escribe un programa que recibe un número y lo muestra en la pantalla. Descarga el programa en la otra micro:bit.
 
-Change the packet error rate using these error values in your program:
-0, 50 and 100. Test packet errors by observing the receiver display.
+Cambia en tu programa la tasa de paquetes con errores usando por turnos los siguientes valores: 0, 50 y 100. Prueba a enviar varios números y comprobar con cada tasa si se cumple lo esperado al ver los mensajes mostrados en el receptor. 
+
 
 ### Task 2: Send a sequence of messages
 
