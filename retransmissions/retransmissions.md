@@ -38,37 +38,26 @@ Imagina en una clase en la que todo el mundo está hablando a la vez. Seguro que
 
 *Pérdida de paquetes* = (*Paquetes perdidos*)/(*Paquetes enviados*)
 
-Por otra parte es posible que si hay mucha interferencia se puedan recibir mensajes con errores. Por ejemplo podría ocurrir que escucharas "guapo" cuando tu compañero en realidad ha dicho "guarro". En redes esto se llama paquetes con errores. Los paquetes con errores se miden como la tasa paquetes con errores.
+Por otra parte es posible que si hay mucha interferencia se puedan recibir mensajes con errores. Por ejemplo podría ocurrir que escucharas "guapo" cuando tu compañero en realidad ha dicho "guarro". En redes esto se llama paquetes con errores. 
 
 !!! hint "Definición 3: _Tasa de paquetes con errores_"
 	La tasa de paquetes con errores es la proporción de paquetes que se han recibido con uno o más errores y los paquetes enviados.
 	
 *Tasa de paquetes con errores* = (*Paquetes con errores*)(*Paquetes enviados*)
 
-In this chapter, we will cover one simple method to handle these errors, *retransmissions*, where the sender automatically retransmits messages multiple times to increase the
-chance of reception.
+En este capítulo veremos un método simple para gestionar estos errores, las *retransmisiones*, por las que el emisor retransmite automáticamente mensajes muchas veces para incrementar la probabilidad de recepción.
 
-!!! hint "Definition 4: _Retransmissions_"
-	Retransmissions mean sending messages many times.
+!!! hint "Definición 4: _Retransmisiones_"
+	Retransmisiones significa enviar mensajes muchas veces. 
 
-In the Figure below, let’s assume the sender knows that
-the communications medium loses half of its packets. In other words, the
-packet loss is 0.5 (or 50%). The sender micro:bit decides to send each packet twice to
-increase the chance to get its messages through. The first packet is the
-transmission, and the second packet is the retransmission. So, the
-number of retransmissions is 1.
+En la Figura de abajo asumiremos que el emisor sabe que el medio de transmisión pierde la mitad de los paquetes que se envían. En otras palabras, la tasa de pérdida de paquetes es 0,5 (50%). La micro:bit emisora decide enviar cada paquete dos veces para incrementar la probabilidad de que el mensaje llegue al destino. El primer paquete es la transmisión, y el segundo paquete es la retransmisión. Así que el número de retransmisiones es 1.
 
-![Retransmissions may increase message success. In the example, the sender sends each message twice by default. So, even if the first “Hello” failed, the second “Hello” was received by the receiver!](Retransmissions.png)
+![Las retransmisiones pueden incrementar el éxito de los mensajes. En el ejemplo, el emisor envía un mensaje dos veces por defecto. Así que, a pesar de que el primer "Hola" falla, el segundo "Hola" sí es recibido por el receptor.](Retransmissions_ES.png)
 
 !!! note ""
-	**Figure 1:** Retransmissions may increase message success. 
-	In the example, the sender sends each message twice by default. So, even if 
-	the first “Hello” failed, the second “Hello” was received by the receiver!
+	**Figura 1:** Las retransmisiones pueden incrementar el éxito de los mensajes. En el ejemplo, el emisor envía un mensaje dos veces por defecto. Así que, a pesar de que el primer "Hola" falla, el segundo "Hola" sí es recibido por el receptor.
 
-It is common to use retransmissions combined with another method. For
-instance, senders may choose retransmit only when they are sure there
-has been an error. We will explore this option in the next chapter,
-[Handling errors: Acknowledgements](../acknowledgements/acknowledgements.md).
+Es habitual utilizar retransmisiones combinadas con otros métodos. Por ejemplos, el emisor podria retransmitir solo cuando está seguro de que ha ocurrido un error. Esta opción se explora en el próximo capítulo, [Gestionar errores: ACKs](../acknowledgements/acknowledgements.md).
 
 Programming: Retransmissions
 ----------------------------
