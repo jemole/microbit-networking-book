@@ -45,13 +45,13 @@ Resumen
 -------
 
 - [**Conexión de micro:bits por cables**](wiredcommunication/wiredcommunication.md)  
-    Este capítulo es una introducción y una demostración divertida de las redes de ordenadores. Las placas micro:bit se pueden comunicar al conectarse mediante cables. Y a través de estos enviars imágenes entre micro:bits.
+    Este capítulo es una introducción y una demostración divertida de las redes de ordenadores. Las placas micro:bit se pueden comunicar al conectarse mediante cables. Y a través de estos enviarás imágenes entre micro:bits.
 
 - [**Comunicación broadcast: de una a todas**](broadcast/broadcast.md)  
-    Comenzars a utilizar la comunicación por radio y aprenderás acerca de la comunicación broadast. Así, una micro:bit enviará información a todas las demás micro:bits de la clase. Pero, ojo, si todas las placas hacen lo mismo es como si todos hablésemos al mismo tiempo.
+    Comenzarás a utilizar la comunicación por radio y aprenderás acerca de la comunicación broadast. Así, una micro:bit enviará información a todas las demás micro:bits de la clase. Pero, ojo, si todas las placas hacen lo mismo es como si todos hablésemos al mismo tiempo.
 
 - [**Comunicación por grupos: de una a muchas**](groupcommunication/groupcommunication.md)
-    Formaremos grupos pequeño para enviar y recibir información de un número limitado de micro:bits. Esto es más manejable que broadcast. El reto está en elegir un identificador que sea único para tu grupo.
+    Formaremos grupos pequeños para enviar y recibir información de un número limitado de micro:bits. Esto es más manejable que broadcast. El reto está en elegir un identificador que sea único para tu grupo.
 
 - [**Juego 1: Corazones agitados**](shakeydonkey/shakeydonkey.md)
     Este juego usa la radio de la micro:bit. Tras programarlo siguiendo las instrucciones, jugarás varias partidas, entenderás el código e, incluso, tratarás de hackearlo para poder ganar siempre.
