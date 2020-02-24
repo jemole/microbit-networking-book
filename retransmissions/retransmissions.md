@@ -77,39 +77,31 @@ Los bloques de ErrorRadio son como los que estamos acostumbrados a usar de Radio
 
 **Instrucciones** Para usar los bloques a medida en el editor de JavaScript hay que importar el archivo [ErrorRadio.hex](https://microbit.nominetresearch.uk/networking-book/ErrorRadio.hex) en el sitio web de MakeCode. Ahora tenéis que decidir qué placa micro:bit será la emisora y cuál la receptora. Sigue el enfoque del capítulo [Unicast: de una a una](../unicast/unicast.md) para escribir las direcciones origen y destino en los paquetes. Quizás incluso puedes copiar y modificar uno de los programas que ya escribiste en ese capítulo, para incluir ahora los bloques de *ErrorRadio*.
 
-En el emisor, escribe un programa que envíe un número con un error. Descarga el programa a la micro:bit. En el receptor escribe un programa que recibe un número y lo muestra en la pantalla. Descarga el programa en la otra micro:bit.
+En el emisor, escribe un programa que envíe un número usando el bloque que realiza envíos con errores. Descarga el programa a la micro:bit. En el receptor escribe un programa que recibe un número y lo muestra en la pantalla. Descarga el programa en la otra micro:bit.
 
 Cambia en tu programa la tasa de paquetes con errores usando por turnos los siguientes valores: 0, 50 y 100. Prueba a enviar varios números y comprobar con cada tasa si se cumple lo esperado al ver los mensajes mostrados en el receptor. 
 
 
-### Task 2: Send a sequence of messages
+### Tarea 2: Envía una secuencia de mensajes
 
-**Description:** In this section, you will send a sequence of messages
-to the receiver micro:bit.
+**Descripción:** En esta sección enviarás una secuencia de mensajes a la micro:bit receptora.
 
-**Instruction:** Extend your program in Task 1, to send this sequence:
+**Instrucciones:** Amplía el programa de la tarea 1 para que se envíe esta secuencia:
 
-    Start 1 2 3 4 5 6 7 8 9 10 End
+    Inicio 1 2 3 4 5 6 7 8 9 10 Fin
 
-You can send the *Start* and *End* using the normal Radio blocks to
-send them without an error. But remember that your micro:bit’s radio may
-drop messages. So, there may be errors even in sending *Start* and
-*End*. No radio is perfect!
+Puedes enviar los mensajes *Inicio* y *Fin* utilizando los bloques de radio para que se envíen sin errores. Pero recuerda que la radio de nuestra micro:bit es posible que pierda involuntariamente algunos mensajes. Así que puede que ocurra algún error al enviar *Inicio* y *Fin*... ¡ninguna radio es perfecta!
 
-Extend the receiver program to count the number of messages it receives
-in this sequence. Run experiments setting the *error* parameter to 25,
-50, and 75. Calculate the packet loss using the Packet loss equation. Repeat each experiment three times. Fill
-the table below with the result of your experiments. For
-example, when *error* is set to 25 in experiment number 1, if you
-received:
+Amplía el programa de la micro:bit receptora para contar el número de mensajes que recibe en esta secuencia. Ejecuta el experimento estableciendo el parámetro de error primero a 25, luego a 50 y luego a 75. Calcula la tasa de pérdida de paquetes utilizando la ecuación que vimos antes. Repite el experimento tres veces. Rellena la tabla de debajo con los resultados de tus experimentos. Por ejemplo, cuando el *error* se establece a 25 en el experimento primero, si recibes:
 
-    Start 1 5 6 7 8 9 10 End
+    Inicio 1 5 6 7 8 9 10 Fin
 
-This means, you received 7 packets, and lost 3. Your packet loss is 0.3%. The first row of the table is filled based on this example. Add in the values from your own experiment Based on your experiment results, discuss with your teammate how the experiment results change as you change the value  of *error*. 
+Esto significa que has recibido 7 paquetes y que has perdido 3. Tu tasa de pérdida de paquetes es 0.3%. La primera fila de la tabla se ha rellenado en base a este ejemplo. Rellena la tabla con los valores de tu experimento. Y en base a vuestros resultados, discutid entre los compañeros cómo han cambiado los resultados al modificarse el valor de *error* en el bloque de envío. 
 
-| **Error value** | **Experiment no.** | **Packets received**| **Packet loss** |
+
+| **Valor de error** | **Experimento nº** | **Paquetes recibidos**| **Pérdida de paquetes** |
 |-----------------|:-------------------|:---------------|:-----------------|
-| 25 | (Example) | 7| 0.3
+| 25 | (Ejemplo) | 7| 0.3
 | 25 | 1 | | |
 | 25 | 2 | | |
 | 25 | 3 | | |
@@ -120,7 +112,7 @@ This means, you received 7 packets, and lost 3. Your packet loss is 0.3%. The fi
 | 75 | 2 | | |
 | 75 | 3 | | |
 
-Task 3: Retransmit by default
+Tarea 3: Retransmit by default
 -----------------------------
 
 **Description:** In this task, you will program the automatic
