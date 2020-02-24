@@ -144,19 +144,19 @@ Ejecuta el experimento tres veces para los distintos valores de retransmisión y
 | 5 | 2 |  | | | |
 | 5 | 3 |  | | | |
 
-Extended activity
------------------
+Actividad extra
+---------------
 
-!!! attention "Exercise 1"
-	Based on your experiments, discuss with your teammate how the increase in 
-	retransmissions helps. In your discussion, answer the following questions:
+!!! attention "Ejercicio 1"
+	En base a vuestros experimentos discutid en grupo cómo ayuda el incremento de las retransmisiones. En vuestro debate, contestad las siguientes preguntas:
 	
-	- How does the infromation loss improve as you increase the number of retransmissions?
-	- Does the method guarantee all messages are received at least once?
-	- How would you improve your method?
+	- ¿Cómo mejora la tasa de pérdida de información al incrementar el número de retransmisiones?
+	- ¿El método garantiza que todos los mensajes se reciben al menos una vez?
+	- ¿Se retransmiten mensajes que ya habían llegado al receptor y, por tanto, son *redundantes*?
+	- ¿Cómo podrías mejorar este método?
 
-!!! attention "Exercise 2"
-	Imagine you are going to survey packet loss in different locations inside a room using two micro:bits. Write a receiver and a sender program to measure packet loss. What do you observe? How does the packet loss change in different locations?
+!!! attention "Ejercicio 2"
+	Imagina que vas a probar la pérdida de paquetes en distintas posiciones de la clase utilizando dos micro:bits. Escribe los programas de emisor y receptor para medir la tasa de pérdida de paquetes. ¿Qué observas? ¿Cómo cambia la pérdida de paquetes en las distintas posiciones?
 
 Problems
 --------
