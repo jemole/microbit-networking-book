@@ -96,12 +96,12 @@ Amplía el programa de la micro:bit receptora para contar el número de mensajes
 
     Inicio 1 5 6 7 8 9 10 Fin
 
-Esto significa que has recibido 7 paquetes y que has perdido 3. Tu tasa de pérdida de paquetes es 0.3%. La primera fila de la tabla se ha rellenado en base a este ejemplo. Rellena la tabla con los valores de tu experimento. Y en base a vuestros resultados, discutid entre los compañeros cómo han cambiado los resultados al modificarse el valor de *error* en el bloque de envío. 
+Esto significa que has recibido 7 paquetes y que has perdido 3. Tu tasa de pérdida de paquetes es 0,3. La primera fila de la tabla se ha rellenado en base a este ejemplo. Rellena la tabla con los valores de tu experimento. Y en base a vuestros resultados, discutid entre los compañeros cómo han cambiado los resultados al modificarse el valor de *error* en el bloque de envío. 
 
 
 | **Valor de error** | **Experimento nº** | **Paquetes recibidos**| **Pérdida de paquetes** |
 |-----------------|:-------------------|:---------------|:-----------------|
-| 25 | (Ejemplo) | 7| 0.3
+| 25 | (Ejemplo) | 7| 0,3
 | 25 | 1 | | |
 | 25 | 2 | | |
 | 25 | 3 | | |
@@ -112,38 +112,28 @@ Esto significa que has recibido 7 paquetes y que has perdido 3. Tu tasa de pérd
 | 75 | 2 | | |
 | 75 | 3 | | |
 
-Tarea 3: Retransmit by default
------------------------------
+Tarea 3: Retransmitir por defecto
+---------------------------------
 
-**Description:** In this task, you will program the automatic
-retransmissions at the sender side.
+**Descripción:** En esta tarea, vas a programar retransmisiones automáticas en el lado del emisor.
 
-**Instructions:** Change your sender code from Task 2 to send each
-number in your sequence more than once. To try out your code, set
-*error* to 75. For example, by setting number of retransmissions to 1,
-you will send the following sequence:
+**Instrucciones:** Cambia el código de la Tarea 2 para enviar cada paquete de la secuencia más de una vez. Para probar el código establece el valor de *error* a 75. Por ejemplo, si fijamos el número de retransmisiones a 1, tendríamos que enviar la siguiente secuencia:
 
-    Start 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10End
+    Inicio 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 Fin
 
-This means the sender sent 20 packets in total, including 10
-retransmissions.
+Esto significa que se enviaría 20 paquetes en total, incluyendo 10 retransmisiones.
 
-Change your receiver code to count the unique numbers received.  Count 
-also the duplicates. Calculate the packet loss. For example,
-let’s assume your receiver received, for the case of 1 retransmission:
+Cambia el código del receptor para contar el número de paquetes únicos recibidos. Cuenta también los duplicados recibidos. Calcula la pérdida de paquetes. Por ejemplo, supongamos que has recibido la siguiente secuencia para el caso de 1 retransmisión:
 
-    Start 1 1 2 3 5 5 6 8 9 9 10 End
+    Inicio 1 1 2 3 5 5 6 8 9 9 10 Fin
 
-This means, the receiver received 8 unique numbers (1, 2, 3, 5, 6, 8, 9 and 10) and 3 duplicates (1, 5 and 9). Note that the packet loss is 9 packets out of 20 (45%). But with retransmissions, the receiver only lost 2
-numbers out of 9 (it did not receive 4 and 7). Let’s call this improved
-packet loss *information loss*. So, the information loss with
-retransmissions is 0.2. The first row of the table below is filled based on this example.
+Esto significa que el receptor ha recibido 8 números únicos (1, 2, 3, 5, 6, 8, 9 y 10) y 3 duplicados (1, 5 y 9). Por tanto, fíjate que aunque la tasa de pérdida de paquetes es 9 de 20 (45%), al utilizar retransmisiones el receptor solo ha perdido 2 números de los 10 (el 4 y el 7 son los que no recibió). Vamos a llamar a esta tasa *pérdida de información*. Así que la pérdida de información es 0,2. La primera fila de la tabla de abajo se ha rellenado en base a este ejemplo.
 
-Run each experiment three times each, for different retransmission values and fill in the rest of the table.
+Ejecuta el experimento tres veces para los distintos valores de retransmisión y rellena el resto de la tabla.
 
-| **Retransmissions** | **Experiment** | **Unique Packets Received**| **Duplicates** |**Packet loss** | **Information loss**|
+| **Retransmisiones** | **Experimento** | **Páquetes únicos recibidos**| **Duplicados** |**Pérdida de paquetes** | **Pérdida de información**|
 |---------------------|:---------------|:----------------|:--------------------|-----------------|:----------------|
-| 1 | (example) | 8 | 3 | 0.45 | 0.2|
+| 1 | (ejemplo) | 8 | 3 | 0,45 | 0,2|
 | 1 | 1 |  | | | |
 | 1 | 2 |  | | | |
 | 1 | 3 |  | | | |
