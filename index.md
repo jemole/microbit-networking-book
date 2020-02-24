@@ -66,11 +66,8 @@ Resumen
     This is not like the traditional Rock-Paper-Scissors game. It
     works over the radio!
 
-- [**Handling errors: Retransmissions**](retransmissions/retransmissions.md)
-     Nothing is perfect, not even radio communication. What happens if
-    your message gets lost on the way? In this chapter, you will test
-    methods for dealing with message loss. For instance, does it help if
-    you send your messages more than once?
+- [**Gestionar errores: Retransmisiones**](retransmissions/retransmissions.md)
+     Nada es perfecto, ni siquiera la comunicación por radio. ¿Qué pasa si se pierde uno de tus mensajes por el camino? En este capítulo probarás varios métodos para lidiar con la pérdida de mensajes. Por ejemplo, ¿ayudaría que cada mensaje se enviara más de una vez?
 
 - [**Handling errors: Acknowledgements**](acknowledgements/acknowledgements.md)
     It’s a waste to retransmit if the other side already received the message! The receiver needs a
