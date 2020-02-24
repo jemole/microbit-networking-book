@@ -62,18 +62,18 @@ Es habitual utilizar retransmisiones combinadas con otros métodos. Por ejemplos
 A programar: Retransmisiones 
 ----------------------------
 
-Esta actividad hay que hacerla con un colega. En la tarea 1 epezarás creando paquetes de errores, y luego en la tarea 2 probaremos diferentes tasas de error. En la tarea 3 programaremos la solución de las retransmisiones para tratar con los errores. Y a lo largo de las tareas se proponen diferentes experimentos para medir realmente cómo de bien funcionan las retransmisiones.
+Esta actividad hay que hacerla con un colega. En la tarea 1 epezarás creando paquetes de errores, y luego en la tarea 2 probaremos diferentes tasas de error. En la tarea 3 programaremos la solución de las retransmisiones para lidiar con los errores. Y a lo largo de las tareas se proponen diferentes experimentos para medir realmente cómo de bien funcionan las retransmisiones.
 
 ### Tarea 1: Crear errores en paquetes
 
-**Descripción:** En comunicación inalámbrica los paquetes pueden fallar de manera aleatoria. Y claro, esto hace que realizar pruebas en tu código para este capítulo sea complicado. Para probar los errores vamos a usar un bloque a medida en el editor de bloques de JavaScript para enviar mensajes con errores.
+**Descripción:** En comunicación inalámbrica los paquetes pueden fallar de manera aleatoria. Y claro, esto hace que realizar pruebas en tu código para este capítulo sea complicado. Para probar los errores vamos a usar un bloque del editor de bloques de JavaScript que se ha creado a medida para enviar mensajes con errores.
 
 Los bloques de ErrorRadio son como los que estamos acostumbrados a usar de Radio, pero tienen un parámetro extra, *error*. Este parámetro está definido a 20 por defecto, lo que significa que la tasa de paquetes con errores es 0,2 o 20%.
 
-![Error radio custom blocks](ErrorRadio.png)
+![Bloques a medida ErrorRadio](ErrorRadio.png)
 
 !!! note ""
-	**Figura 2:** Bloques a medida Error radio
+	**Figura 2:** Bloques a medida ErrorRadio
 
 **Instrucciones** Para usar los bloques a medida en el editor de JavaScript hay que importar el archivo [ErrorRadio.hex](https://microbit.nominetresearch.uk/networking-book/ErrorRadio.hex) en el sitio web de MakeCode. Ahora tenéis que decidir qué placa micro:bit será la emisora y cuál la receptora. Sigue el enfoque del capítulo [Unicast: de una a una](../unicast/unicast.md) para escribir las direcciones origen y destino en los paquetes. Quizás incluso puedes copiar y modificar uno de los programas que ya escribiste en ese capítulo, para incluir ahora los bloques de *ErrorRadio*.
 
@@ -115,13 +115,13 @@ Esto significa que has recibido 7 paquetes y que has perdido 3. Tu tasa de pérd
 Tarea 3: Retransmitir por defecto
 ---------------------------------
 
-**Descripción:** En esta tarea, vas a programar retransmisiones automáticas en el lado del emisor.
+**Descripción:** En esta tarea vas a programar retransmisiones automáticas en el lado del emisor.
 
 **Instrucciones:** Cambia el código de la Tarea 2 para enviar cada paquete de la secuencia más de una vez. Para probar el código establece el valor de *error* a 75. Por ejemplo, si fijamos el número de retransmisiones a 1, tendríamos que enviar la siguiente secuencia:
 
     Inicio 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 Fin
 
-Esto significa que se enviaría 20 paquetes en total, incluyendo 10 retransmisiones.
+Esto significa que se enviarían 20 paquetes en total, incluyendo 10 retransmisiones.
 
 Cambia el código del receptor para contar el número de paquetes únicos recibidos. Cuenta también los duplicados recibidos. Calcula la pérdida de paquetes. Por ejemplo, supongamos que has recibido la siguiente secuencia para el caso de 1 retransmisión:
 
@@ -152,7 +152,7 @@ Actividad extra
 	
 	- ¿Cómo mejora la tasa de pérdida de información al incrementar el número de retransmisiones?
 	- ¿El método garantiza que todos los mensajes se reciben al menos una vez?
-	- ¿Se retransmiten mensajes que ya habían llegado al receptor y, por tanto, son *redundantes*?
+	- ¿Se retransmiten mensajes que ya habían llegado al receptor y, por tanto, son "redundantes"?
 	- ¿Cómo podrías mejorar este método?
 
 !!! attention "Ejercicio 2"
@@ -163,7 +163,7 @@ Problemas
 
 1. ¿Qué son las interferencias? ¿Por qué ocurren?
 
-2. Si emisor envía 20 mensajes y se pierden 11 mensajes en el camino al receptor, ¿cuál es la tasa de pérdida de paquetes?
+2. Si el emisor envía 20 mensajes y se pierden 11 mensajes en el camino al receptor, ¿cuál es la tasa de pérdida de paquetes?
 
 3. Si la tasa de paquetes con errores es del 20% y el emisor envía 40 paquetes, ¿cuántos paquetes contenían errores?
 
