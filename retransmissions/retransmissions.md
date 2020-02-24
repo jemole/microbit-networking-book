@@ -156,23 +156,23 @@ Actividad extra
 	- ¿Cómo podrías mejorar este método?
 
 !!! attention "Ejercicio 2"
-	Imagina que vas a probar la pérdida de paquetes en distintas posiciones de la clase utilizando dos micro:bits. Escribe los programas de emisor y receptor para medir la tasa de pérdida de paquetes. ¿Qué observas? ¿Cómo cambia la pérdida de paquetes en las distintas posiciones?
+	Imagina que vas a probar la pérdida de paquetes en distintas posiciones de la clase utilizando dos micro:bits. Escribe los programas de emisor y receptor para medir la tasa de pérdida de paquetes. ¿Qué observas? ¿Cómo cambia la pérdida de paquetes en las distintas posiciones? ¿A qué pueden deberse estas diferencias?
 
-Problems
---------
-
-1. What is interference? Why does it happen?
-
-2. If the sender sent 20 messages, and 11 messages were lost on the way to the destination, what is the packet loss?
-
-3. If the packet error rate is 20% and the sender sent 40 packets, how many packets had errors?
-
-4. Assume you do not know how many numbers that will be in the message sequence. But, you know the numbers will start from 1, and will increment by 1. For example, the sent message sequence may be: *Start 1 2 3 4 5 6 7 8 9 10 11 12 End*. What happens if you lose *Start* or *End* messages? Which one is worse: the loss of *Start* or *End* message? If the only message you receive is a 4, what can you say about the number of messages you lost?
-
-5. Assume you do not know how many numbers that will be in the message sequence. And they do not follow any order. For example, the sent message sequence may be: *Start 3 5 10 2 End*. What happens if you lose *Start* or *End* messages in the sequence Which one is worse: the loss of *Start* or *End* message? If the only message you receive is a 5, what can you say about the number of messages you lost?
-
-Resources
+Problemas
 ---------
 
-Video: The Internet: Packet, Routing and Reliability -
+1. ¿Qué son las interferencias? ¿Por qué ocurren?
+
+2. Si emisor envía 20 mensajes y se pierden 11 mensajes en el camino al receptor, ¿cuál es la tasa de pérdida de paquetes?
+
+3. Si la tasa de paquetes con errores es del 20% y el emisor envía 40 paquetes, ¿cuántos paquetes contenían errores?
+
+4. Supongamos que no sabes cuántos números habrá en la secuencia de mensajes. Pero sabes que los números empiezan en el 1 y que se incrementan de 1 en 1. Por ejemplo, la secuencia de mensajes podría ser:*Inicio 1 2 3 4 5 6 7 8 9 10 11 12 Fin*. ¿Qué ocurre si pierdes los mensajes *Inicio* o *Fin*? ¿Qué sería peor: perder el mensaje de *Inicio* o el de *Fin*? Si el único mensaje que recibes es un 4, ¿qué podrías saber sobre el número de mensajes perdidos?
+
+5. Supongamos que no sabes cuántos números habrá en la secuencia de mensajes. Y que además los números no siguen ningún orden concreto.Por ejemplo, la secuencia podría ser: *Inicio 3 5 10 2 Fin*. ¿Qué ocurre si pierdes los mensajes *Inicio* o *Fin*? ¿Qué sería peor: perder el mensaje de *Inicio* o el de *Fin*? Si el único mensaje que recibes es un 5, ¿qué podrías saber sobre el número de mensajes perdidos?
+
+Recursos
+--------
+
+Vídeo: Internet: paquetes, enrutamiento y fiablidad -
     <https://youtu.be/AYdF7b3nMto>
