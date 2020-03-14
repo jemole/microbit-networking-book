@@ -1,26 +1,25 @@
-Handling Errors: Acknowledgements
-=================================
+Gestionar errores: acuse de recibo
+==================================
 
 ![Chapter 9 image](chapter9.png)
 
-Introduction
+Introducción
 ------------
 
-In the previous chapter, you used retransmissions to deal with transmission errors. In this chapter, you will improve on this by using acknowledgements. Doing this activity, you will learn
-several key methods and protocols for error control in networking.
+En el capítulo anterior usamos retransmisiones para gestionar los errores de transmisión. En este capítulo vamos a ir un paso más allá al usar acuses de recibo (acknowledgements o ACKs, en inglés). Y en el proceso vamos a aprender varios métodos y protocolos fundamentales para el control de errores en las redes de ordenadores.
 
-In summary, you will learn:
+Resumiendo, vas a aprender:
 
-- The concept of *acknowledgements*
+- El concepto de *acuse de recibo*
 
-- The concept of *Automatic Repeat Request (ARQ)*
+- El concepto de *Solicitud de repetición automática* (*Automatic Repeat Request (ARQ)*
 
-- The *Stop-and-Wait protocol*
+- El protocolo *parada-y-espera*
 
-### What you’ll need
+### Necesitarás
 
     2 micro:bits
-    1 teammate
+    1 colegawikipedia Stop-and-Wait protocol
 
 Background
 ----------
