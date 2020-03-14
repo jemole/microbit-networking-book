@@ -24,7 +24,7 @@ Resumiendo, vas a aprender:
 Antecedentes
 ------------
 
-En el capítulo anterior, un mensaje se transmitía varias veces sin importar si el receptor ya había recibido una copia anterior. ¡Eso es un desperdicio! Podrías haber transmitido nueva información en lugar de volver a enviar estos mensajes repetidos. También es un incordio para el receptor, que tiene que descartar mensajes duplicados.
+En el capítulo anterior, un mensaje se transmitía varias veces sin importar si el receptor ya había recibido una copia previamente. ¡Eso es un desperdicio! El emisor podría haber transmitido nueva información en lugar de volver a enviar estos mensajes repetidos. Y también es un incordio para el receptor, que tiene que descartar mensajes duplicados.
 
 Para evitarlo vamos a introducir un concpeto llamado *acuse de recibo*.
 
@@ -43,11 +43,11 @@ En otras palabras, si el emisor no recibe un acuse de recibo dentro del periodo 
 Los acuses de recibo se utilizan en método de control de errores que se llama *Solicitud de repetición automática* o *Automatic Repeat Request (ARQ)*.
 
 !!! hint "Definición 3: _Solicitud de repetición automática (ARQ)_"
-	Solicitud de repetición automática es un método de control de errores. Usa acuses de recibo y timeouts para retransmitir paquetes. Las retransmisiones pueden continuar hasta que el emisor recibe un acuse de recibo o bien hasta que un número máximo de retransmisiones se ha alcanzado.
+	Solicitud de repetición automática es un método de control de errores. Utiliza acuses de recibo y timeouts para retransmitir paquetes. Las retransmisiones pueden continuar hasta que el emisor recibe un acuse de recibo o bien hasta que un número máximo de retransmisiones se ha alcanzado.
 	
 ARQ se usa tanto en internet como en redes móviles. 
 
-En su implementación más sencill ARQ utiliza el protocolo de *Parada-y-Espera*
+En su implementación más sencilla ARQ utiliza el protocolo de *Parada-y-Espera*
 
 !!! hint "Definición 4: _Protocolo Parada-y-Espera_"
 	En el protocolo de *Parada-y-Espera* el emisor:
@@ -59,49 +59,41 @@ En su implementación más sencill ARQ utiliza el protocolo de *Parada-y-Espera*
 
 En el protocolo *Parada-y-Espera* el emisor, por tanto, no puede enviar un nuevo paquete hasta que recibe el ACK del paquete anterior.
 
-The figure below shows an example of a successful retransmission. The sender sends "Hello" and the receiver responds with an ACK. The sender received the ACK before the timeout ends, so it knows the packet was received OK. Now, the sender can start sending another message.
+La siguiente figura muestra un ejemplo de retransmisión exitoso. El emisor envía "Hola" y el receptor responde con un ACK. El emisor recibió el ACK antes de que se cumpliera el timeout, así que sabe que el paquete se recibió bien. Por tanto, en ese momento el emisor puede empezar en enviar otro mensaje.
 
-![Stop-and-Wait ARQ protocol: The receiver sends and ACK back to the sender, so the sender knows that the "Hello" message arrived OK.](c9_Ack1.png)
-
-!!! note ""
-	**Figure 1:** Stop-and-Wait ARQ protocol: The receiver sends and ACK back 
-	to the sender, so the sender knows that the "Hello" message arrived OK.
-
-Now let's look at some error cases. Figure below shows that the first message from the sender is lost. So, the receiver does not send an ACK. When the timeout ends, the sender has not received an ACK. So, it retransmits the message. The second attempt is successful, and the sender receives an ACK on time (before a timeout).
-
-![Stop-and-Wait ARQ protocol: The message gets lost, so the sender retransmits it.](c9_Ack2.png)
+![Protocolo ARQ Parada-y-Espera: El receptor envía un ACK al emisor para que el emisor sepa que el mensaje "Hola" llegó correctamente.](c9_Ack1.png)
 
 !!! note ""
-	**Figure 2:** Stop-and-Wait ARQ protocol: The message gets lost, so the sender retransmits it.
+	**Figura 1:** Protocolo ARQ Parada-y-Espera: El receptor envía un ACK al emisor para que el emisor sepa que el mensaje "Hola" llegó correctamente.
 
-The figure below shows an example where the message from the sender is received, but the ACK from the receiver is lost. Again, when the timout ends, the sender has not received an ACK. So, it retransmits its message. The receiver receives the duplicate message, and again, sends an ACK. This time the ACK succeeds and things can go as normal.
+Ahora vamos a ver algunos casos con errores. La figura de abajo muestra que el primer mensaje se pierde. Así que el receptor no envía el ACK. Cuando se cumple el timeout el emisor no ha recibido un ACK. Por tanto, retransmite el mensaje. El segundo intento sí tiene éxito, y el emisor recibe el ACK a tiempo (antes de cumplirse el timeout).
 
-![Stop-and-Wait ARQ protocol: The message was received, but the ACK gets lost, so the sender retransmits the message.](c9_Ack3.png)
+![Protocolo ARQ Parada-y-Espera: El mensaje se pierte, así que el emisor retransmite.](c9_Ack2.png)
 
 !!! note ""
-	**Figure 3:** Stop-and-Wait ARQ protocol: The message was received, but the 
-	ACK gets lost, so the sender retransmits the message.
+	**Figura 2:** Protocolo ARQ Parada-y-Espera: El mensaje se pierte, así que el emisor retransmite.
+
+La figura siguiente muestra un ejemplo en el que el mensaje enviado por el emisor se recibe correctamente, pero el ACK enviado por el receptor se pierde. De nuevo, cuando se cumple el timeout el emisor no ha recibido el ACK. Así que retransmite el mensaje. El receptor recibe mensaje duplicado y, de nuevo, envía el ACK. Esta vez el segundo ACK llega con éxito y las cosas continúan con normalidad.
+
+![Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.](c9_Ack3.png)
+
+!!! note ""
+	**Figura 3:** Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.
 	
-These examples show that Stop-and-Wait ARQ handles data packet and ACK losses quite well. But,
-does it always work? Figure below shows a
-problem that can hapen when messages or ACKs are delayed. In other words,  timeouts end before ACKs can be received. In this example, when the sender sends the first "Hello", the receiver receives this message and send an ACK back. But the sender times out before it receives this ACK. So, it retransmits the second "Hello". Then, it receives the delayed ACK message. But what packet this ACK refer to? The first "Hello", or the second? This confuses the receiver as well! Is the second "Hello" a new packet, or a duplicate?
+Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los mensajes o ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reeciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
 
-![Stop-and-Wait ARQ protocol: What happens if a message gets delayed? It's not clear which ACK refers to which message.](c9_Ack4.png)
+![Protocolo ARQ Parada-y-Espera:¿Qué ocurre si un mensaje se retrasa? No está claro qué ACK se refiere a qué mensaje.](c9_Ack4.png)
 
 !!! note ""
-	**Figure 4:** Stop-and-Wait ARQ protocol: What happens if a message gets 
-	delayed? It's not clear which ACK refers to which message.
+	**Figura 4:** Protocolo ARQ Parada-y-Espera:¿Qué ocurre si un mensaje se retrasa? No está claro qué ACK se refiere a qué mensaje.
 
- To solve this confusion, the protocol needs to use sequence numbers.
+Para resolver esta confusión el protocolo necesita usar números de secuencia.
 
-!!! hint "Definition 5: _Sequence number_"
-	A sequence number is a number chosen by the sender, and included in the packet header. When the
-	receiver sends an ACK, it includes the next sequence number to tell the sender that it received the previous packet, and is ready for the next one.
+!!! hint "Definición 5: _Número de secuencia_"
+	Un número de secuencia es un número escogido por el emisor, e incluido en la cabecera del paquete. Cuando el receptor envía un ACK incluye el número de secuencia para decirle al emisor que recibió el paquete anterior y que está listo para el siguiente.
 
-For example, when the sender sends “Hello, 0”, this is a “Hello” message
-with a sequence number 0. On receiving this packet, the receiver will
-send “ACK, 1”, which says “I received packet 0, send me packet 1 next”.
-We won't use sequence numbers in this lesson's tasks, but you could try adding them as an extended activity.
+Por ejemplo, si el emisor envía "Hola, 0", significa que es un mensaje "Hola" con un número de secuencia 0. Al recibir este paquete el receptor enviaría "ACK, 1", que significa "he recibido el paquete 0, puedes enviarme el paquete 1". No vamos a usar números de secuencia en las tareas de esta lección, pero podrías tratar de añadirlos como actividad de extensión.
+
 
 Programming: Stop and Wait!
 ---------------------------
