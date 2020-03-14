@@ -114,37 +114,27 @@ Para programar el protocolo ARQ Parada-y-Espera vas a trabajar con un colega. De
 
 Para probar el programa hay que programar también el receptor. El receptor envía un paquete ACK por cada paquete de datos que recibe.
 
-### Task 3: Testing the reliability of Stop-and-Wait
+### Tarea 3: probar la fiablidad de la Parada-y-Espera
 
-**Description:** In this task, you will experiment with the
-Stop-and-Wait protocol you programmed. For this, you will add a counter
-on the sender side to count the number of retransmissions. On the
-receiver side, you need a counter to understand the effect
-acknowledgements on retransmissions.
+**Descripción:** En esta tarea vas a experimentar con el protocolo Parada-y-Espera que habéis programado. Para ello hay que aladir un contador en la placa emisora para contar el número de retransmisiones. En la micro:bit receptora necesitas mostrar por pantalla los mensajes recibidos y un contador para comprender el efecto de los ACKs en las retransmisiones.
 
-**Instruction:** Decide on a timeout/pause time. Send five numbers to your teammate’s
-micro:bit using the Stop-and-Wait protocol. You will run the protocol
-for a fixed error value (25 and 75), repeating each experiment three
-times.
+**Instrucciones:** Decide cuánto timpo va a ser la pausa del timeout. Tienes que enviar 5 números a la otra micro:bit siguiendo el protocolo. Primero usaras una tasa de error de 25, y luego de 75. Repetid el experimento tres veces. 
 
-In the table below, retransmissions are the number of times a packet needed to
-be resent. Duplicates are the number of times the receiver received
-unnecessary retransmissions. So, let’s assume, at the end, the sender
-sent the following:
+En la tabla de abajo las retransmisiones son el número de veces que un paquete necesitó ser reenviado. Los duplicados son el número de veces que el receptor recibió retransmisiones innecesarias. Así que, por ejemplo, supongamos que tras la ejecución del protocolo el emisor envió lo siguiente:
+
 
        1 1 1 2 2 3 4 4 4 4 5 5
 
-There were 7
-retransmissions. And the receiver received the following:
+Esto significa que hubo 7 retransmisiones. Y el receptor recibió lo siguiente:
 
        1 2 2 3 4 5 5
 
-Two duplicates were received. The first row of the table is filled as an example. Use your experiment results to fill in the rest. By comparing retransmissions to duplicates, discuss how good the
-protocol is in handling errors.
+Por tanto, se recibieron dos duplicados. La primera fila de la tabla se ha rellenado con los datos del ejemplo. Tras ejecutar tus experimentos, rellena las siguientes filas de la tabla. Al comparar las retransmisiones y los duplicados, debatid si el protocolo funciona bien para gestionar errores.
 
-| **Error value** | **Experiment no.** | **Retransmissions** | **Duplicates** |
+
+| **Valor del error** | **Experimento nª.** | **Retransmisiones** | **Duplicados** |
 |-----------------|:-------------------|:--------------------|:---------------|
-| 25 | (example) | 7 | 2|
+| 25 | (ejemplo) | 7 | 2|
 | 25 | 1 | | |
 | 25 | 2 | | |
 | 25 | 3 | | |
@@ -152,31 +142,27 @@ protocol is in handling errors.
 | 75 | 2 | | |
 | 75 | 3 | | |
 
-Extended activity
------------------
+Actividades de ampliación
+-------------------------
 
-!!! attention "Exercise 1"
-	Discuss how acknowledgements work better than using only
-	retransmissions. Do you see any problems with using acknowledgements?
+!!! attention "Ejercicio 1"
+	¿Funcionan mejor los acuses de recibo que usar solamente retransmisiones? En cualquier caso, ¿le veis algunos problemas a los acuses de recibo?
 
-!!! attention "Exercise 2"
-	Discuss how the duration of the timeout period affects your protocol. 
-	For instance, what happens if your timer is too short or too long? 
-	What happens if acknowledgements are delayed. 
+!!! attention "Ejercicio 2"
+	¿Cómo afecta la duración del timeout al protocolo? Por ejemplo, ¿qué ocurre si el timeout es muy corto, o muy largo? ¿Qué pasa si se retrasan los ACKs?
 
-!!! attention "Exercise 3"
-	Research the "Alternating Bit Protocol", which uses a 1-bit sequence number 
-	to help with the problems discussed in the figures.
+!!! attention "Ejercicio 3"
+	Investigad cómo funciona el "Protocolo de bits alternos", que usa un número de secuencia de 1 bit para ayudar con los problemas discutidos en las figuras de la sección "Antecedentes".
 
-Problems
+Problemas
 --------
 
-1. What does ARQ mean?
+1. ¿Qué significa ARQ?
 
-2. In the Stop-and-Wait ARQ protocol, if 10 packets are sent, how many acknowledgements are needed?
+2. En el protocolo ARQ Parada-y-Espera, si se envían 10 paquetes, ¿cuántos ACKs hay que enviar?
 
-Resources
----------
+Recursos
+--------
 
-Video: The Internet: Packet, Routing and Reliability -
+Vídeo: Internet: paquetes, enrutamiento y fiabilidad -
     <https://youtu.be/AYdF7b3nMto>
