@@ -12,66 +12,52 @@ Resumiendo, vas a aprender:
 
 - El concepto de *acuse de recibo*
 
-- El concepto de *Solicitud de repetición automática* (*Automatic Repeat Request (ARQ)*
+- El concepto de *Solicitud de repetición automática* o *Automatic Repeat Request (ARQ)*
 
 - El protocolo *parada-y-espera*
 
 ### Necesitarás
 
     2 micro:bits
-    1 colegawikipedia Stop-and-Wait protocol
+    1 colega
 
-Background
-----------
+Antecedentes
+------------
 
-In the previous chapter, a message was transmitted multiple times no
-matter if the receiver already received an earlier copy. This is
-wasteful! You could have been transmitting new information instead of
-repeating yourself. This is also wasteful for the receiver, which needs to
-keep discarding the duplicates.
+En el capítulo anterior, un mensaje se transmitía varias veces sin importar si el receptor ya había recibido una copia anterior. ¡Eso es un desperdicio! Podrías haber transmitido nueva información en lugar de volver a enviar estos mensajes repetidos. También es un incordio para el receptor, que tiene que descartar mensajes duplicados.
 
-To avoid this, we will introduce a new concept called
-*acknowledgements*.
+Para evitarlo vamos a introducir un concpeto llamado *acuse de recibo*.
 
-!!! hint "Definition 1: _Acknowledgement (ACK)_"
-	Acknowledgements are small messages that the receiver sends back, to tell the sender it received a message. The sender then knows it doesn't need to retransmit, and is ready to send the next message. 
+!!! hint "Definición 1: _Acuse de recibo (ACK)_"
+	Un acuse de recibo es un mensaje breve que el receptor envía para avisar al emisor de que recibió un mensaje. El emisor entonces se da cuenta de que no es necesario retransmitir, y estaría ya listo para enviar el siguiente mensaje.
 	
-If the sender does not receive an acknowledgment, only then it should retransmit its message.
+Si el emisor no recibe un acuse de recibo, solo entonces retransmitiría su mensaje.
 
-But how long should the sender wait an acknowledgement? This is
-determined by a *timeout*.
+Pero, claro, ¿cuánto tiempo debería esperar el emisor a que le llegue el acuse de recibo? Esto se determina mediante un *timeout*.
 
-!!! hint "Definition 2: _Timeout_"
-	A timeout is the amount of time allowed to pass
-	before the sender gives up waiting for an acknowledgement.
+!!! hint "Definición 2: _Timeout_"
+	Un timeout es el tiempo permitido que puede pasar antes de que el emisor deje de esperar un acuse de recibo.
+	
+En otras palabras, si el emisor no recibe un acuse de recibo dentro del periodo de timeout, pensará que el paquete debe haberse perdido.
 
-In other words, if the sender does not receive an acknowledgement within
-a timeout period, it will decide the packet must have got lost.
+Los acuses de recibo se utilizan en método de control de errores que se llama *Solicitud de repetición automática* o *Automatic Repeat Request (ARQ)*.
 
-Acknowledgements are used in an error control method called *Automatic
-Repeat Request (ARQ)*.
+!!! hint "Definición 3: _Solicitud de repetición automática (ARQ)_"
+	Solicitud de repetición automática es un método de control de errores. Usa acuses de recibo y timeouts para retransmitir paquetes. Las retransmisiones pueden continuar hasta que el emisor recibe un acuse de recibo o bien hasta que un número máximo de retransmisiones se ha alcanzado.
+	
+ARQ se usa tanto en internet como en redes móviles. 
 
-!!! hint "Definition 3: _Automatic Repeat Request (ARQ)_"
-	Automatic Repeat Request is an error
-	control method. It uses acknowledgements and timeouts to retransmit
-	packets. Retransmissions may continue until the sender receives an
-	acknowledgment, or a maximum number is reached.
+En su implementación más sencill ARQ utiliza el protocolo de *Parada-y-Espera*
 
-ARQ is used both in the Internet and mobile networks.
+!!! hint "Definición 4: _Protocolo Parada-y-Espera_"
+	En el protocolo de *Parada-y-Espera* el emisor:
 
-In its simplest form, an Automatic Repeat Request uses the
-*Stop-and-Wait ARQ protocol*
+	1. envía un paquete
+	2. espera hasta que le llega el acuse de recibo (ACK) o se rinde después de que se cumpla el timeout
+	3. si se cumple el timeout, va al paso 1
+	4. si le llega el ACK, prepara un nuevo paquete y va al paso 1.
 
-!!! hint "Definition 4: _Stop-and-Wait ARQ Protocol_"
-	In the *Stop-and-Wait ARQ protocol*, the sender:
-
-	1. sends a packet
-	2. waits for the acknowledgement (ACK) or but gives up after a timeout period
-	3. if timeout, goes to step 1
-	4. if ACK, gets a new packet, goes to step 1.
-
-In Stop-and-Wait protocol, the sender cannot send a new packet until it
-receives the acknowledgement for the previous one.
+En el protocolo *Parada-y-Espera* el emisor, por tanto, no puede enviar un nuevo paquete hasta que recibe el ACK del paquete anterior.
 
 The figure below shows an example of a successful retransmission. The sender sends "Hello" and the receiver responds with an ACK. The sender received the ACK before the timeout ends, so it knows the packet was received OK. Now, the sender can start sending another message.
 
