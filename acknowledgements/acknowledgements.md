@@ -80,12 +80,12 @@ La figura siguiente muestra un ejemplo en el que el mensaje enviado por el emiso
 !!! note ""
 	**Figura 3:** Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.
 	
-Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los mensajes o ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reeciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
+Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reeciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
 
-![Protocolo ARQ Parada-y-Espera:¿Qué ocurre si un mensaje se retrasa? No está claro qué ACK se refiere a qué mensaje.](c9_Ack4.png)
+![Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.](c9_Ack4.png)
 
 !!! note ""
-	**Figura 4:** Protocolo ARQ Parada-y-Espera:¿Qué ocurre si un mensaje se retrasa? No está claro qué ACK se refiere a qué mensaje.
+	**Figura 4:** Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.
 
 Para resolver esta confusión el protocolo necesita usar números de secuencia.
 
@@ -95,42 +95,24 @@ Para resolver esta confusión el protocolo necesita usar números de secuencia.
 Por ejemplo, si el emisor envía "Hola, 0", significa que es un mensaje "Hola" con un número de secuencia 0. Al recibir este paquete el receptor enviaría "ACK, 1", que significa "he recibido el paquete 0, puedes enviarme el paquete 1". No vamos a usar números de secuencia en las tareas de esta lección, pero podrías tratar de añadirlos como actividad de extensión.
 
 
-Programming: Stop and Wait!
----------------------------
+A programar: ¡Para y espera!
+----------------------------
 
-To program the Stop-and-Wait ARQ protocol, you will work with a
-teammate. Like in [Handling Errors: Retransmisions](../retransmissions/retransmissions.md), you will use the
-custom *ErrorRadio* blocks to send messages with errors. The
-communication is unicast, so you will still use source and destination
-addresses in your messages. like you did in the
-[Unicast communication: One to One](../unicast/unicast.md). Do not forget that your receivers need
-to check if the received messages are addressed to them!
+Para programar el protocolo ARQ Parada-y-Espera vas a trabajar con un colega. Del mismo modo que en el tema [Gestionar errores: Retransmisiones](../retransmissions/retransmissions.md), vamos a usar los bloques a medida *ErrorRadio* para enviar mensajes con errores. La comunicación es unicast, así que usaras direcciones origen y destino en tus mensajes, como ya hicimos en el tema [Comunicación unicast: de una a una](../unicast/unicast.md). No olvides que al recibir un mensaje hay que comprobar si la dirección destino que viene en el paquete es la de la placa en cuestión.
 
-### Task 1: Design your data and ACK packets
+### Tarea 1: Diseña tus paquetes de datos y ACKs
 
-**Description:** Before you can send and receive any packets, first you
-will decide what your data and ACK packets should look like.
+**Descripción:** Antes de que puedas enviar ningún paquete es necesario que decidas el formato de los paquetes de datos y de los ACKs.
 
-**Instruction:** Discuss what is the minimum information you should have
-in your packets. Create two string variables for data and ACK packets, using the Text blocks in the JavaScript Blocks editor.
+**Instrucciones:** Debatid en grupo cuál es la información mínima que deberían contener los paquetes. Crear dos variables para los paquetes de datos y los ACKs haciendo uso de los bloques de Texto en el editor de bloques JavaScript.
 
-### Task 2: Timeout and retransmission 
+### Tarea 2: Timeout y retransmisiones
 
-**Description:** To program the Stop-and-Wait, you need a timeout
-mechanism. After each transmission, you need to wait for the
-ACK or time out. The main decision you need to make is
-how long the timeout should be.
+**Descripción:** Para programar la Parada-y-Espera vas a necesitar un mecanismo de timeout. Tras cada envío necesitas esperar a que te llegue bien el ACK o a que se cumpla el timeout. La decisión principal que tenéis que tomar es cuál será la duración del timeout.
 
-**Instruction:** To do this task, you may either start from scratch or
-change your code from [Handling Errors: Retransmisions](../retransmissions/retransmissions.md) for the
-sender micro:bit. At the sender side, program how to wait for th ACK. In the *Basic* menu, the *pause* function will
-be useful for the timeout mechanism. If your pause ends before you
-receive an acknowledgement, then you will retransmit the packet. If you
-receive the ACK before the pause ends, you will remember this information
-when the pause ends and will use it to send your next message.
+**Instrucciones:** Para esta tarea puedes empezar desde cero o puedes también partir del código que programaste en las tareas del tema [Gestionar errores: Retransmisiones](../retransmissions/retransmissions.md). En la placa emisora tienes que programar cómo esperar al ACK. En el menú "Básico" está la función "pausa", que puede ser muy útil para el mecanismo de timeout. Si la pausa termina antes de que recibas el ACK hay que retransmitir el paquete. Si recibes el ACK antes de que termine la pausa, tienes que recordar esta información para que al terminar la pausa envíes el sigiuente paquete (sin retransmitir el anterior).
 
-To test the program, you need to also program the receiver. The receiver
-sends the ACK packet for each data packet it receives.
+Para probar el programa hay que programar también el receptor. El receptor envía un paquete ACK por cada paquete de datos que recibe.
 
 ### Task 3: Testing the reliability of Stop-and-Wait
 
