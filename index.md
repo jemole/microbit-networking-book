@@ -62,7 +62,7 @@ Resumen
 - [**Unicast de ida y vuelta: ping-pong**](twowayunicast/twowayunicast.md)
     No tiene mucho sentido hablar con alguien si no te puede responder. En este capítulo programarás tu micro:bit para enviar un mensaje y recibir una respuesta. Además calcularás cuánto tarda la respuesta en llegar. Y en el proceso habrás programado una de las herramientas más importantes de las utilizadas en Internet: Ping.
 
-- [**Juego 2: Pierda-Papel-Tijera por radio**](rockpaperscissors/rockpaperscissors.md)  
+- [**Juego 2: Piedra-Papel-Tijera por radio**](rockpaperscissors/rockpaperscissors.md)  
     Este juego no es como el tradicional "Piedra, papel o tijera"... ¡A este se juega por radio!
 
 - [**Gestionar errores: Retransmisiones**](retransmissions/retransmissions.md)
@@ -71,15 +71,11 @@ Resumen
 - [**Gestionar errores: Acuse de recibo**](acknowledgements/acknowledgements.md)
     ¡Retransmitir un mensaje es un desperdicio si el otro lado ya lo había recibido! Para evitarlo el receptor necesita una repuesta estándar (o un acuse de recibo). El emisor de este modo puede suponer que si no recibe el acuse de recibo el mensaje no se debe haber recibido. En este capítulo pondremos a prueba qué tal funcionan los acuses de recibo para mejorar la fiabilidad.
 
-- [**Game 3: Battleship over Radio**](battleship/battleship.md)
-    You have come far. Now you are ready for another classic game!
-    You will write a version of the famous Battleship game using
-    your micro:bits. Your experience with radio communication and
-    networking will help you along the way.
+- [**Juego 3: Hundir la flota por radio**](battleship/battleship.md)
+    Has llegado realmente lejos. ¡Y ya estás listo para programar otro juego clásico! Vas a escribir una versión del famoso Hundir la flota usando placas micro:bits. Tu experiencia con la comunicación por radio y las redes de ordenadores te ayudarán a superar este reto.
 
-Let’s start!
+¡Manos a la obra!
 
-[^1]: The CPU on the micro:bit is a Nordic Semiconductor nRF51822 and contains a built-in 2.4GHz radio module. This radio can be configured to run Bluetooth Low Energy
-(BLE) protocol but in this book, we will use the simpler micro:bit to micro:bit communication.
+[^1]: La CPU de la micro:bit es un Nordic Semiconductor nRF51822 y contiene dos módulos de radio 2.4GHz integrados. Esta radio se puede configurar para ejecutar el protocolo Bluetooth Low Energy (BLE), pero en este libro se usa la comunicación de micro:bit a micro:bit, que es más sencilla.
 
-[^2]: This version of the book uses JavaScript Blocks Editor; we are also working on a MicroPython version.
+[^2]: Esta versión del libro usa el editor de bloques JavaScript. También existe una versión del libro con MicroPython.
