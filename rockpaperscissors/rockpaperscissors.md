@@ -79,62 +79,52 @@ Comprobar en pareja que podéis enviar y recibir correctamente.
 !!! note ""
 	**Figura 2:** Tabla Pedra, papel o tijera
 	
-### Task 4: Play the game
+### Tarea 4: El juego completo
 
-**Description:** Once you filled the table, you need to decide how to
-program these rules in your code. Your program will:
+**Descripción:** na vez rellena la tabla hay que decir cómo programar estas reglas en tu código. El programa debera:
 
-1. play the game based on Rock-Paper-Scissors rules
+1. permitir jugar partidas en base  las reglas del juego
 
-2. display a *happy* face if you won, a *sad* face if you lost. And if it’s a draw, show a *surprised* face.
+2. mostrando una cara *alegre* si ganas tú, una cara *triste* si pierdes, y una cara *sorprendida* si es un empate.
 
-**Instruction:** Figure below shows a
-template for programming the table using the *if* block in the JavaScript Blocks editor
-*Logic* menu. Note that this is just a template and it is there to give
-you an idea of the structure of your program. For instance, your *on radio received* block will have to be different to do unicast communication (see [Unicast Communication: One to One](../unicast/unicast.md)).
+**Instrucciones:** A continuación se muestra una plantilla que puede ayudarte a programar la tabla de reglas utilizando bloques *si* del menú *Lógica* en el editor de bloques de JavaScript. El objetivo de la plantilla es darte tan solo una idea de la estructura del programa. 
 
-You will notice in the template that we used two variables: *selected* and *received*.
-*selected* is set to *True* when you make the selection for your hand by pressing button B. *received* is set to *True* when you receive your opponent’s hand. In the *forever* block,
-the game is only played when both *selected* and *received* are *True*. Once you enter the block to play the game, these variables are initialized to *False* for the next round.
+Como verás, en la plantilla se usan dos variables: *seleccionado* y *recibido*. *seleccionado* se establece a *Verdadero* cuando haces la selección de mano al presionar el botón B. Por su parte, *recibido* se pone a *Verdadero* cuando recibes la mano de tu oponente. En el bloque *Por siempre*, verás que solo se comprueba la jugada cuando ambas variables son *Verdadero*. Una vez entras en el bloque para jugar la partida, las variables se ponen a *Falso* para la siguiente ronda.
 
-After you program the game, play it with your teammate! Who
-wins more often?
+Una vez programadas las placas, jugad en pareja unas cuantas partidas a ver quién gana más.
+
 
 ```blocks
-let my_hand = 0
-let selected = false
-input.onButtonPressed(Button.B, function () {
-    selected = true
-    radio.sendNumber(my_hand)
-})
+alPresionarBotón(B){
+    seleccionado = true
+    radio.enviarNúmero(mi_mano)
+}
 ```
 ```blocks
-let opponent_hand = 0
-let received = false
-radio.onReceivedNumber(function (receivedNumber) {
-    received = true
-    opponent_hand = receivedNumber
-})
+radio.alRecibirNúmero(númeroRecibido) {
+    recibido = true
+    mano_oponent = númeroRecibido
+}
 ```
 ```blocks
-let my_hand = 0
-let opponent_hand = 0
-let received = false
-let selected = false
-basic.forever(function () {
-    if (selected == true && received == true) {
-        selected = false
-        received = false
-        if (opponent_hand == my_hand) {
-            basic.showIcon(IconNames.Surprised)
-        } else {
-            if (my_hand == 0 && opponent_hand == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (0 == 0) {
+mi_mano = 0
+mano_oponente = 0
+recibido = false
+seleccionado = false
+porSiempre {
+    si (seleccionado == true && recibido == true) {
+        seleccionado = false
+        recibido = false
+        si (mano_oponente == mi_mano) {
+            básico.mostrarIcono(Sorprendido)
+        } sino {
+            si (mi_mano == 2 && mano_oponente == 1) {
+                básico.mostrarIcono(Alegre)
+            } sino si (...) {
             	
-            } else if (0 == 0) {
+            } sino si (...) {
             	
-            } else {
+            } sino {
             	
             }
         }
@@ -143,25 +133,28 @@ basic.forever(function () {
 ```
 
 !!! note ""
-	**Figure 3:** Rock paper scissors: A template for programming the rules
+	**Figura 3:** Una plantilla para programar las reglas de Piedra, papel o tijera
 	
-Exercises
+Ejercicios
+----------
+
+!!! attention "Ejercicio 1"
+	¿Cómo podrías ampliar el programa para jugar a piedra/papel/tijera/lagarto/spock? Para saber más sobre esta extensión puedes echar un ojo a estos enlaces:
+	- Vídeo de The Big Bang Theory <https://www.youtube.com/watch?v=_tsy4q9ibAE>
+	- Desafío TNT <https://cadenaser.com/ser/2012/03/03/cultura/1330733828_850215.html>
+	
+
+Problemas
 ---------
 
-!!! attention "Exercise 1"
-	How might you expand your program to play rock/paper/scissors/lizard/spock? 
-	To learn more about this extension check the website: [http://www.samkass.com/theories/RPSSL.html](http://www.samkass.com/theories/RPSSL.html).
+1. ¿Cómo se comprueba que hay un empate en el programa?
 
-Problems
---------
+2. ¿Cómo cambia la tabla si papel=2, piedra=0, y tijera=1? Dibuja la nueva tabla.
 
-1. How do you test a tie in your program?
+3. Para echar una partida contra un jugador distinto, ¿qué habría que cambiar en tu programa? Recuerda que estás usando unicast para la comunicación por radio.
 
-2. How does the Table change, if paper=2, rock=0, and scissors=1? Redraw your table.
+4. ¿Qué ocurre si envías tu mano al otro jugador antes de que escoja la suya? ¿Habría algún problema? ¡¿Podría hacer trampas?!
 
-3. To play with a different player, what do you need to change in your program? Remember you are using unicast to send your hand shape.
-
-4. What happens if you send your hand shape to the other player before they pick theirs? Will there be a problem? Could they cheat!?
 
 Recursos
 --------
