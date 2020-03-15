@@ -62,9 +62,8 @@ Resumen
 - [**Unicast de ida y vuelta: ping-pong**](twowayunicast/twowayunicast.md)
     No tiene mucho sentido hablar con alguien si no te puede responder. En este capítulo programarás tu micro:bit para enviar un mensaje y recibir una respuesta. Además calcularás cuánto tarda la respuesta en llegar. Y en el proceso habrás programado una de las herramientas más importantes de las utilizadas en Internet: Ping.
 
-- [**Game 2: Rock-Paper-Scissors over Radio**](rockpaperscissors/rockpaperscissors.md)  
-    This is not like the traditional Rock-Paper-Scissors game. It
-    works over the radio!
+- [**Juego 2: Pierda-Papel-Tijera por radio**](rockpaperscissors/rockpaperscissors.md)  
+    Este juego no es como el tradicional "Piedra, papel o tijera"... ¡A este se juega por radio!
 
 - [**Gestionar errores: Retransmisiones**](retransmissions/retransmissions.md)
      Nada es perfecto, ni siquiera la comunicación por radio. ¿Qué pasa si se pierde uno de tus mensajes por el camino? En este capítulo probarás varios métodos para lidiar con la pérdida de mensajes. Por ejemplo, ¿ayudaría que cada mensaje se enviara más de una vez?
