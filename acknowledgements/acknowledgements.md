@@ -61,28 +61,28 @@ En el protocolo *Parada-y-Espera* el emisor, por tanto, no puede enviar un nuevo
 
 La siguiente figura muestra un ejemplo de retransmisión exitoso. El emisor envía "Hola" y el receptor responde con un ACK. El emisor recibió el ACK antes de que se cumpliera el timeout, así que sabe que el paquete se recibió bien. Por tanto, en ese momento el emisor puede empezar en enviar otro mensaje.
 
-![Protocolo ARQ Parada-y-Espera: El receptor envía un ACK al emisor para que el emisor sepa que el mensaje "Hola" llegó correctamente.](c9_Ack1.png)
+![Protocolo ARQ Parada-y-Espera: El receptor envía un ACK al emisor para que el emisor sepa que el mensaje "Hola" llegó correctamente.](c9_Ack1_ES.png)
 
 !!! note ""
 	**Figura 1:** Protocolo ARQ Parada-y-Espera: El receptor envía un ACK al emisor para que el emisor sepa que el mensaje "Hola" llegó correctamente.
 
 Ahora vamos a ver algunos casos con errores. La figura de abajo muestra que el primer mensaje se pierde. Así que el receptor no envía el ACK. Cuando se cumple el timeout el emisor no ha recibido un ACK. Por tanto, retransmite el mensaje. El segundo intento sí tiene éxito, y el emisor recibe el ACK a tiempo (antes de cumplirse el timeout).
 
-![Protocolo ARQ Parada-y-Espera: El mensaje se pierte, así que el emisor retransmite.](c9_Ack2.png)
+![Protocolo ARQ Parada-y-Espera: El mensaje se pierte, así que el emisor retransmite.](c9_Ack2_ES.png)
 
 !!! note ""
 	**Figura 2:** Protocolo ARQ Parada-y-Espera: El mensaje se pierte, así que el emisor retransmite.
 
 La figura siguiente muestra un ejemplo en el que el mensaje enviado por el emisor se recibe correctamente, pero el ACK enviado por el receptor se pierde. De nuevo, cuando se cumple el timeout el emisor no ha recibido el ACK. Así que retransmite el mensaje. El receptor recibe mensaje duplicado y, de nuevo, envía el ACK. Esta vez el segundo ACK llega con éxito y las cosas continúan con normalidad.
 
-![Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.](c9_Ack3.png)
+![Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.](c9_Ack3_ES.png)
 
 !!! note ""
 	**Figura 3:** Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.
 	
 Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reeciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
 
-![Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.](c9_Ack4.png)
+![Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.](c9_Ack4_ES.png)
 
 !!! note ""
 	**Figura 4:** Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.
