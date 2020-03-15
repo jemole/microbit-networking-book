@@ -1,5 +1,5 @@
-Juego 2: Piedra, papel o tijera por la radio
-============================================
+Juego 2: Piedra, papel o tijera por radio
+=========================================
 
 ![Chapter 7 image](chapter7.png)
 
