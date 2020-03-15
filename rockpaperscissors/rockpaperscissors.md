@@ -181,9 +181,12 @@ Problems
 
 4. What happens if you send your hand shape to the other player before they pick theirs? Will there be a problem? Could they cheat!?
 
-Resources
----------
+Recursos
+--------
 
-- Flash game: Rock-Paper-Scissors: You vs. the Computer -
-    <http://www.nytimes.com/interactive/science/rock-paper-scissors.html>
+- Wikipedia: piedra, papel o tijera - 
+    <https://es.wikipedia.org/wiki/Piedra,_papel_o_tijera>
+    
+- Vídeo: cómo ganar siempre jugando a Piedra, papel o tijera - 
+    <https://www.youtube.com/watch?v=i0_Y0ll6Z08>
 
