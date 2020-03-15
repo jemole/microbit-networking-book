@@ -23,7 +23,7 @@ La siguiente figura resume las reglas.
 !!! note ""
 	**Figura 1:** Reglas de Piedra, papel o tijera.
 
-En este capítulo vamos a progrmar este juego con nuestras placas micro:bits. Y al hacerlo practicaremos:
+En este capítulo vamos a progrmar este juego con nuestras placas micro:bit. Y al hacerlo practicaremos:
 
 - *Comunicación unicast*
 
@@ -31,67 +31,53 @@ En este capítulo vamos a progrmar este juego con nuestras placas micro:bits. Y 
 
 - Uso de condicionales
 
-### Se necesitan
+### Necesitarás
 
     2 micro:bits
     1 pizarra
     rotuladores/notas adhesivas
     1 colega
 
-Programming: Rock, paper, scissors
-----------------------------------
+A programar: Piedra, papel o tijera
+-----------------------------------
 
-To program this game, it is best to work with a teammate. Task 1 is for
-familiarising you with the game and will not use the radio. Starting
-from Task 2, you will start writing the parts of your program to play
-this game over the radio.
+Para programar el juego es mejor trabajar en parejas. En la tarea 1 os vais a familiarizar con el juego y no usaréis la radio. A partir de la tarea 2 será cuando nos lancemos a usar la radio.
 
-### Task 1: Start with the simple game
 
-**Description:** To familiarize yourself with the game, try the
-[Rock-Paper-Scissors activity](https://makecode.microbit.org/projects/rock-paper-scissors).
-Notice that the program gives a number to *rock*, *paper* and
-*scissors*. For example, paper=1, rock=2, and scissors=3.
+### Tarea 1: Empezamos con el juego base
 
-**Instruction:** Program the code shown on the Rock-Paper-Scissors
-activity page, and download it to your micro:bits. Play the game with a
-friend. You will each shake your micro:bits at the same time and then
-decide who wins using the games rules as described above.
+**Descripción:** Para familiarizarnos con el juego, sigue la actividad [Piedra-papel-tijera](https://makecode.microbit.org/projects/rock-paper-scissors), que te guiará paso a paso en la construcción de una versión sencilla del juego. Fíjate en que el programa asigna un número a *piedra*, *papel* y *tijera*. Por ejemplo, piedra=1, papel=2, tijera=3.
 
-### Task 2: Hand shapes over the radio with unicast
+**Instrucciones:** Programa el código mostrado en la página de la actividad y descárgalo a tu micro:bit. Juega unas partidas con tu pareja. Tendréis que agitar las placas al mismo tiempo y luego decidir quién gana en base a las reglas descritas en la introducción.
 
-**Description:** To play the game over the radio, you will use the button A to select paper, rock or scissors.  You will use button B to confirm your
-selection and send it over the radio. Like in Task 1, use paper=0, rock=1, scissors=2.
 
-**Instruction:** Write a program to do the following:
+### Tarea 2: Enviamos la forma seleccionada por radio con unicast
 
-1. Use button A to select paper, rock or scissors. Each time you press button A, it should alternately show an icon of either paper, rock or scissors.
+**Descripción:** Para jugar por radio usarás el botón A para seleccionar entre piedra, papel o tijera. Usarás el botón B para confirmar la selección y enviarla por radio. Al igual que en la tarea 1, se usará: piedra=1, papel=2, tijera=3.
 
-2. Use button B to confirm your selection, and unicast it to your friend’s micro:bit over the radio like you did in [Unicast Communication: One to One](../unicast/unicast.md).
 
-3. Add code for receiving a number. When you receive a number, show the corresponding icon  on the display. For example, if you received 0, display the paper icon. 
+**Instrucciones:** Escribe un programa que haga lo siguiente:
 
-Test with your teammate that you can send and receive your hand shape values over the radio.
+1. Usa el botón A para seleccionar entre piedra, papel o tijera. Cada vez que pulses el botón A debería mostrar alternativamente un icono de cada una de las tres formas.
 
-### Task 3: Fill the table of rules
+2. Usa el botón B para confirmar tu selección y enviar el número correspondiente por radior mediante comunicación unicast a la placa de tu pareja, tal como hicimos en las prácticas del capítulo [Comunicación Unicast: De una a una](../unicast/unicast.md).
 
-**Description:** Your program, when it receives a number from your
-teammate’s micro:bit, decides who wins.
+3. Añade el código para recibir un número. Cuando recibas un número, muestra el icono correspondiente en la pantalla. Por ejemplos, si recibes un 2 deberías mostrar el icono del papel.
 
-**Instruction:** To decide who
-wins, compare the number you picked with the number you received. We
-provided an incomplete table below to help you decide the result [^2]. Using this table, you
-compare *My hand* to *Opponent's hand*. For example, if both of these
-numbers mean *Paper*, it is a tie, and the result is a surprised face.
-But, if *My hand* is for *Paper* and the *Opponent's hand* is for
-*Scissors*, the result is a sad face. In contrast, if *My hand* is
-for *Scissors* and the *Opponent's hand* is for *Paper*, then the result
-is a happy face. Using the rules of the game, fill the rest of the table.
+Comprobar en pareja que podéis enviar y recibir correctamente.
 
-![Rock paper scissors table<](IncompleteRockPaperScissorsTable.png)
+
+### Tarea 3: Rellenamos la tabla de reglas
+
+**Descripción:** Tu programa debe decidir quién gana cuando recibes un número desde la micro:bit de tu colega.
+
+**Instrucciones:** Para decidir quién gana, hay que comparar el número que tú escogiste con el número que has recibido por radio. La tabla de abajo puede ayudarte a decidir quién gana cada partida [^2]. Usando esta tabla puedes comparar *Mi mano* con *Mano oponente*. Por ejemplo, si los dos números significan *papel*, es un empate y el resultado es una cara de sorpresa. Pero si *Mi mano* es *papel* y *Mano oponente* es *tijera*, el resultado es una cara triste. Y si fuera al contrario el resultado sería una cara alegre. En base a las reglas del juego, termina de rellenar la tabla.
+
+
+![Tabla Pedra, papel o tijera](IncompleteRockPaperScissorsTable.png)
 
 !!! note ""
-	**Figure 2:** Incomplete rock, paper, scissors table
+	**Figura 2:** Tabla Pedra, papel o tijera
 	
 ### Task 4: Play the game
 
