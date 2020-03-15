@@ -33,12 +33,12 @@ Cuando finalice la traducción al español se generará una edición en PDF y se
 Sobre los autores
 -----------------
 
-Los autores de la obra original son investigadores, lo que significa que tratan de encontrar nuevas ideas y productos. Su empresa Nominet se encarga de la parte de internet que controla como se usan los nombres (como
+Los autores de la obra original, Cigdem Sengul y Anthony Kirby, son investigadores, lo que significa que tratan de encontrar nuevas ideas y productos. Su empresa Nominet se encarga de la parte de internet que controla como se usan los nombres (como
 [http://www.bbc.co.uk)](http://www.bbc.co.uk)) cuando la gente, los ordenadores y otros dispositivos se conectan a otros ordenadores a través de internet. 
 
 Comprender cómo hablan los ordenadores entre sí es algo importante, y es por eso que escribieron este libro. Anthony & Cigdem disfrutaron realmente al diseñar los retos y los desafíos del libro, y esperan que tú también lo hagas al tratar de resolverlos.
 
-El autor de esta traducción al español y adaptación es [Jesús Moreno León](http://jemole.me/), profesor de informática en Sevilla (España). Las modificaciones que se han realizado de la obra original se deben a que Jesús está utilizando estas prácticas en sus clases, por lo que algunos capítulos se han adaptado a las necesidades concretas de su alumnado.
+El autor de esta traducción al español y adaptación es [Jesús Moreno León](http://jemole.me/), profesor de informática en Sevilla (España) y codirector de [Programamos](https://programamos.es/). Las modificaciones que se han realizado de la obra original se deben a que Jesús está utilizando estas prácticas en sus clases, por lo que algunos capítulos se han adaptado a las necesidades concretas de su alumnado.
 
 
 Resumen
