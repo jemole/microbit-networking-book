@@ -18,7 +18,7 @@ Introducción
 
 La siguiente figura resume las reglas.
 
-![Reglas de Piedra, papel o tijera.](Rock-paper-scissors.jpg)
+![Reglas de Piedra, papel o tijera.](Rock-paper-scissors_ES.jpg)
 
 !!! note ""
 	**Figura 1:** Reglas de Piedra, papel o tijera.
@@ -74,7 +74,7 @@ Comprobad en pareja que podéis enviar y recibir correctamente.
 **Instrucciones:** Para decidir quién gana, hay que comparar el número que tú escogiste con el número que has recibido por radio. La tabla de abajo puede ayudarte a decidir quién gana cada partida [^2]. Usando esta tabla puedes comparar *Mi mano* con *Mano oponente*. Por ejemplo, si los dos números significan *papel*, es un empate y el resultado es una cara de sorpresa. Pero si *Mi mano* es *papel* y *Mano oponente* es *tijera*, el resultado es una cara triste. Y si fuera al contrario el resultado sería una cara alegre. En base a las reglas del juego, termina de rellenar la tabla.
 
 
-![Tabla Pedra, papel o tijera](IncompleteRockPaperScissorsTable.png)
+![Tabla Pedra, papel o tijera](IncompleteRockPaperScissorsTable_ES.png)
 
 !!! note ""
 	**Figura 2:** Tabla Pedra, papel o tijera
