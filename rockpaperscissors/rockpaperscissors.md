@@ -94,46 +94,11 @@ Como verás, en la plantilla se usan dos variables: *seleccionado* y *recibido*.
 Una vez programadas las placas, jugad en pareja unas cuantas partidas a ver quién gana más.
 
 
-```blocks
-alPresionarBotón(B){
-    seleccionado = true
-    radio.enviarNúmero(mi_mano)
-}
-```
-```blocks
-radio.alRecibirNúmero(númeroRecibido) {
-    recibido = true
-    mano_oponente = númeroRecibido
-}
-```
-```blocks
-mi_mano = 0
-mano_oponente = 0
-recibido = false
-seleccionado = false
-porSiempre {
-    si (seleccionado == true && recibido == true) {
-        seleccionado = false
-        recibido = false
-        si (mano_oponente == mi_mano) {
-            básico.mostrarIcono(Sorprendido)
-        } sino {
-            si (mi_mano == 2 && mano_oponente == 1) {
-                básico.mostrarIcono(Alegre)
-            } sino si (...) {
-            	
-            } sino si (...) {
-            	
-            } sino {
-            	
-            }
-        }
-    }
-})
-```
+![Una plantilla para programar las reglas de Piedra, papel o tijera](Codigo.png)
 
 !!! note ""
 	**Figura 3:** Una plantilla para programar las reglas de Piedra, papel o tijera
+
 	
 Ejercicios
 ----------
