@@ -60,11 +60,11 @@ Para programar el juego es mejor trabajar en parejas. En la tarea 1 os vais a fa
 
 1. Usa el botón A para seleccionar entre piedra, papel o tijera. Cada vez que pulses el botón A debería mostrar alternativamente un icono de cada una de las tres formas.
 
-2. Usa el botón B para confirmar tu selección y enviar el número correspondiente por radior mediante comunicación unicast a la placa de tu pareja, tal como hicimos en las prácticas del capítulo [Comunicación Unicast: De una a una](../unicast/unicast.md).
+2. Usa el botón B para confirmar tu selección y enviar el número correspondiente por radio mediante comunicación unicast a la placa de tu pareja, tal como hicimos en las prácticas del capítulo [Comunicación Unicast: De una a una](../unicast/unicast.md).
 
-3. Añade el código para recibir un número. Cuando recibas un número, muestra el icono correspondiente en la pantalla. Por ejemplos, si recibes un 2 deberías mostrar el icono del papel.
+3. Añade el código para recibir un número. Cuando recibas un número, muestra el icono correspondiente en la pantalla. Por ejemplo, si recibes un 2 deberías mostrar el icono del papel.
 
-Comprobar en pareja que podéis enviar y recibir correctamente.
+Comprobad en pareja que podéis enviar y recibir correctamente.
 
 
 ### Tarea 3: Rellenamos la tabla de reglas
@@ -81,7 +81,7 @@ Comprobar en pareja que podéis enviar y recibir correctamente.
 	
 ### Tarea 4: El juego completo
 
-**Descripción:** na vez rellena la tabla hay que decir cómo programar estas reglas en tu código. El programa debera:
+**Descripción:** Una vez rellena la tabla hay que decir cómo programar estas reglas en tu código. El programa deberá:
 
 1. permitir jugar partidas en base  las reglas del juego
 
@@ -103,7 +103,7 @@ alPresionarBotón(B){
 ```blocks
 radio.alRecibirNúmero(númeroRecibido) {
     recibido = true
-    mano_oponent = númeroRecibido
+    mano_oponente = númeroRecibido
 }
 ```
 ```blocks
