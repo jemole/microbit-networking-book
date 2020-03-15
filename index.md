@@ -69,11 +69,8 @@ Resumen
 - [**Gestionar errores: Retransmisiones**](retransmissions/retransmissions.md)
      Nada es perfecto, ni siquiera la comunicación por radio. ¿Qué pasa si se pierde uno de tus mensajes por el camino? En este capítulo probarás varios métodos para lidiar con la pérdida de mensajes. Por ejemplo, ¿ayudaría que cada mensaje se enviara más de una vez?
 
-- [**Handling errors: Acknowledgements**](acknowledgements/acknowledgements.md)
-    It’s a waste to retransmit if the other side already received the message! The receiver needs a
-    standard reply (or an acknowledgement) to avoid this. At the sending side, if you do not receive an
-    acknowledgement, you can assume that your message wasn’t received. In this chapter, you will test
-    how well acknowledgments work to improve reliability.
+- [**Gestionar errores: Acuse de recibo**](acknowledgements/acknowledgements.md)
+    ¡Retransmitir un mensaje es un desperdicio si el otro lado ya lo había recibido! Para evitarlo el receptor necesita una repuesta estándar (o un acuse de recibo). El emisor de este modo puede suponer que si no recibe el acuse de recibo el mensaje no se debe haber recibido. En este capítulo pondremos a prueba qué tal funcionan los acuses de recibo para mejorar la fiabilidad.
 
 - [**Game 3: Battleship over Radio**](battleship/battleship.md)
     You have come far. Now you are ready for another classic game!
