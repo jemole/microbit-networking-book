@@ -1,46 +1,42 @@
-Game 2: Rock, paper, scissors over the radio
+Juego 2: Piedra, papel o tijera por la radio
 ============================================
 
 ![Chapter 7 image](chapter7.png)
 
-Introduction
+Introducción
 ------------
 
-Let’s play a game of rock, paper, scissors! Rock, paper and scissors is
-a game played with two players. Each player, at the same time, forms one
-of the three shapes (rock, paper or scissor) with their hands. Then,
-they use these rules to decide who wins:
+¡Juguemos a Piedra, papel o tijera! Como sabes, es un juego de dos jugadores. Cada jugador, al mismo tiempo, forma con sus manos una de las opciones (piedra, papel o tijera). Se usan las siguientes reglas para decidir quién gana:
 
-- The rock crushes the scissors.
+- La piedra aplasta a la tijera.
 
-- The scissors cuts the paper.
+- La tijera corta el papel.
 
-- The paper covers the rock.
+- El papel cubre la piedra.
 
-- If both players choose the same shape, it is a tie.
+- Si ambos jugadores escogen la misma forma, empatan.
 
-Figure below shows these rules.
+La siguiente figura resume las reglas.
 
-![Rock paper scissors game: Rock beats Scissors. Scissors beats Paper. Paper beats Rock.](Rock-paper-scissors.jpg)
+![Reglas de Piedra, papel o tijera.](Rock-paper-scissors.jpg)
 
 !!! note ""
-	**Figure 1:** Rock paper scissors game: Rock beats Scissors. Scissors beats Paper. Paper beats Rock
+	**Figura 1:** Reglas de Piedra, papel o tijera.
 
-In this chapter, you will program this game using your micro:bits. Doing
-so, you will practice:
+En este capítulo vamos a progrmar este juego con nuestras placas micro:bits. Y al hacerlo practicaremos:
 
-- *Unicast communication*
+- *Comunicación unicast*
 
-- Programming with variables
+- Uso de variables
 
-- Programming with conditionals
+- Uso de condicionales
 
-### What you’ll need
+### Se necesitan
 
     2 micro:bits
-    1 whiteboard/board
-    boardmarkers/postit notes
-    1 teammate
+    1 pizarra
+    rotuladores/notas adhesivas
+    1 colega
 
 Programming: Rock, paper, scissors
 ----------------------------------
