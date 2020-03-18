@@ -26,4 +26,4 @@ contributions under the same license as the original.
 - No additional restrictions — You may not apply legal terms or technological measures that legally
 restrict others from doing anything the license permits.
 
-**Acknowledgements:** “BBC”, “micro:bit” and the micro:bit emojis are trademarks of the BBC
+**Agradecimientos:** “BBC”, “micro:bit” y los emojis de micro:bit son marcas registradas de la BBC
