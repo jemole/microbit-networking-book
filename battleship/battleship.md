@@ -53,7 +53,7 @@ Otra limitación de nuestro juego será que no podremos mostrar en pantalla un r
 
 **Disparar misiles:** Para disparar misiles vamos a usar los botones, seleccionando un número de fila y de columna. Ten en cuenta que cuando las coordenadas LED se muestran como *(x,y)*, x es el número de columna, mientras que y es el número de fila. Para más información puedes echar un ojo a [https://microbit.org/guide/hardware/leds/](https://microbit.org/guide/hardware/leds/).
 
-![Hundir la flota en micro:bit.](Battleship_microbit.png)
+![Hundir la flota en micro:bit.](Battleship_microbit_ES.png)
 
 !!! note ""
 	**Figura 2:** Hundir la flota en micro:bit
@@ -76,14 +76,14 @@ Veamos cómo se verá una partida en las micro:bits. Al principio tus barcos se 
 
 El atacante (a la izquierda) presiona el botón A 3 veces, y el botón B 1 vez. Al presionar luego los dos botones a la vez dispara y envía un mensaje a través de la radio con la coordenada (3,1). Como hay un barco en esa posición, se trata de un disparo "tocado". En la figura de abajo el LED de la posición más a la izquierda de la fila superior del atacante se enciende. Y, en la placa del oponente, el LED de la posición (3,1) se apaga, puesto que el barco ha sido hundido.
 
-![Hundir la flota: ¡Tocado! ¡Has alcanzado un barco!](Hit.jpg)
+![Hundir la flota: ¡Tocado! ¡Has alcanzado un barco!](Hit_ES.jpg)
 
 !!! note ""
 	**Figura 4:** Hundir la flota: ¡Tocado! ¡Has alcanzado un barco!
 
 Echemos un vistazo también a una situación en la que se falla con el disparo (figura de abajo). En este caso, como el disparo es "agua", en la placa del oponente no hay que cambiar nada. Pero en la del atacante, en la fila de arriba, hay que encender el LED de la derecha del todo para mostrar que se ha fallado. 
 
-![Hundir la flota: ¡Agua! No ha habido suerte, amigo](Miss.jpg)
+![Hundir la flota: ¡Agua! No ha habido suerte, amigo](Miss_ES.jpg)
 
 !!! note ""
 	**Figura 5:** Hundir la flota: ¡Agua! No ha habido suerte, amigo
