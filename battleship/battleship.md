@@ -114,39 +114,30 @@ También tendrás que establecer la configuración de la radio y de los paquetes
 
 ### Tarea 2: Disparar
 
-**Descripción:** Cuando se presiona el botón A, indica el *número\_columna* del disparo. Así que tienes que contar cuántas veces se ha presionado el botón para establecer el *número\_columna*. Cuando se presiona el botón B, se define el *número\_fila* de ese mismo disparo. De nuevo, cuenta el número de veces que se presiona para establecer el *número\_fila*.
+**Descripción:** Cuando se presiona el botón A, se indica el *número\_columna* del disparo. Así que tienes que contar cuántas veces se ha presionado el botón para establecer el *número\_columna*. Cuando se presiona el botón B, se define el *número\_fila* de ese mismo disparo. De nuevo, cuenta el número de veces que se presiona para establecer el *número\_fila*.
 
-**Importante:** Si no presionas ni el botón A ni el B, *número\_columna* será 0 y *número\_fila* será 0. Un disparo con *número\_fila*=0 es un desperdicio, porque no puede haber barcos en esa fila. También hay que tener en cuenta que si un botón se presiona más de cuatro veces habría que volver a contar desde 0. En otras palabras, el contador del botón debería incremetnarse con cada pulsación del botón así: 0, 1, 2, 3, 4, 0, 1, 2, 3, 4.
+**Importante:** Si no presionas ni el botón A ni el B, *número\_columna* será 0 y *número\_fila* será 0. Un disparo con *número\_fila*=0 es un desperdicio, porque no puede haber barcos en esa fila. También hay que tener en cuenta que si un botón se presiona más de cuatro veces habría que volver a contar desde 0. En otras palabras, el contador del botón debería incrementarse con cada pulsación del botón así: 0, 1, 2, 3, 4, 0, 1, 2, 3, 4.
 
 Presionar los dos botones al mismo tiempo enviará por radio al oponente *número\_columna* y *número\_fila*. Tenéis que decidir cómo enviar este mensaje en un paquete. Si estáis escribiendo cada pareja vuestros programas por separado es fundamental que os pongáis de acuerdo en esto.
 
-**Instrucciones:** Programa las pulsaciones de los botones A, B y A+B. El progrma enviará por radio un mensaje al presionar A+B.
+**Instrucciones:** Programa las pulsaciones de los botones A, B y A+B. El programa enviará por radio un mensaje al presionar A+B.
 
-Prueba que el código es correcto. Añade un pequeño código de prueba que cuando dispares, además de enviar el mensaje de radio, también enciendo el LED de la posición *número\_columna* y *número\_fila*. Esto te ayduará a comprobar que está funcionando bien. Cuando todo vaya bien, puedes borrar este código extra de prueba.
+Prueba que el código es correcto. Añade un pequeño código de prueba para que cuando dispares, además de enviar el mensaje de radio, también se encienda el LED de la posición *número\_columna* y *número\_fila*. Esto te ayudará a comprobar que está funcionando bien. Cuando todo vaya bien, puedes borrar este código extra de prueba.
 
-### Task 3: Receiving a shot
+### Tarea 3: Recibir un disparo
 
-**Description:** When you receive a shot, you will check whether you
-have a ship on the (*column\_number*, *row\_number*) of the shot.
-If you have a ship there, then it was hit and sunk. You will send a
-“Hit” message to your opponent, and remove the ship from the display. If it is a miss, send a
-“Miss” message too your opponent.
+**Descripción:** Cuando recibes un disparo tienes que comprobar si tienes un barco en esa posición (*número\_columna*,*número\_fila*). Si tienes un barco, entonces te ha tocado y hundido. Tienes que enviar un mensaje "tocado" a tu oponente y borrar el barco de la pantalla. Si no acertó a tus barcos, envías un mensaje "agua" a tu oponente.
 
-**Instruction:** Depending on how the packet was formatted, decode
-(*column\_number*, *row\_number*) from the received packet. If you have
-a ship on (*column\_number*, *row\_number*), it is a hit: Turn off the
-LED in that position. If you have a separate data structure as a variable to represent your ships, update that too. Send your opponent a “Hit” message. If it is a miss, send a “Miss” message to your opponent.
+**Instrucciones:** Dependiendo de cómo hayáis decidido formatear el mensaje, tienes que decodificar *número\_columna* y *número\_fila* del mensaje recibido. Si tienes un barco en esas coordenadas, es un acierto: apaga el LED de esa posición. Si tienes una estrucutura de datos para representar tus barcos, como una variable, tendrás que actualizarla también. Envía a tu oponente un mensaje "tocado". Si es un fallo, envía un mensaje "agua".
 
-### Task 4: Receiving the shot result: “Hit” or “Miss”
+### Tarea 4: Recibir el resultado de un disparo: "tocado" o "agua"
 
-**Description:** Turn on LEDs in top row depending on the result.
-If it is a “Hit”, check if you reached 5 hits. Then you won! Display a
-smile!
+**Descripción:** Enciende el LED correspondiente dependiendo del resultado. Si es "tocado", comprueba si llevas 5 aciertos. Si es así, ¡has ganado! Muestra una sonrisa en la pantalla.
 
-**Instruction:** If you receive a “Hit”, light the leftmost LED of the top row (the LED in (0,0) position). Update the count of your hits,
-and if you reached 5, display a smile! If the result was a “Miss”, light the rightmost LED of the top row (the LED in (4,0) position).
+**Instrucciones:** Si recibes un mensaje "tocado", enciende el LED de la izquierda de la fila superior, en la posición (0,0). Actualiza el contador de aciertos, y si has llegado a 5 muestra una sonrisa en la pantalla. Si el mensaje es "agua", enciende el LED de la esquina superior derecha, posición (4,0).
 
-Test your program(s) with your opponent. To start with, it'll be easier if you can see each other's screens. You might find it helpful to put in some test code, like you did for the previous task. For example, you could print out "hit" or "miss" when you receive and decode a shot. You might even find it helpful to print out the coordinates of the show when you receive the packet.
+Prueba tus programas con tu oponente. Para las pruebas, quizás sea más fácil si ambos podéis ver las pantallas de los dos. Además puedes escribir algo de código extra, como hiciste en la tarea anterior. Por ejemplo, podrías imprimir "tocado" o "agua" cuando recibes y decodificas un disparo. Incluso podría ser interesante para las pruebas imprimir las coordenadas del disparo cuando recibas el paquete. Una vez tengáis todo funcionando correctamente, podéis borrar todo este código extra.
+
 
 Extended Activity
 -----------------
