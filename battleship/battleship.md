@@ -139,37 +139,34 @@ Prueba que el código es correcto. Añade un pequeño código de prueba para que
 Prueba tus programas con tu oponente. Para las pruebas, quizás sea más fácil si ambos podéis ver las pantallas de los dos. Además puedes escribir algo de código extra, como hiciste en la tarea anterior. Por ejemplo, podrías imprimir "tocado" o "agua" cuando recibes y decodificas un disparo. Incluso podría ser interesante para las pruebas imprimir las coordenadas del disparo cuando recibas el paquete. Una vez tengáis todo funcionando correctamente, podéis borrar todo este código extra.
 
 
-Extended Activity
------------------
+Actividad ampliada
+------------------
 
-Battleship game has many variations. See the Wikipedia site in Resources
-to read about the variations.
+El Hundir la flota tiene muchas variaciones. Echa un ojo a la página de la Wikipedia en la sección Recursos para leer más acerca de estas variaciones.
 
-!!! attention "Exercise 1"
-	One variation allows players to keep it secret that a ship has been sunk. So, their opponent has to take further shots to confirm that an area is clear. This is like having a packet loss! Remember how you dealt with packet losses in [Handling errors: Retransmissions](../retransmissions/retransmissions.md) and [Handling errors: Acknowledgements](../acknowledgements/acknowledgements.md). How would you apply those concepts to this case? Discuss possible solutions with your friend. Then, program and test your new solution.
+!!! attention "Ejercicio 1"
+	Imagina una variación en la que fueran necesarios 3 disparos para hundir un barco en lugar de 1. ¿Cómo programarías esta modificación? ¿Habría que hacer cambios en el lado del emisor o del receptor? ¿Te recuerda en algo a usar retransmisiones, tal como hicimos en [Gestionar errores: Retransmisiones](../retransmissions/retransmissions.md)?
+	
 
-!!! attention "Exercise 2"
-	Imagine a variant when it takes 3 hits to sink a ship instead of 1 hit. How would your program change? Do you need to make changes on the sender side or the receiver side? How similar is this to using default retransmissions in [Handling errors: Retransmissions](../retransmissions/retransmissions.md)?
-
-Problems
+Problemas
 --------
 
-![Battleship game: A random battle area](Example_init.png)
+![Hundir la flota: Un área de batalla aleatoria](Example_init.png)
 
 !!! note ""
-	**Figure 6:** Battleship game: A random battle area
+	**Figura 6:** Hundir la flota: Un área de batalla aleatoria
 
-**Problem 1:** The figure above shows randomly placed ships in a battle area. Which coordinates do you need to send to hit all the ships?
+**Problema 1:** La figura de arriba muestra barcos colocados aleatoriamente en un área de batalla. ¿Qué coordenadas tendrías que enviar para acertar a cada uno de los barcos?
 
-![Battleship game: Two players](Two_microbits_sidebyside.png)
+![Hundir la flota: Dos jugadores](Two_microbits_sidebyside.png)
 
 !!! note ""
-	**Figure 7:** Battleship game: Two players
+	**Figura 7:** Hundir la flota: Dos jugadores
 
-**Problem 2:** The figure above shows randomly placed ships in the battle areas of two micro:bits. Table below lists all the shots that are fired from the micro:bit 1 (left/red micro:bit) and micro:bit 2
-(right/yellow micro:bit). Who wins?
+**Problema 2:** La figuta muetra barcos colocados aleatoriamente en el área de batalla de dos micro:bits. La tabla de abajo muestra los disparos que se han realizado desde micro:bit 1 (micro:bit izquierda/roja) and micro:bit 2
+(micro:bit derecha/amarilla). ¿Quién ha ganado?
 
-| **Rounds** | **Micro:bit 1** | **Micro:bit2** | **Result** |
+| **Rondas** | **Micro:bit 1** | **Micro:bit2** | **Resultado** |
 |------------|:----------------|:---------------|:-----------|
 | 1 | (3,1) | (2,1) | |
 | 2 | (0,3) | (0,1) | |
@@ -179,9 +176,6 @@ Problems
 | 6 | (2,2) | (0,3) | |
 | 7 | (3,2) | (1,4) | |
 
-If you wanted to play this game with another opponent, what do you need
-to change in your program?
+[^1]: Hundir la flota en Wikipedia: [https://es.wikipedia.org/wiki/Batalla_naval_(juego)](https://es.wikipedia.org/wiki/Batalla_naval_(juego))
 
-[^1]: Battleship in Wikipedia: [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_(game))
-
-[^2]: Online Battleship game 1: [https://battleship-game.org](https://battleship-game.org) and Online Battleship game 2: [http://www.mathplayground.com/battleship.html](http://www.mathplayground.com/battleship.html)
+[^2]: Hundir la flota online: [http://es.battleship-game.org/](http://es.battleship-game.org/) 
