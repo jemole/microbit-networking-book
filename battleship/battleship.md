@@ -1,61 +1,42 @@
-Game 3: Battleship over Radio
-=============================
+Juego 3: Hudir la flota por radio
+=================================
 
 ![Chapter 10 image](chapter10.png)
 
-Introduction
+Introducción
 ------------
 
-In this activity, you will program the micro:bit version of a famous
-classic game called Battleship. Battleship has been played since World
-War 1 with pencil and paper[^1]. A plastic board game was released in
-1967, and now, there are several electronic versions and apps! [^2]
+En esta actividad vamos a programar una versión para micro:bt del famoso juego Hundir la flota, al que ya se jugaba desde la Primera Guerra Mundial, aunque con papel y lápiz [^1]. En 1967 se publicó una versión con tablero de plástico, y hoy en día existen multitud de versiones electrónicas y apps [^2].
 
-![Battleship board](Battleship_game_board.png)
+![Tablero del Hundir la flota](Battleship_game_board.png)
 
 !!! note ""
-	**Figure 1:** Battleship board
+	**Figura 1:** Tablero del Hundir la flota
 
-Let's look at how this game works using the example board in the figure above.  
-In this example, each player uses their own 10x10 board, and each player's fleet includes
-10 ships of different sizes (the grey rectangles). The figure shows the placement for one of the players: 4
-ships of size 2, 3 ships of size 3, 2 ships of size 4, and 1 ship of
-size 6. Arrangement ships is of course hidden from the opponent. Once both players have placed their ships
-on their boards, they start guessing the position of (shooting at) their opponent's ships.
-In the example board, the crosses mark the shots of the opponent. Notice that some
-of these crosses did not hit any ships, and some of them did. The
-opponent has sunk the ship on squares 8A-8B. The ship on the
-squares 6J-7J-8J was hit twice. Another shot on 8J will sink it. The
-players keep a second board to mark the shots they have already tried. They
-record each hit and miss to decide which shot to fire next.
+Para repasar cómo funcioa el juego vamos a usar el tablero de ejemplo de la figura de arriba. En el ejemplo, cada jugador usa un tablero de 10x10 casillas, y la flota de cada jugador incluye 10 barcos de diferentes tamaños (los rectángulos grises). La figura muestra cómo están colocados los de un jugador: con 4 barcos de tamaño 2, 3 barcos de tamaño 3, 2 barcos de tamaño 4, y 1 barco de tamaño 6. Por supuesto, el sitio donde se han colocado los barcos es secreto y no lo conoce el oponente. Cuando ambos jugadores han colocado sus barcos comienzan a tratar de adivinar dónde están los barcos del oponente, para lo que disparan misiles que caen en la casilla escogida. En el ejemplo, las cruces muestran los disparos que ha realizado el oponente. Fíjate en que algunas de estas cruces han caído en el agua, mientras que otras han alcanzado a barcos. El oponente ha hundido el barco de las casillas 8A-8B. El barco de las casillas 6J-7J-8J ha sido alcanzado dos veces; otro disparo lo hundiría. Los jugadores van escribiendo en otro tablere los disparos que ya han realizado, donde apuntan cada acierto y cada fallo para decidir a qué casilla disparar a continuación.
 
-To program the Battleship into your micro:bits, you will use your networking knowledge. This
-game requires unicast and bidirectional communication, which you worked
-on in [Unicast Communication: One to One](../unicast/unicast.md) and [Two way unicast](../twowayunicast/twowayunicast.md). If you program
-the variant in Exercises, you will use information from
- [Handling errors: Retransmissions](../retransmissions/retransmissions.md) and [Handling errors: Acknowledgements](../acknowledgements/acknowledgements.md). 
-In summary, you
-will practice:
+Para programar Hundir la flota con las micro:bits vas a tener que poner en práctica todos tus conocimientos de redes. El juego requiere comunicación unicast bidirecciónal, algo que hemos trabajado en los temas [Comunicación unicast: De una a una](../unicast/unicast.md) y [Unicast de ida y vuelta:ping-pong](../twowayunicast/twowayunicast.md). Además, si te animas con las extensiones propuestas en los ejercicios, tendrás que hacer uso de lo aprendido en los capítulos  [Gestionar errores: Retransmisiones](../retransmissions/retransmissions.md) y [Gestionar errores: Acuse de recibo](../acknowledgements/acknowledgements.md). 
 
-- The concept of *unicast communication*, *two-way communication* and
-    *retransmissions*
+Resumiendo, vas a practicar con:
 
-- Sending and receiving messages
+- El concpeto de *comunicación unicast*, *unicast de ida y vuelta* y *retransmisiones*
 
-- Button inputs
+- Envío y recepción de mensajes
 
-- Display and its coordinates
+- Botones de entrada
 
-- Variables and random numbers
+- La pantalla y sus coordenadas
+
+- Variables y números aleatorios
 
 - Arrays
 
-- Loops
+- Bucles
 
-### What you’ll need
+### Vas a necesitar
 
     2 micro:bits
-    1 teammate
+    1 colega
 
 Designing the Battleship for Microbit {#sec:design}
 -------------------------------------
