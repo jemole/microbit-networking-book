@@ -88,35 +88,29 @@ Echemos un vistazo también a una situación en la que se falla con el disparo (
 !!! note ""
 	**Figura 5:** Hundir la flota: ¡Agua! No ha habido suerte, amigo
 
-Programming: Battleship
------------------------
+A programar: Hundir la flota
+----------------------------
 
-Battleship is a two-person game. Both players can run identical problems, or you can each program your own version, as long as you agree on the details of the radio messages. When writing a more complex program like this, you will find it easier if you split up into parts, and test each part as you write it. (This is a valuable skill as you learn more about programming!)
+El Hundir la flota es un juego de dos jugadores. Por tanto, podéis programar en parejas y ejecutar los mismos programas en ambas placas, o bien podéis programar cada jugador vuestra versión, pero en este caso tendríais que poneros de acuerdo en los detalles de los mensajes de radio. 
 
-To help with this, we have split the program into four tasks: once you have completed the final task, you will be able to play with your teammate. If you find any errors
-(bugs) in your program, work with your teammate to fix them until you
-get the game play as described in the introduction.
+Al trabajar en un proyecto de envergadura como este, verás que es más asequible si se divide en partes, y se va probando cada parte según se va programando. (Esta capacidad es una habilidad muy importante que se va desarrollando según vas aprendiendo más sobre la programación informática).
 
-### Task 1: Setting up the game
+Es por ello que hemos dividio el programa en cuatro tareas: cuando hayas finalizado la última tarea ya tendrás todo listo para comenzar a jugar con tu pareja. Si al hacer las pruebas encontráis *bugs* (errores) en vuestros programas, trabajad en pareja para tratar de localizarlos y corregirlos, lo que se llama *depurar* errores.
 
-**Description:** This part needs to take place before the game starts.
-You will place 5 ships on your board. Think about randomly placing 5
-points in the battle area, which is a 4 x 5 matrix. Answer the following
-questions:
 
-- How will you represent the battle area in your program as a data
-    structure?
+### Tarea 1: Preparar la partida
 
-- How will you select random coordinates (*column\_number*,
-    *row\_number*) for 5 ships, where *column\_number* is between 0 and 5, and *row\_number* is between 1 and 5?
+**Descripción:** Esta parte tiene que ejecutarse antes de que comience la partida. Necesitarás 5 barcos en el tablero. Piensa en cómo colocar 5 barcos en el área de batalla, que es una matriz de 4x5. Contesta las siguientes preguntas:
 
-- How will you represent the information that there is a ship at each of these coordinates?
+- ¿Qué estrcutura de datos vas a utilizar para representar el área de batalla en tu programa?
 
-You will also set up your radio and packet configuration to send unicast messages.
+- ¿Cómo vas a seleccionar coordenadas aleatorias (*número\_columna*,*número\_fila*) para los 5 barcos, donde *número\_columna* está entre 0 y 5, y *número\_fila* entre 0 y 5?
 
-**Instruction:** Create the necessary data structures and variables that represent the ships in the battle area. Set up your radio and packets
-for unicast communication. Test whether your program displays 5 ships randomly
-placed on the lower 4 rows of the display, like in the example figures.
+- ¿Cómo vas a representar la información para saber si un barco está en cada una de estas coordenadas?
+
+También tendrás que establecer la configuración de la radio y de los paquetes para enviar mensajes unicast.
+
+**Instrucciones:** Crea las estructuras de datos y variables necesarias para representar los barcos en el área de batalla. Establece la radio y configura los paquetes para la comunicación unicast. Prueba que tu programa puede mostrar 5 barcos aleatoriamente colocados en las cuatro filas de abajo de la pantalla, como en las figuras de ejemplo.
 
 ### Task 2: Firing a shot
 
