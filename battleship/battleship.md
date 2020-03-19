@@ -47,58 +47,46 @@ Vamos a repasar las diferentes partes que necesitamos para programar el Hundir l
 
 **Usar la pantalla de micro:bit como tablero:** Como las micro:bits tienen una pantalla de 5x5, el tablero tendrá que ser más pequeño que el del ejemplo de la introducción. Y esto no nos va a dejar espacio para muchos barcos. Así que la flota va a tener 5 barcos, todos de tamaño 1.
 
-Cuando diapres un misil, hay que saber si ha alcanzado a un barco o ha caído al agua. Así hay que resevar la fila de arriba para mostrar si se trata de un acierto o de un fallo. Si la micro:bit del oponente nos dice que es un acierto, tu placa encenderá el LED de la izquierda de la fila superor. Por el contrario si es "agua", se encenderá el LED de la derecha.
+Cuando dispares un misil, hay que saber si ha alcanzado a un barco o ha caído al agua. Así que hay que resevar la fila de arriba para mostrar si se trata de un acierto o de un fallo. Si la micro:bit del oponente nos dice que es un acierto, tu placa encenderá el LED de la izquierda de la fila superor. Por el contrario si es "agua", se encenderá el LED de la derecha.
 
 Otra limitación de nuestro juego será que no podremos mostrar en pantalla un registro de las posiciones de nuestros aciertos y fallos. Quizás lo más fácil sea ir apuntándolo en papel y lápiz como se hacía en el siglo XX ;-) 
 
-**Diparar misiles:** Para disparar misiles vamos a usar los botones, seleccionando un número de fila y de columna. Ten en cuenta que cuando las coordenadas LED se muestran como *(x,y)*, x es el número de columna, mientras que y es el número de fila. Para más información puedes echar un ojo a [https://microbit.org/guide/hardware/leds/](https://microbit.org/guide/hardware/leds/).
+**Disparar misiles:** Para disparar misiles vamos a usar los botones, seleccionando un número de fila y de columna. Ten en cuenta que cuando las coordenadas LED se muestran como *(x,y)*, x es el número de columna, mientras que y es el número de fila. Para más información puedes echar un ojo a [https://microbit.org/guide/hardware/leds/](https://microbit.org/guide/hardware/leds/).
 
 ![Hundir la flota en micro:bit.](Battleship_microbit.png)
 
 !!! note ""
 	**Figura 2:** Hundir la flota en micro:bit
 
-El botón a se usará para seleccionar el número de columna y el botón B para seleccionar el número de fila. Por tanto, para disparar a la posición (2,3) tendrás que presionar el botón A dos veces y el botón B 3 veces, y luego presionar los botones A y B a la vez. Para ver si lo has entendido, debatid en parejas qué secuencia de botones habría que presionar para disparar a la posición (0,4).
+El botón A se usará para seleccionar el número de columna y el botón B para seleccionar el número de fila. Por tanto, para disparar a la posición (2,3) tendrás que presionar el botón A dos veces y el botón B 3 veces, y luego presionar los botones A y B a la vez. Para ver si lo has entendido, debatid en parejas qué secuencia de botones habría que presionar para disparar a la posición (0,4).
 
-Cuando presiones los botones tu micro:bit enviará un mensaje a la placa del oponente. Así, por ejemplo, si quieres diparar a la posición (4,4), tu programa enviará las coordenadas (4,4). Cuando la micro:bit del oponente recibe un disparo, comprueba si ha "tocado" un barco o si ha caído al "agua", y enviará consecuentemente un mensaje por radio indicando "tocado" o "agua".
+Cuando presiones los botones tu micro:bit enviará un mensaje a la placa del oponente. Así, por ejemplo, si quieres disparar a la posición (4,4), tu programa enviará las coordenadas (4,4). Cuando la micro:bit del oponente recibe un disparo, comprueba si ha "tocado" un barco o si ha caído al "agua", y enviará consecuentemente un mensaje por radio indicando "tocado" o "agua".
 
 En tu micro:bit, cuando recibas "tocado" encenderás el LED de la esquina superior izquierda de la pantalla. Cuando recibas "agua", encenderás el de la esquina superior derecha.
 
 
-### A sample game
+### Una partida de ejemplo
 
-Let’s see how things will look like in your micro:bits. At the
-beginning, you will have all your battleships placed in the lower 4 rows
-as in the figure below. The figure shows both
-players have 5 ships placed in the battle area.
+Veamos cómo se verá una partida en las micro:bits. Al principio tus barcos se colocarán aleatoriamente en las cuatro filas inferiores de la pantalla, como en la figura de abajo. La figura muestra los 5 barcos de cada jugador colocados en la zona de batalla.
 
-![Battleship game: Initial stage with randomly placed ships.](Initial.jpg)
+![Una partida de Hundir la flota: Escenario inicial con los barcos colocados aleatoriamente.](Initial.jpg)
 
 !!! note ""
-	**Figure 3:** Battleship game: Initial stage with randomly placed ships.
+	**Figura 3:** Una partida de Hundir la flota: Escenario inicial con los barcos colocados aleatoriamente
 
-The attacker (on the left) presses button A three times, and button B
-once. Pressing both buttons at the same fires a shot, and sends a
-shot message over the radio for the position (3,1). There is a ship on
-this location, and so, this is a hit! In the
-figure below, the leftmost LED in the top row of the
-attacker’s micro:bit lights up. And, in the opponent’s display the LED in
-the position (3,1) gets turned off, because this ship was sunk.
+El atacante (a la izquierda) presiona el botón A 3 veces, y el botón B 1 vez. Al presionar luego los dos botones a la vez dispara y envía un mensaje a través de la radio con la coordenada (3,1). Como hay un barco en esa posición, se trata de un disparo "tocado". En la figura de abajo el LED de la posición más a la izquierda de la fila superior del atacante se enciende. Y, en la placa del oponente, el LED de la posición (3,1) se apaga, puesto que el barco ha sido hundido.
 
-![Battleship game: Success! You hit a ship!](Hit.jpg)
+![Hundir la flota: ¡Tocado! ¡Has alcanzado un barco!](Hit.jpg)
 
 !!! note ""
-	**Figure 4:** Battleship game: Success! You hit a ship!
+	**Figura 4:** Hundir la flota: ¡Tocado! ¡Has alcanzado un barco!
 
-Let’s also look at a miss situation (see
-the figure below). In this case, nothing should change on
-the opponent’s board. But, in the attacker’s display, in the top row,
-the rightmpst LED lights up to show a miss.
+Echemos un vistazo también a una situación en la que se falla con el disparo (figura de abajo). En este caso, como el disparo es "agua", en la placa del oponente no hay que cambiar nada. Pero en la del atacante, en la fila de arriba, hay que encender el LED de la derecha del todo para mostrar que se ha fallado. 
 
-![Battleship game: An unfortunate miss!](Miss.jpg)
+![Hundir la flota: ¡Agua! No ha habido suerte, amigo](Miss.jpg)
 
 !!! note ""
-	**Figure 5:** Battleship game: An unfortunate miss!
+	**Figura 5:** Hundir la flota: ¡Agua! No ha habido suerte, amigo
 
 Programming: Battleship
 -----------------------
