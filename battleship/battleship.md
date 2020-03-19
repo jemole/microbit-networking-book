@@ -104,38 +104,25 @@ Es por ello que hemos dividio el programa en cuatro tareas: cuando hayas finaliz
 
 - ¿Qué estrcutura de datos vas a utilizar para representar el área de batalla en tu programa?
 
-- ¿Cómo vas a seleccionar coordenadas aleatorias (*número\_columna*,*número\_fila*) para los 5 barcos, donde *número\_columna* está entre 0 y 5, y *número\_fila* entre 0 y 5?
+- ¿Cómo vas a seleccionar coordenadas aleatorias (*número\_columna*,*número\_fila*) para los 5 barcos, donde *número\_columna* está entre 0 y 5, y *número\_fila* entre 1 y 5?
 
 - ¿Cómo vas a representar la información para saber si un barco está en cada una de estas coordenadas?
 
 También tendrás que establecer la configuración de la radio y de los paquetes para enviar mensajes unicast.
 
-**Instrucciones:** Crea las estructuras de datos y variables necesarias para representar los barcos en el área de batalla. Establece la radio y configura los paquetes para la comunicación unicast. Prueba que tu programa puede mostrar 5 barcos aleatoriamente colocados en las cuatro filas de abajo de la pantalla, como en las figuras de ejemplo.
+**Instrucciones:** Crea las estructuras de datos y variables necesarias para representar los barcos en el área de batalla. Establece la radio y configura los paquetes para la comunicación unicast. Prueba que tu programa puede mostrar 5 barcos colocados aleatoriamente en las cuatro filas de abajo de la pantalla, como en las figuras de ejemplo.
 
-### Task 2: Firing a shot
+### Tarea 2: Disparar
 
-**Description:** When button A is pressed, it indicates the
-*column\_number* for a shot. So, you need to count how many times this
-button was pressed to get the *column\_number*. When button B is
-pressed, it defines the *row\_number* for the same shot. Again,
-count the number of times to get the *row\_number*.
+**Descripción:** Cuando se presiona el botón A, indica el *número\_columna* del disparo. Así que tienes que contar cuántas veces se ha presionado el botón para establecer el *número\_columna*. Cuando se presiona el botón B, se define el *número\_fila* de ese mismo disparo. De nuevo, cuenta el número de veces que se presiona para establecer el *número\_fila*.
 
-**Important:** If you do not press either button A or button B, the
-*column\_number=0* and *row\_number=0*. A shot with *row\_number=0* is a
-wasted shot because there cannot be any ships on that row.
-Also, make sure if either button is pressed more than four times, it shoud start counting again from 0. In other words, the button counters should
-increment  with each button press like this: 0, 1, 2, 3, 4, 0, 1, 2,
-3, 4.
+**Importante:** Si no presionas ni el botón A ni el B, *número\_columna* será 0 y *número\_fila* será 0. Un disparo con *número\_fila*=0 es un desperdicio, porque no puede haber barcos en esa fila. También hay que tener en cuenta que si un botón se presiona más de cuatro veces habría que volver a contar desde 0. En otras palabras, el contador del botón debería incremetnarse con cada pulsación del botón así: 0, 1, 2, 3, 4, 0, 1, 2, 3, 4.
 
-Pressing both buttons together will send *column\_number* and
-*row\_number* over the radio to your opponent. Decide how to send this
-message in a packet, and agree on this with your teammate if you are writing separate programs.
+Presionar los dos botones al mismo tiempo enviará por radio al oponente *número\_columna* y *número\_fila*. Tenéis que decidir cómo enviar este mensaje en un paquete. Si estáis escribiendo cada pareja vuestros programas por separado es fundamental que os pongáis de acuerdo en esto.
 
-**Instruction:** Program the button presses for A, B, and A+B. The
-program piece for buttons A+B will send a radio message.
+**Instrucciones:** Programa las pulsaciones de los botones A, B y A+B. El progrma enviará por radio un mensaje al presionar A+B.
 
-Test the correctness of your code. Add a little test code so that when you fire, as well as sending a radio message,  it also lights up the LED at
-*column\_number* and *row\_number*. Use this to check that aiming is working correctly. This is just test code, so remove it once you're confident that it works.
+Prueba que el código es correcto. Añade un pequeño código de prueba que cuando dispares, además de enviar el mensaje de radio, también enciendo el LED de la posición *número\_columna* y *número\_fila*. Esto te ayduará a comprobar que está funcionando bien. Cuando todo vaya bien, puedes borrar este código extra de prueba.
 
 ### Task 3: Receiving a shot
 
