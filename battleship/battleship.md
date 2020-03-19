@@ -163,7 +163,7 @@ Problemas
 !!! note ""
 	**Figura 7:** Hundir la flota: Dos jugadores
 
-**Problema 2:** La figuta muetra barcos colocados aleatoriamente en el área de batalla de dos micro:bits. La tabla de abajo muestra los disparos que se han realizado desde micro:bit 1 (micro:bit izquierda/roja) and micro:bit 2
+**Problema 2:** La figura 7 muestra barcos colocados aleatoriamente en el área de batalla de dos micro:bits. La tabla de abajo muestra los disparos que se han realizado desde micro:bit 1 (micro:bit izquierda/roja) and micro:bit 2
 (micro:bit derecha/amarilla). ¿Quién ha ganado?
 
 | **Rondas** | **Micro:bit 1** | **Micro:bit2** | **Resultado** |
