@@ -58,9 +58,9 @@ Cuando dos ordenadores se comunican, el emisor envía un paquete de datos al rec
 !!! note ""
 	**Figura 1:** Un paquete de datos contiene un mensaje y una cabecera. Una cabecera contiene información de ayuda definida por el protocolo, como las direcciones del origen o del destino, o el tipo de información que viaja en el paquete. Cada protocolo añade diferentes tipos de cabeceras a los mensajes.
 
-La figura anterior muestra como los datos y una cabecera forman un paquete de datos. En esta figura además de las direcciones origen y destino, la cabecera de ejemplo también incluye el tipo de mensaje. El tipo de mensaje le dice al receptor si está recibiendo, por ejemplo, un texto o una imagen. Si te acuerdas, en los capítulos anteriores programábamos nuestra placa para recibir un tipo específico de mensaje (texto o número). Si los paquetes contienen una cabecera con información del tipo de mensaje sería ms fácil escribir el programa del receptor.
+La figura anterior muestra que los datos junto a una cabecera forman un paquete de datos. En esta figura además de las direcciones origen y destino, la cabecera de ejemplo también incluye el tipo de mensaje. El tipo de mensaje le dice al receptor si está recibiendo, por ejemplo, un texto o una imagen. Si te acuerdas, en los capítulos anteriores programábamos nuestra placa para recibir un tipo específico de mensaje (texto o número). Si los paquetes contienen una cabecera con información del tipo de mensaje sería más fácil escribir el programa del receptor.
 
-En cualquier caso, en esta práctica vas a crear paquetes de datos añadiendo una cabecera que contendrá tan solo las direcciones origen y destino, para lograr comunicación unicast entre micro:bits.
+En cualquier caso, en esta práctica vas a crear paquetes de datos añadiendo una cabecera que contendrá tan solo las direcciones origen y destino. Y así vamos a lograr comunicación unicast entre micro:bits.
 
 A programar: enviar y recibir mensajes unicast
 ----------------------------------------------
