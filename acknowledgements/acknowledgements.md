@@ -40,7 +40,7 @@ Pero, claro, ¿cuánto tiempo debería esperar el emisor a que le llegue el acus
 	
 En otras palabras, si el emisor no recibe un acuse de recibo dentro del periodo de timeout, pensará que el paquete debe haberse perdido.
 
-Los acuses de recibo se utilizan en método de control de errores que se llama *Solicitud de repetición automática* o *Automatic Repeat Request (ARQ)*.
+Los acuses de recibo se utilizan en un método de control de errores que se llama *Solicitud de repetición automática* o *Automatic Repeat Request (ARQ)*.
 
 !!! hint "Definición 3: _Solicitud de repetición automática (ARQ)_"
 	Solicitud de repetición automática es un método de control de errores. Utiliza acuses de recibo y timeouts para retransmitir paquetes. Las retransmisiones pueden continuar hasta que el emisor recibe un acuse de recibo o bien hasta que un número máximo de retransmisiones se ha alcanzado.
@@ -80,7 +80,7 @@ La figura siguiente muestra un ejemplo en el que el mensaje enviado por el emiso
 !!! note ""
 	**Figura 3:** Protocolo ARQ Parada-y-Espera: El mensaje se recibe, pero el ACK se pierde, así que el emisor retransmite.
 	
-Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reeciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
+Estos ejemplos muestran que el protocolo ARQ Parada-y-Espera maneja las pérdidas de paquetes de datos y ACKs bastante bien. Sin embargo, ¿siempre funciona? La figura de abajo muestra un problema que puede ocurrir cuando los ACKs se retrasan. En otras palabras, los timeouts se cumplen antes de que los ACKs puedan ser recibidos. En este ejemplo cuando el emisor envía el primer "Hola" el receptor recibe el mensaje y envía un ACK de vuelta. Pero el timeout se cumple antes de que el emisor reciba el ACK. Así que retransmite el segundo "Hola". Y justo después, el emisor recibe el ACK retrasado. Pero, ¿a qué paquete se refiere este ACK? ¿Al primer "Hola" o al segundo? ¡Y esto es confuso también para el receptor! ¿El segundo "Hola" es un nuevo paquete o un duplicado?
 
 ![Protocolo ARQ Parada-y-Espera: ¿Qué ocurre si un mensaje se retrasa? No está claro a qué mensaje se refiere el ACK.](c9_Ack4_ES.png)
 
@@ -104,7 +104,7 @@ Para programar el protocolo ARQ Parada-y-Espera vas a trabajar con un colega. De
 
 **Descripción:** Antes de que puedas enviar ningún paquete es necesario que decidas el formato de los paquetes de datos y de los ACKs.
 
-**Instrucciones:** Debatid en grupo cuál es la información mínima que deberían contener los paquetes. Crear dos variables para los paquetes de datos y los ACKs haciendo uso de los bloques de Texto en el editor de bloques JavaScript.
+**Instrucciones:** Debatid en grupo cuál es la información mínima que deberían contener los paquetes. Cread dos variables para los paquetes de datos y los ACKs haciendo uso de los bloques de Texto en el editor de bloques JavaScript.
 
 ### Tarea 2: Timeout y retransmisiones
 
@@ -116,9 +116,9 @@ Para probar el programa hay que programar también el receptor. El receptor env�
 
 ### Tarea 3: probar la fiablidad de la Parada-y-Espera
 
-**Descripción:** En esta tarea vas a experimentar con el protocolo Parada-y-Espera que habéis programado. Para ello hay que aladir un contador en la placa emisora para contar el número de retransmisiones. En la micro:bit receptora necesitas mostrar por pantalla los mensajes recibidos y un contador para comprender el efecto de los ACKs en las retransmisiones.
+**Descripción:** En esta tarea vas a experimentar con el protocolo Parada-y-Espera que habéis programado. Para ello hay que añadir un contador en la placa emisora para contar el número de retransmisiones. En la micro:bit receptora necesitas mostrar por pantalla los mensajes recibidos y un contador para comprender el efecto de los ACKs en las retransmisiones.
 
-**Instrucciones:** Decide cuánto timpo va a ser la pausa del timeout. Tienes que enviar 5 números a la otra micro:bit siguiendo el protocolo. Primero usaras una tasa de error de 25, y luego de 75. Repetid el experimento tres veces. 
+**Instrucciones:** Decide cuánto tiempo va a ser la pausa del timeout. Tienes que enviar 5 números a la otra micro:bit siguiendo el protocolo. Primero usarás una tasa de error de 25, y luego de 75. Repetid el experimento tres veces. 
 
 En la tabla de abajo las retransmisiones son el número de veces que un paquete necesitó ser reenviado. Los duplicados son el número de veces que el receptor recibió retransmisiones innecesarias. Así que, por ejemplo, supongamos que tras la ejecución del protocolo el emisor envió lo siguiente:
 
