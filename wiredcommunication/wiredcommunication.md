@@ -123,12 +123,12 @@ Avanzado...
 	Echa un ojo a este vídeo [Wired\_pixel\_by\_pixel\_heart.m4v](https://microbit.nominetresearch.uk/networking-book/pixel_heart_transfer.html). Debate con tus colegas de equipo cómo se pueden enviar datos más complejos a través de cables. 
 
 
-Resources
----------
+Recursos
+--------
 
-- Video: What is the Internet (Code.org) -   <https://youtu.be/Dxcc6ycZ73M>
+- Vídeo: ¿Qué es Internet? (Code.org) -   <https://youtu.be/Dxcc6ycZ73M>
 
-- Video: The Internet: Wires, Cables and Wifi (Code.org) - <https://youtu.be/ZhEf7e4kopM>
+- Vídeo: Internet, cables de cobre, cables de fibra y Wifi (Code.org) - <https://youtu.be/ZhEf7e4kopM>
 
 - BBC Bitesize, Introducing Binary - <http://www.bbc.co.uk/education/guides/zwsbwmn/revision>
 
