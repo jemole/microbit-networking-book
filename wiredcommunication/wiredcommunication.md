@@ -6,7 +6,7 @@ Comunicación usando cables
 Introducción
 ------------
 
-¡Todo está conectado hoy en día! Ordenadores y dispositvos se conectan entre sí para formar redes. Y estas redes se conectan a su vez entre sí para formar la Internet. Cuando decimos *ordenadores* or *dispositivos*, nos referimos a cualquier cosa, desde un portátil o un teléfono, pasando por una lavadora o un sensor de humedad. Por supuesto, también puede ser tu micro:bit. Y es que, cada vez más, Internet se está convirtiendo en una *Internet de las Cosas* (*Internet of Things* o *IoT*).
+¡Todo está conectado hoy en día! Ordenadores y dispositvos se conectan entre sí para formar redes. Y estas redes se conectan a su vez entre sí para formar la Internet. Cuando decimos *ordenadores* o *dispositivos*, nos referimos a cualquier cosa, desde un portátil o un teléfono, pasando por una lavadora o un sensor de humedad. Por supuesto, también puede ser tu micro:bit. Y es que, cada vez más, Internet se está convirtiendo en una *Internet de las Cosas* (*Internet of Things* o *IoT*).
 
 En este capítulo vas a crear una red usando cables para conectar micro:bits. Y en el proceso trabajarás los siguientes conceptos:
 
@@ -68,7 +68,7 @@ Programando mi red de micro:bits
 
 ### Tarea 0: Los pines de la placa micro:bit
 
-Antes de comenzar, como vamos a conectar nuestras micro:bits usando cables, es importante comprender bien para qué se usa cada uno de los pines de conexión. Para ello, lee el artículo [Los "pines" del BBC micro:bit](https://microbit.org/es/guide/hardware/pins/) y contesta las siguientes preguntas: 
+Antes de comenzar, como vamos a conectar nuestras micro:bits usando cables, es importante comprender bien para qué se usa cada uno de los pines de conexión. Para ello, lee el artículo [Los "pines" de la micro:bit BBC](https://microbit.org/es/guide/hardware/pins/) y contesta las siguientes preguntas: 
 
 - ¿Para qué se usan los pines 0, 1 y 2?
 - ¿Para qué se usan los pines GND y 3V?
@@ -94,7 +94,7 @@ Para probar la conexión usa el programa de la figura; presiona el botón A en c
 ![Programa telégrafo: envía una señal por el Pin 1 al presionar botón A. Enciende el píxel (4,4) al recibir una señal en Pin 2](telegrafo_base.png)
 
 !!! note ""
-	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit Telegraph program. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
+	**Figura 2:** Programa para probar la conexión entre dos placas micro:bit. Al presionar el botón A, se envía una señal al otro lado utilizando el Pin 1. El micro:bit receptor escucha en el Pin 2 para verificar si se recibe una señal. Si hay una señal, se ilumina el píxel (4,4) en la pantalla.
 
 Una vez que tengas la red funcionando correctamente contesta las siguientes preguntas:
 - ¿Cuántos bits se utilizan para enviar la señal para que la otra placa encienda el píxel (4,4)?
