@@ -23,7 +23,7 @@ La siguiente figura resume las reglas.
 !!! note ""
 	**Figura 1:** Reglas de Piedra, papel o tijera.
 
-En este capítulo vamos a progrmar este juego con nuestras placas micro:bit. Y al hacerlo practicaremos:
+En este capítulo vamos a programar este juego con nuestras placas micro:bit. Y al hacerlo practicaremos:
 
 - *Comunicación unicast*
 
@@ -71,7 +71,7 @@ Comprobad en pareja que podéis enviar y recibir correctamente.
 
 **Descripción:** Tu programa debe decidir quién gana cuando recibes un número desde la micro:bit de tu colega.
 
-**Instrucciones:** Para decidir quién gana, hay que comparar el número que tú escogiste con el número que has recibido por radio. La tabla de abajo puede ayudarte a decidir quién gana cada partida [^2]. Usando esta tabla puedes comparar *Mi mano* con *Mano oponente*. Por ejemplo, si los dos números significan *papel*, es un empate y el resultado es una cara de sorpresa. Pero si *Mi mano* es *papel* y *Mano oponente* es *tijera*, el resultado es una cara triste. Y si fuera al contrario el resultado sería una cara alegre. En base a las reglas del juego, termina de rellenar la tabla.
+**Instrucciones:** Para decidir quién gana, hay que comparar el número que tú escogiste con el número que has recibido por radio. La tabla de abajo puede ayudarte a decidir quién gana cada partida [^2]. Usando esta tabla puedes comparar *Mi mano* con *Mano oponente*. Por ejemplo, si los dos números significan *piedra*, es un empate y el resultado es una cara de sorpresa. Pero si *Mi mano* es *tijera* y *Mano oponente* es *piedra*, el resultado es una cara triste. Y si fuera al contrario el resultado sería una cara alegre. En base a las reglas del juego, termina de rellenar la tabla.
 
 
 ![Tabla Pedra, papel o tijera](IncompleteRockPaperScissorsTable_ESv2.png)
@@ -83,7 +83,7 @@ Comprobad en pareja que podéis enviar y recibir correctamente.
 
 **Descripción:** Una vez rellena la tabla hay que decir cómo programar estas reglas en tu código. El programa deberá:
 
-1. permitir jugar partidas en base  las reglas del juego
+1. permitir jugar partidas en base a las reglas del juego
 
 2. mostrando una cara *alegre* si ganas tú, una cara *triste* si pierdes, y una cara *sorprendida* si es un empate.
 
@@ -105,8 +105,10 @@ Ejercicios
 
 !!! attention "Ejercicio 1"
 	¿Cómo podrías ampliar el programa para jugar a piedra/papel/tijera/lagarto/spock? Para saber más sobre esta extensión puedes echar un ojo a estos enlaces:
-	- Vídeo de The Big Bang Theory <https://www.youtube.com/watch?v=_tsy4q9ibAE>
-	- Desafío TNT <https://cadenaser.com/ser/2012/03/03/cultura/1330733828_850215.html>
+	
+- Vídeo de The Big Bang Theory <https://www.youtube.com/watch?v=_tsy4q9ibAE>
+	
+- Desafío TNT <https://cadenaser.com/ser/2012/03/03/cultura/1330733828_850215.html>
 	
 
 Problemas
