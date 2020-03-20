@@ -8,7 +8,7 @@ Introducción
 
 En el capítulo anterior experimentamos con la comunicación broadcast,o de difusión, enviando mensajes a todo el mundo. En este capítulo vamos a aprender a enviar mensajes de forma que lleguen a un grupo más pequeño de gente. Para que la actividad fluya mejor vamos a organizarnos en grupos de tres parejas. 
 
-La comunicación multicast (que también se conoce como multidifusión o comunicación de grupo) es un concepto interesante, y se usa por muchas tecnologías de Internet. Por ejemplo, permite enviar vídeos de forma muy rápida a través de Internet. En este capítulo vamos a aprender sobre:
+La comunicación multicast (que también se conoce como multidifusión o comunicación de grupo) es un concepto interesante que usan muchas tecnologías de Internet. Por ejemplo, permite enviar vídeos de forma muy rápida a través de Internet. En este capítulo vamos a aprender sobre:
 
 - El concepto de *comunicación multicast* y *grupo* o *dirección multicast*
 
@@ -18,7 +18,7 @@ La comunicación multicast (que también se conoce como multidifusión o comunic
 
     3 micro:bits
     1 pizarra
-    tizas o rotuladores o adhesivos para notas
+    tizas o rotuladores o notas adhesivas
     varios colegas
 
 Antecedentes
