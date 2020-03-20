@@ -8,13 +8,11 @@ Acerca del libro
 
 Este libro presenta una serie de actividades para conocer aspectos básicos sobre redes de ordenadores usando placas micro:bit. Aunque no aprenderás todos los aspectos de las redes, esperamos que sirva como un buen punto de partida.
 
-Para que las micro:bits puedan comunicarse usaremos la comunicación de radio a radio. Al escuchar la palabra radio solemos pensar en nuestras emisoras musicales favoritas, pero una radio, un trasceptor de radio (transmisor/receptor) se usa en las comunicaciones para generar y recibir ondas de radio que pueden contener información como audio, vídeo o datos digitales. Y todas las micro:bit llevan una radio incorada [^1].
+Para que las micro:bits puedan comunicarse usaremos la comunicación de radio a radio. Al escuchar la palabra radio solemos pensar en nuestras emisoras musicales favoritas, pero un trasceptor de radio (transmisor/receptor) se usa en las comunicaciones para generar y recibir ondas de radio que pueden contener todo tipo de información, como audio, vídeo o datos digitales. Y todas las micro:bit llevan una radio incorada [^1].
 
 Cada capítulo presenta retos interesantes sobre las comunicaciones usando micro:bits. Cada pocos capítulos se intercala un juego que pone en práctica todo lo aprendido. Para programar las placas se usa el editor de bloques de JavaScript, [Microsoft Makecode](https://makecode.microbit.org/)[^2]. 
 
-Al escribir el libro no se ha asumido conocimiento previo alguno sobre comunicaciones o redes. 
-
-Sin embargo, sí se asume que has escrito algunos programas sencillos con una micro:bit. Por ejemplo, se espera que entiendas lo que es una variable, una instrucción si-entonces-sino o un bucle. Pero si no tienes mucha experiencia programando, tampoco te preocupes, porque los programas con que trabajaremos son muy sencillos y tendrás oportunidad de practicar en cada capítulo.
+Al escribir el libro no se ha asumido conocimiento previo alguno sobre comunicaciones o redes. Sin embargo, sí se asume que has escrito algunos programas sencillos con una micro:bit. Por ejemplo, se espera que entiendas lo que es una variable, una instrucción si-entonces-sino o un bucle. Pero si no tienes mucha experiencia programando, tampoco te preocupes, porque los programas con que trabajaremos son muy sencillos y tendrás oportunidad de practicar en cada capítulo.
 
 Hay que tener en cuenta que esta obra que estás leyendo es un traducción al castellano que, aunque respeta en general la obra original, ha sido modificada, resumida o ampliada en diferentes capítulos por el autor de la adaptación.
 
@@ -24,16 +22,15 @@ Ediciones
 
 Es posible descargar una versión PDF del libro original en inglés: [descarga](https://microbit.nominetresearch.uk/networking-book-pdf/networking_with_the_microbit.pdf).
 
-También se pueden comprar copias impresasen [Amazon.co.uk](https://www.amazon.co.uk/Networking-micro-bit-Anthony-Kirby/dp/1973396769) o [Amazon.com](https://www.amazon.com/Networking-micro-bit-Anthony-Kirby/dp/1973396769). 
+También se pueden comprar copias impresas en [Amazon.co.uk](https://www.amazon.co.uk/Networking-micro-bit-Anthony-Kirby/dp/1973396769) o [Amazon.com](https://www.amazon.com/Networking-micro-bit-Anthony-Kirby/dp/1973396769). 
 
 Cuando finalice la traducción al español se generará una edición en PDF y se incluirá también para descarga.
-
 
 
 Sobre los autores
 -----------------
 
-Los autores de la obra original, Cigdem Sengul y Anthony Kirby, son investigadores, lo que significa que tratan de encontrar nuevas ideas y productos. Su empresa Nominet se encarga de la parte de internet que controla como se usan los nombres (como
+Los autores de la obra original, Cigdem Sengul y Anthony Kirby, son investigadores, lo que significa que tratan de encontrar nuevas ideas y productos. Su empresa Nominet se encarga de la parte de internet que controla cómo se usan los nombres (como
 [http://www.bbc.co.uk)](http://www.bbc.co.uk)) cuando la gente, los ordenadores y otros dispositivos se conectan a otros ordenadores a través de internet. 
 
 Comprender cómo hablan los ordenadores entre sí es algo importante, y es por eso que escribieron este libro. Anthony & Cigdem disfrutaron realmente al diseñar los retos y los desafíos del libro, y esperan que tú también lo hagas al tratar de resolverlos.
