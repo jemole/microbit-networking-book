@@ -29,7 +29,7 @@ Resumiendo, este capítulo nos servirá para aprender sobre:
 Antecedentes
 ------------
 
-La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que se emiten desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
+La comunicación inalámbrica utiliza radiación electromagnética (ondas de radio y microondas) para enviar información. Las ondas de radio son esencialmente ondas electromagnéticas que se emiten desde una antena (como las antenas de un router WiFi). Por tanto, la comunicación inalámbrica es siempre broadcast, en el sentido de que las señales enviadas, por ejemplo, por un router WiFI, pueden ser escuchadas por cualquier dispositivo WiFi sintonizado en la misma frecuencia de radio.
 
 !!! hint "Definición 1: _Broadcast_"
 	En redes, la comunicación broadcast (o de difusión) significa que el mensaje enviado por un remitente se transmite a todos los receptores en una red.
@@ -74,7 +74,7 @@ A la hora de escribir tu programa para recibir mensajes hay dos cosas que tienes
 
 2. Haciendo uso de estos bloques, ¿puedes recibir cualquier tipo de mensaje, como por ejemplo un número o un texto?
 
-**Instrucciones:** Primero vas a programar tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 and 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
+**Instrucciones:** Primero vas a programar tu micro:bit para que pueda recibir un número. La placa del profe está preparada para enviar mensajes con un número del 0 al 9, así que tu programa debe recibir el mensaje y mostrar por pantalla el número recibido. Cuando lo hayas programado, avisa al profe para que puedas probar tu programa.
 
 Cuando hayas conseguido el paso anterior, vas a programar tu micro:bit para que también pueda recibir un texto. De nuevo, programa tu micro:bit para recibir mensajes de texto y mostrar el texto recibido. Cuando la hayas programado, avisa al profe para que puedas probar tu programa. ¿Qué palabra has recibido?
 
