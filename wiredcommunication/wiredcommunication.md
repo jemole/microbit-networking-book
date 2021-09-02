@@ -46,15 +46,21 @@ Los ordenadores, y también la micro:bit, no pueden procesar señales sin conver
 !!! hint "Definición 3: _Bit_"
 	Un bit es la unidad de datos más pequeña en una computadora. Es como un átomo. Un bit puede ser un 1 o un 0.
 
-Un grupo de 8 bits es un *byte*. La Tabla \[tab:bit\] muestra otros ejemplos: 
+Un grupo de 8 bits es un *byte*. Las siguientes tablas muestran los nombres de algunos grupos de 1000 y 1024 bytes que son de uso frecuente cuando se habla de muchos bytes:
 
 |**Nombre** | **Tamaño**|
 |---------|:--------|
 |Byte (B) | 8 bits |
-|Kilobyte (KB) | 1024 bytes |
-|Megabyte (MB) | 1024 kilobytes |
-| Gigabyte (GB) | 1024 megabytes |
-| Terabyte (TB) | 1024 gigabytes |
+|---------|:--------|
+|Kilobyte (kB) | 1000 bytes |
+|Megabyte (MB) | 1000 kilobytes |
+|Gigabyte (GB) | 1000 megabytes |
+|Terabyte (TB) | 1000 gigabytes |
+|---------|:--------|
+|Kibibyte (KiB) | 1024 bytes |
+|Mebibyte (MiB) | 1024 kibibytes |
+|Gibibyte (GiB) | 1024 mebibytes |
+|Tebibyte (TiB) | 1024 gibibytes |
 
 Al conectar ordenadores o dispositivos a través de diferentes medios de transmisión se crean las redes. 
 
